@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Partenaires - GameCritique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme-switcher.js" defer></script>
+    
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .member-img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin: 2rem auto 1rem;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        /* Style spécifique pour le logo de Maximum Games sans fond blanc */
+        img[src="assets/img/Maximum-Entertainment.jpg"] {
+            background-color: transparent;
+            padding: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 2rem auto 1rem;
+            border: 3px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        
+        img[src="assets/img/Maximum-Entertainment.jpg"]:hover {
+            transform: scale(1.05);
+        }
+        
+        .member-info {
+            padding: 1rem 1.5rem 2rem;
+        }
+        
+        .member-name {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+        
+        .member-role {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .member-bio {
+            color: #cbd5e0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .member-social a {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .member-social a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Game<span>Critique</span></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="tests.html">Tests</a></li>
+                    <li><a href="interviews.html">Interviews</a></li>
+                    <li><a href="partenariat.html" class="active">Partenariats</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><button id="theme-toggle" class="theme-toggle"><i class="fas fa-sun"></i></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Mes Partenaires</h1>
+            <p>Découvrez les éditeurs, développeurs et distributeurs qui collaborent avec GameCritique pour vous offrir les meilleures actualités et tests de jeux vidéo.</p>
+        </div>
+    </section>
+
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Éditeurs Partenaires</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Je travaille en étroite collaboration avec ces éditeurs pour vous proposer des tests exclusifs et des informations de première main sur leurs jeux.</p>
+            
+            <div class="team-grid">
+                <!-- Les éditeurs partenaires seront ajoutés progressivement -->
+            </div>
+        </div>
+    </section>
+
+    <section class="recent-reviews">
+        <div class="container">
+            <h2 class="section-title">Développeurs Partenaires</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Découvrez les studios de développement avec lesquels je collabore pour vous présenter leurs créations.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="assets/img/Alzara_Keyart_Steam.png" alt="Studio Camelia Logo" class="member-img">
+                    <div class="member-info">
+                        <h3 class="member-name">Studio Camelia</h3>
+                        <p class="member-role">Développeur</p>
+                        <p class="member-bio">Studio de développement français créateur d'ALZARA: Radiant Echoes, un JRPG inspiré des classiques avec une touche méditerranéenne.</p>
+                        <div class="member-social">
+                            <a href="https://www.kickstarter.com/projects/studiocamelia/seed-a-vibrant-tribute-to-jrpg-classics" target="_blank"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Distributeurs Partenaires</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Je collabore avec ces distributeurs pour vous faire découvrir leurs catalogues de jeux et vous proposer des tests exclusifs.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="assets/img/Maximum-Entertainment.jpg" alt="Maximum Games Logo" class="member-img">
+                    <div class="member-info">
+                        <h3 class="member-name">Maximum Games</h3>
+                        <p class="member-role">Distributeur</p>
+                        <p class="member-bio">Éditeur et distributeur international de jeux vidéo, partenaire pour la distribution de Whisker Waters.</p>
+                        <div class="member-social">
+                            <a href="https://www.maximumgames.com/" target="_blank"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Devenez Partenaire</h2>
+            <p>Vous êtes un éditeur, un développeur ou un distributeur et souhaitez collaborer avec GameCritique ? Contactez-moi pour discuter des opportunités de partenariat.</p>
+            <p>Email: <a href="mailto:contentcreator.jrpglibrary@gmail.com">contentcreator.jrpglibrary@gmail.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">Game<span>Critique</span></div>
+                    <p>Votre référence pour les tests de jeux vidéo.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="tests.html">Tests</a></li>
+                        <li><a href="interviews.html">Interviews</a></li>
+                        <li><a href="partenariat.html">Partenariats</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Suivez-moi</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GameCritique. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <style>
+        /* Style personnalisé pour l'adresse email */
+        .newsletter a[href^="mailto:"] {
+            color: var(--accent-color);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        
+        .newsletter a[href^="mailto:"]:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</body>
+</html>

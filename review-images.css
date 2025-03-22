@@ -1,0 +1,67 @@
+/* Styles pour la disposition horizontale des images dans les revues */
+.review-images-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 3rem 0;
+}
+
+.review-image-item {
+    flex: 1;
+    overflow: visible; /* Permet à l'image de dépasser son conteneur */
+    position: relative; /* Pour le positionnement de l'image */
+    cursor: zoom-in; /* Curseur indiquant que l'image est zoomable */
+}
+
+.review-image-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide pour l'effet de zoom */
+}
+
+/* Effet de zoom au survol */
+.review-image-item:hover img {
+    transform: scale(1.15); /* Agrandissement de 15% */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
+    z-index: 10; /* Valeur plus élevée pour s'assurer que l'image agrandie est au-dessus des autres éléments */
+    position: relative; /* Assure que l'image peut sortir de son conteneur */
+}
+
+/* Style pour l'image unique */
+.review-image {
+    overflow: visible; /* Permet à l'image de dépasser son conteneur */
+    position: relative; /* Pour le positionnement de l'image */
+}
+
+.review-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: zoom-in;
+}
+
+.review-image:hover img {
+    transform: scale(1.1); /* Agrandissement de 10% */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    z-index: 10; /* Valeur plus élevée pour s'assurer que l'image agrandie est au-dessus des autres éléments */
+    position: relative; /* Assure que l'image peut sortir de son conteneur */
+}
+
+/* Responsive design pour les petits écrans */
+@media (max-width: 768px) {
+    .review-images-container {
+        flex-direction: column;
+    }
+    
+    .review-image-item {
+        margin-bottom: 2rem;
+    }
+    
+    /* Réduire l'effet de zoom sur mobile pour éviter les débordements */
+    .review-image-item:hover img,
+    .review-image:hover img {
+        transform: scale(1.05);
+    }
+}
