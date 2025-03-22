@@ -1,0 +1,139 @@
+/* Styles responsives pour les appareils mobiles */
+
+/* Styles généraux pour mobile */
+@media (max-width: 768px) {
+    /* Ajustement de la navigation */
+    .navbar {
+        position: relative;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .nav-links li {
+        margin: 0 0.3rem;
+    }
+    
+    /* Ajustement des sections */
+    .hero {
+        padding: 3rem 0;
+        height: auto;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+        padding: 0.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    /* Ajustement des cartes de jeux */
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-card {
+        max-width: 100%;
+    }
+    
+    /* Ajustement des formulaires */
+    .newsletter-form input, 
+    .newsletter-form textarea {
+        width: 100%;
+    }
+    
+    /* Ajustement du footer */
+    .footer-content {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Styles spécifiques pour les très petits écrans */
+@media (max-width: 480px) {
+    /* Réduction de la taille des textes */
+    body {
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .game-title {
+        font-size: 1.2rem;
+    }
+    
+    /* Ajustement des plateformes de jeux */
+    .game-platform {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+        margin-right: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    /* Ajustement des boutons */
+    .read-more {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Styles spécifiques pour les pages de test de jeu */
+@media (max-width: 768px) {
+    /* Ajustement de l'en-tête de la revue */
+    .game-info-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .game-cover {
+        max-width: 200px;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Ajustement des métadonnées */
+    .game-metadata {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustement des pros et cons */
+    .pros-cons {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Ajustement des images de revue */
+    .review-image img {
+        max-width: 100%;
+    }
+}
+
+/* Styles spécifiques pour les images dans les revues */
+@media (max-width: 768px) {
+    .review-images-container {
+        flex-direction: column;
+    }
+    
+    .review-image-item {
+        margin-bottom: 2rem;
+    }
+    
+    /* Réduire l'effet de zoom sur mobile pour éviter les débordements */
+    .review-image-item:hover img,
+    .review-image:hover img {
+        transform: scale(1.05);
+    }
+}
