@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile-responsive.css">
     <script src="theme-switcher.js" defer></script>
+    <script src="mobile-menu.js" defer></script>
     
     <style>
         .team-grid {
@@ -56,22 +57,24 @@
             border-radius: 8px;
         }
         
-        /* Style spécifique pour le logo de Maximum Games sans fond blanc */
-        img[src="assets/img/Maximum-Entertainment.jpg"] {
-            background-color: transparent;
+        /* Style commun pour tous les logos partenaires */
+        .team-member img.member-img {
+            background-color: black;
             padding: 0;
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            object-fit: cover;
+            object-fit: contain;
             margin: 2rem auto 1rem;
             border: 3px solid var(--accent-color);
             transition: transform 0.3s ease;
         }
         
-        img[src="assets/img/Maximum-Entertainment.jpg"]:hover {
+        .team-member img.member-img:hover {
             transform: scale(1.05);
         }
+        
+        /* Les styles pour les logos partenaires sont maintenant appliqués via la classe .member-img */
         
         .member-info {
             padding: 1rem 1.5rem 2rem;
@@ -122,7 +125,7 @@
                     <li><a href="interviews.html">Interviews</a></li>
                     <li><a href="partenariat.html" class="active">Partenariats</a></li>
                     <li><a href="apropos.html">À propos</a></li>
-                    <li><button id="theme-toggle" class="theme-toggle"><i class="fas fa-sun"></i></button></li>
+                    
                 </ul>
             </nav>
         </div>
@@ -153,7 +156,7 @@
             
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="assets/img/Alzara_Keyart_Steam.png" alt="Studio Camelia Logo" class="member-img">
+                    <img src="assets/img/StdCamelia.png" alt="Studio Camelia Logo" class="member-img">
                     <div class="member-info">
                         <h3 class="member-name">Studio Camelia</h3>
                         <p class="member-role">Développeur</p>
@@ -192,7 +195,7 @@
         <div class="container">
             <h2 class="section-title">Devenez Partenaire</h2>
             <p>Vous êtes un éditeur, un développeur ou un distributeur et souhaitez collaborer avec GameCritique ? Contactez-moi pour discuter des opportunités de partenariat.</p>
-            <p>Email: <a href="mailto:contentcreator.jrpglibrary@gmail.com">contentcreator.jrpglibrary@gmail.com</a></p>
+            <p>Email: <a href="mailto:contentcreator.jrpglibrary@gmail.com?subject=Proposition%20de%20Partenariat">contentcreator.jrpglibrary@gmail.com</a></p>
         </div>
     </section>
 

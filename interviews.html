@@ -36,7 +36,7 @@
                     <li><a href="interviews.html" class="active">Interviews</a></li>
                     <li><a href="partenariat.html">Partenariats</a></li>
                     <li><a href="apropos.html">À propos</a></li>
-                    <li><button id="theme-toggle" class="theme-toggle"><i class="fas fa-sun"></i></button></li>
+                    
                 </ul>
             </nav>
         </div>
@@ -84,14 +84,9 @@
 
     <section class="newsletter">
         <div class="container">
-            <h2 class="section-title">Proposez une Interview</h2>
+            <h2 class="section-title">Contactez-moi</h2>
             <p>Vous êtes développeur, artiste ou acteur de l'industrie du jeu vidéo et souhaitez partager votre expérience ? Contactez-moi pour organiser une interview.</p>
-            <div class="newsletter-form">
-                <input type="text" placeholder="Votre nom" required>
-                <input type="email" placeholder="Votre email" required>
-                <textarea placeholder="Présentez-vous et dites-moi pourquoi vous souhaitez être interviewé" rows="4" required></textarea>
-                <button type="submit" class="read-more">Envoyer</button>
-            </div>
+            <p>Email: <a href="mailto:contentcreator.jrpglibrary@gmail.com?subject=Interview%20Proposition">contentcreator.jrpglibrary@gmail.com</a></p>
         </div>
     </section>
 
@@ -128,5 +123,18 @@
             </div>
         </div>
     </footer>
+    <style>
+        /* Style personnalisé pour l'adresse email */
+        .newsletter a[href^="mailto:"] {
+            color: var(--accent-color);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        
+        .newsletter a[href^="mailto:"]:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
 </body>
 </html>
