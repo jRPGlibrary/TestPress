@@ -229,14 +229,22 @@ header {
 }
 
 .game-rating {
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    gap: 0.5rem;
 }
 
 .stars {
-    color: gold;
-    margin-right: 0.5rem;
+    display: flex;
+    gap: 0.3rem;
+    color: var(--accent-color);
+}
+
+.rating-text {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 0.9rem;
 }
 
 .game-excerpt {
