@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Partenaires - GameCritique</title>
+    <title data-i18n="partners_page_title">Mes Partenaires - GameCritique</title>
     
     <!-- Balises Open Graph pour l'aperçu des liens -->
-    <meta property="og:title" content="Mes Partenaires - GameCritique">
-    <meta property="og:description" content="Découvrez les partenaires de GameCritique, des studios et éditeurs de jeux vidéo qui nous font confiance pour tester et présenter leurs jeux.">
+    <meta property="og:title" data-i18n="partners_page_title" content="Mes Partenaires - GameCritique">
+    <meta property="og:description" data-i18n="partners_page_description" content="Découvrez les partenaires de GameCritique, des studios et éditeurs de jeux vidéo qui nous font confiance pour tester et présenter leurs jeux.">
     <meta property="og:image" content="https://gamecritique.fr/assets/img/logo-menu.png">
     <meta property="og:url" content="https://gamecritique.fr/partenariat.html">
     <meta property="og:type" content="website">
@@ -15,14 +15,15 @@
     
     <!-- Balises Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mes Partenaires - GameCritique">
-    <meta name="twitter:description" content="Découvrez les partenaires de GameCritique, des studios et éditeurs de jeux vidéo qui nous font confiance pour tester et présenter leurs jeux.">
+    <meta name="twitter:title" data-i18n="partners_page_title" content="Mes Partenaires - GameCritique">
+    <meta name="twitter:description" data-i18n="partners_page_description" content="Découvrez les partenaires de GameCritique, des studios et éditeurs de jeux vidéo qui nous font confiance pour tester et présenter leurs jeux.">
     <meta name="twitter:image" content="https://gamecritique.fr/assets/img/logo-menu.png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile-responsive.css">
     <script src="theme-switcher.js" defer></script>
+    <script src="language-switcher.js" defer></script>
     
     <style>
         .team-grid {
@@ -119,11 +120,11 @@
             <nav class="navbar">
                 <div class="logo">Game<span>Critique</span></div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="tests.html">Tests</a></li>
-                    <li><a href="interviews.html">Interviews</a></li>
-                    <li><a href="partenariat.html" class="active">Partenariats</a></li>
-                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="tests.html" data-i18n="nav_tests">Tests</a></li>
+                    <li><a href="interviews.html" data-i18n="nav_interviews">Interviews</a></li>
+                    <li><a href="partenariat.html" class="active" data-i18n="nav_partnerships">Partenariats</a></li>
+                    <li><a href="apropos.html" data-i18n="nav_about">À propos</a></li>
                     
                 </ul>
             </nav>
@@ -132,15 +133,15 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Mes Partenaires</h1>
-            <p>Découvrez les éditeurs, développeurs et distributeurs qui collaborent avec GameCritique pour vous offrir les meilleures actualités et tests de jeux vidéo.</p>
+            <h1 data-i18n="partners_title">Mes Partenaires</h1>
+            <p data-i18n="partners_subtitle">Découvrez les éditeurs, développeurs et distributeurs qui collaborent avec GameCritique pour vous offrir les meilleures actualités et tests de jeux vidéo.</p>
         </div>
     </section>
 
     <section class="featured">
         <div class="container">
-            <h2 class="section-title">Éditeurs Partenaires</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Je travaille en étroite collaboration avec ces éditeurs pour vous proposer des tests exclusifs et des informations de première main sur leurs jeux.</p>
+            <h2 class="section-title" data-i18n="publisher_partners">Éditeurs Partenaires</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;" data-i18n="publisher_partners_text">Je travaille en étroite collaboration avec ces éditeurs pour vous proposer des tests exclusifs et des informations de première main sur leurs jeux.</p>
             
             <div class="team-grid">
                 <!-- Les éditeurs partenaires seront ajoutés progressivement -->
@@ -150,16 +151,16 @@
 
     <section class="recent-reviews">
         <div class="container">
-            <h2 class="section-title">Développeurs Partenaires</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Découvrez les studios de développement avec lesquels je collabore pour vous présenter leurs créations.</p>
+            <h2 class="section-title" data-i18n="developer_partners">Développeurs Partenaires</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;" data-i18n="developer_partners_text">Découvrez les studios de développement avec lesquels je collabore pour vous présenter leurs créations.</p>
             
             <div class="team-grid">
                 <div class="team-member">
                     <img src="assets/img/StdCamelia.png" alt="Studio Camelia Logo" class="member-img">
                     <div class="member-info">
-                        <h3 class="member-name">Studio Camelia</h3>
-                        <p class="member-role">Développeur</p>
-                        <p class="member-bio">Studio de développement français créateur d'ALZARA: Radiant Echoes, un JRPG inspiré des classiques avec une touche méditerranéenne.</p>
+                        <h3 class="member-name" data-i18n="studio_camelia_name">Studio Camelia</h3>
+                        <p class="member-role" data-i18n="studio_camelia_role">Développeur</p>
+                        <p class="member-bio" data-i18n="studio_camelia_bio">Studio de développement français créateur d'ALZARA: Radiant Echoes, un JRPG inspiré des classiques avec une touche méditerranéenne.</p>
                         <div class="member-social">
                             <a href="https://www.kickstarter.com/projects/studiocamelia/seed-a-vibrant-tribute-to-jrpg-classics" target="_blank"><i class="fas fa-globe"></i></a>
                         </div>
@@ -171,16 +172,16 @@
 
     <section class="featured">
         <div class="container">
-            <h2 class="section-title">Distributeurs Partenaires</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Je collabore avec ces distributeurs pour vous faire découvrir leurs catalogues de jeux et vous proposer des tests exclusifs.</p>
+            <h2 class="section-title" data-i18n="distributor_partners">Distributeurs Partenaires</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;" data-i18n="distributor_partners_text">Je collabore avec ces distributeurs pour vous faire découvrir leurs catalogues de jeux et vous proposer des tests exclusifs.</p>
             
             <div class="team-grid">
                 <div class="team-member">
                     <img src="assets/img/Maximum-Entertainment.jpg" alt="Maximum Games Logo" class="member-img">
                     <div class="member-info">
-                        <h3 class="member-name">Maximum Games</h3>
-                        <p class="member-role">Distributeur</p>
-                        <p class="member-bio">Éditeur et distributeur international de jeux vidéo, partenaire pour la distribution de Whisker Waters.</p>
+                        <h3 class="member-name" data-i18n="maximum_games_name">Maximum Games</h3>
+                        <p class="member-role" data-i18n="maximum_games_role">Distributeur</p>
+                        <p class="member-bio" data-i18n="maximum_games_bio">Éditeur et distributeur international de jeux vidéo, partenaire pour la distribution de Whisker Waters.</p>
                         <div class="member-social">
                             <a href="https://www.maximumgames.com/" target="_blank"><i class="fas fa-globe"></i></a>
                         </div>
@@ -192,8 +193,8 @@
 
     <section class="newsletter">
         <div class="container">
-            <h2 class="section-title">Devenez Partenaire</h2>
-            <p>Vous êtes un éditeur, un développeur ou un distributeur et souhaitez collaborer avec GameCritique ? Contactez-moi pour discuter des opportunités de partenariat.</p>
+            <h2 class="section-title" data-i18n="become_partner">Devenez Partenaire</h2>
+            <p data-i18n="become_partner_text">Vous êtes un éditeur, un développeur ou un distributeur et souhaitez collaborer avec GameCritique ? Contactez-moi pour discuter des opportunités de partenariat.</p>
             <p>Email: <a href="mailto:contentcreator.jrpglibrary@gmail.com?subject=Proposition%20de%20Partenariat">contentcreator.jrpglibrary@gmail.com</a></p>
         </div>
     </section>
@@ -203,20 +204,20 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo">Game<span>Critique</span></div>
-                    <p>Votre référence pour les tests de jeux vidéo.</p>
+                    <p data-i18n="footer_reference">Votre référence pour les tests de jeux vidéo.</p>
                 </div>
                 <div class="footer-links">
-                    <h3>Liens rapides</h3>
+                    <h3 data-i18n="quick_links">Liens rapides</h3>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="tests.html">Tests</a></li>
-                        <li><a href="interviews.html">Interviews</a></li>
-                        <li><a href="partenariat.html">Partenariats</a></li>
-                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                        <li><a href="tests.html" data-i18n="nav_tests">Tests</a></li>
+                        <li><a href="interviews.html" data-i18n="nav_interviews">Interviews</a></li>
+                        <li><a href="partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
+                        <li><a href="apropos.html" data-i18n="nav_about">À propos</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h3>Suivez-moi</h3>
+                    <h3 data-i18n="follow_me">Suivez-moi</h3>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -229,7 +230,7 @@
 
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 GameCritique. Tous droits réservés.</p>
+                <p data-i18n="copyright">&copy; 2025 GameCritique. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

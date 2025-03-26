@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tests de Jeux Vidéo - GameCritique</title>
+    <title data-i18n="reviews_page_title">Tests de Jeux Vidéo - GameCritique</title>
     
     <!-- Balises Open Graph pour l'aperçu des liens -->
-    <meta property="og:title" content="Tests de Jeux Vidéo - GameCritique">
-    <meta property="og:description" content="Découvrez mes analyses détaillées et mes avis sur les dernières sorties et les grands classiques du jeu vidéo, spécialisés dans les RPG et jeux indépendants.">
+    <meta property="og:title" data-i18n="reviews_page_title" content="Tests de Jeux Vidéo - GameCritique">
+    <meta property="og:description" data-i18n="reviews_page_description" content="Découvrez mes analyses détaillées et mes avis sur les dernières sorties et les grands classiques du jeu vidéo, spécialisés dans les RPG et jeux indépendants.">
     <meta property="og:image" content="https://gamecritique.fr/assets/img/logo-menu.png">
     <meta property="og:url" content="https://gamecritique.fr/tests.html">
     <meta property="og:type" content="website">
@@ -15,14 +15,15 @@
     
     <!-- Balises Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tests de Jeux Vidéo - GameCritique">
-    <meta name="twitter:description" content="Découvrez mes analyses détaillées et mes avis sur les dernières sorties et les grands classiques du jeu vidéo, spécialisés dans les RPG et jeux indépendants.">
+    <meta name="twitter:title" data-i18n="reviews_page_title" content="Tests de Jeux Vidéo - GameCritique">
+    <meta name="twitter:description" data-i18n="reviews_page_description" content="Découvrez mes analyses détaillées et mes avis sur les dernières sorties et les grands classiques du jeu vidéo, spécialisés dans les RPG et jeux indépendants.">
     <meta name="twitter:image" content="https://gamecritique.fr/assets/img/logo-menu.png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile-responsive.css">
     <script src="theme-switcher.js" defer></script>
+    <script src="language-switcher.js" defer></script>
 
 </head>
 <body>
@@ -31,11 +32,11 @@
             <nav class="navbar">
                 <div class="logo">Game<span>Critique</span></div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="tests.html" class="active">Tests</a></li>
-                    <li><a href="interviews.html">Interviews</a></li>
-                    <li><a href="partenariat.html">Partenariats</a></li>
-                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="tests.html" class="active" data-i18n="nav_tests">Tests</a></li>
+                    <li><a href="interviews.html" data-i18n="nav_interviews">Interviews</a></li>
+                    <li><a href="partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
+                    <li><a href="apropos.html" data-i18n="nav_about">À propos</a></li>
                     
                 </ul>
             </nav>
@@ -44,14 +45,14 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Mes Tests de Jeux Vidéo</h1>
-            <p>Découvrez mes analyses détaillées et mes avis sur les dernières sorties et les grands classiques du jeu vidéo.</p>
+            <h1 data-i18n="reviews_title">Mes Tests de Jeux Vidéo</h1>
+            <p data-i18n="reviews_subtitle">Découvrez mes analyses détaillées et mes avis sur les dernières sorties et les grands classiques du jeu vidéo.</p>
         </div>
     </section>
 
     <section class="featured">
         <div class="container">
-            <h2 class="section-title">Derniers Tests</h2>
+            <h2 class="section-title" data-i18n="latest_reviews">Derniers Tests</h2>
             <div class="games-grid">
                 <div class="game-card">
                     <img src="assets/img/SplitFiction.jpeg" alt="Split Fiction" class="game-img">
@@ -71,8 +72,8 @@
                             </div>
                             <span class="rating-text">5/5</span>
                         </div>
-                        <p class="game-excerpt">Une nouvelle aventure coopérative par Hazelight Studios, les créateurs du célèbre It Takes Two.</p>
-                        <a href="split-fiction.html" class="read-more">Lire le test complet</a>
+                        <p class="game-excerpt" data-i18n="split_fiction_subtitle">Une nouvelle aventure coopérative par Hazelight Studios, les créateurs du célèbre It Takes Two.</p>
+                        <a href="split-fiction.html" class="read-more" data-i18n="read_full_review">Lire le test complet</a>
                     </div>
                 </div>
                 <div class="game-card">
@@ -95,8 +96,8 @@
                             </div>
                             <span class="rating-text">4/5</span>
                         </div>
-                        <p class="game-excerpt">Un JRPG d'alchimie qui perpétue l'héritage de la série Atelier avec une nouvelle héroïne.</p>
-                        <a href="atelier-yumia.html" class="read-more">Lire le test complet</a>
+                        <p class="game-excerpt" data-i18n="atelier_yumia_subtitle">Un JRPG d'alchimie qui perpétue l'héritage de la série Atelier avec une nouvelle héroïne.</p>
+                        <a href="atelier-yumia.html" class="read-more" data-i18n="read_full_review">Lire le test complet</a>
                     </div>
                 </div>
                 <div class="game-card">
@@ -118,8 +119,8 @@
                             </div>
                             <span class="rating-text">3/5</span>
                         </div>
-                        <p class="game-excerpt">Un RPG de simulation de pêche avec des chats, entre charme et imperfections techniques.</p>
-                        <a href="whisker-waters.html" class="read-more">Lire le test complet</a>
+                        <p class="game-excerpt" data-i18n="whisker_waters_subtitle">Un RPG de simulation de pêche avec des chats, entre charme et imperfections techniques.</p>
+                        <a href="whisker-waters.html" class="read-more" data-i18n="read_full_review">Lire le test complet</a>
                     </div>
                 </div>
                 <!-- D'autres jeux seront ajoutés progressivement -->
@@ -131,8 +132,8 @@
 
     <section class="newsletter">
         <div class="container">
-            <h2 class="section-title">Contactez-moi</h2>
-            <p>Vous avez des suggestions de jeux à tester ou des commentaires sur mes analyses ? N'hésitez pas à me contacter pour partager votre avis.</p>
+            <h2 class="section-title" data-i18n="contact_me">Contactez-moi</h2>
+            <p data-i18n="contact_text">Vous avez des suggestions de jeux à tester ou des commentaires sur mes analyses ? N'hésitez pas à me contacter pour partager votre avis.</p>
             <p>Email: <a href="mailto:contentcreator.jrpglibrary@gmail.com?subject=Suggestion%20de%20Jeu%20à%20Tester">contentcreator.jrpglibrary@gmail.com</a></p>
         </div>
     </section>
@@ -142,20 +143,20 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo">Game<span>Critique</span></div>
-                    <p>Votre référence pour les tests de jeux vidéo.</p>
+                    <p data-i18n="footer_reference">Votre référence pour les tests de jeux vidéo.</p>
                 </div>
                 <div class="footer-links">
-                    <h3>Liens rapides</h3>
+                    <h3 data-i18n="quick_links">Liens rapides</h3>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="tests.html">Tests</a></li>
-                        <li><a href="interviews.html">Interviews</a></li>
-                        <li><a href="partenariat.html">Partenariats</a></li>
-                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                        <li><a href="tests.html" data-i18n="nav_tests">Tests</a></li>
+                        <li><a href="interviews.html" data-i18n="nav_interviews">Interviews</a></li>
+                        <li><a href="partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
+                        <li><a href="apropos.html" data-i18n="nav_about">À propos</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h3>Suivez-moi</h3>
+                    <h3 data-i18n="follow_me">Suivez-moi</h3>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -168,7 +169,7 @@
 
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 GameCritique. Tous droits réservés.</p>
+                <p data-i18n="copyright">&copy; 2025 GameCritique. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

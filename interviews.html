@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interviews - GameCritique</title>
+    <title data-i18n="interviews_page_title">Interviews - GameCritique</title>
     
     <!-- Balises Open Graph pour l'aperçu des liens -->
-    <meta property="og:title" content="Interviews - GameCritique">
-    <meta property="og:description" content="Découvrez mes entretiens exclusifs avec les développeurs, artistes et personnalités du monde du jeu vidéo, spécialisés dans les RPG et jeux indépendants.">
+    <meta property="og:title" data-i18n="interviews_page_title" content="Interviews - GameCritique">
+    <meta property="og:description" data-i18n="interviews_page_description" content="Découvrez mes entretiens exclusifs avec les développeurs, artistes et personnalités du monde du jeu vidéo, spécialisés dans les RPG et jeux indépendants.">
     <meta property="og:image" content="https://gamecritique.fr/assets/img/logo-menu.png">
     <meta property="og:url" content="https://gamecritique.fr/interviews.html">
     <meta property="og:type" content="website">
@@ -15,14 +15,15 @@
     
     <!-- Balises Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Interviews - GameCritique">
-    <meta name="twitter:description" content="Découvrez mes entretiens exclusifs avec les développeurs, artistes et personnalités du monde du jeu vidéo, spécialisés dans les RPG et jeux indépendants.">
+    <meta name="twitter:title" data-i18n="interviews_page_title" content="Interviews - GameCritique">
+    <meta name="twitter:description" data-i18n="interviews_page_description" content="Découvrez mes entretiens exclusifs avec les développeurs, artistes et personnalités du monde du jeu vidéo, spécialisés dans les RPG et jeux indépendants.">
     <meta name="twitter:image" content="https://gamecritique.fr/assets/img/logo-menu.png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile-responsive.css">
     <script src="theme-switcher.js" defer></script>
+    <script src="language-switcher.js" defer></script>
     
 </head>
 <body>
@@ -31,11 +32,11 @@
             <nav class="navbar">
                 <div class="logo">Game<span>Critique</span></div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="tests.html">Tests</a></li>
-                    <li><a href="interviews.html" class="active">Interviews</a></li>
-                    <li><a href="partenariat.html">Partenariats</a></li>
-                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="tests.html" data-i18n="nav_tests">Tests</a></li>
+                    <li><a href="interviews.html" class="active" data-i18n="nav_interviews">Interviews</a></li>
+                    <li><a href="partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
+                    <li><a href="apropos.html" data-i18n="nav_about">À propos</a></li>
                     
                 </ul>
             </nav>
@@ -44,24 +45,24 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Mes Interviews</h1>
-            <p>Découvrez mes entretiens exclusifs avec les développeurs, artistes et personnalités du monde du jeu vidéo.</p>
+            <h1 data-i18n="interviews_title">Mes Interviews</h1>
+            <p data-i18n="interviews_subtitle">Découvrez mes entretiens exclusifs avec les développeurs, artistes et personnalités du monde du jeu vidéo.</p>
         </div>
     </section>
 
     <section class="featured">
         <div class="container">
-            <h2 class="section-title">Dernières Interviews</h2>
+            <h2 class="section-title" data-i18n="latest_interviews">Dernières Interviews</h2>
             <div class="games-grid">
                 <!-- Les interviews seront ajoutées progressivement -->
                 <div class="game-card">
                     <img src="assets/img/Alzara_Keyart_Steam.png" alt="ALZARA: Radiant Echoes" class="game-img">
                     <div class="game-info">
-                        <span class="game-platform platform-studio">Studio Camelia</span>
-                        <h3 class="game-title">ALZARA: Radiant Echoes</h3>
-                        <span class="publication-date">20 Mai 2025</span>
-                        <p class="game-excerpt">Une plongée dans les coulisses de ce JRPG inspiré des classiques avec une touche méditerranéenne.</p>
-                        <a href="alzara-interview.html" class="read-more">Lire l'interview</a>
+                        <span class="game-platform platform-studio" data-i18n="alzara_studio">Studio Camelia</span>
+                        <h3 class="game-title" data-i18n="alzara_title">ALZARA: Radiant Echoes</h3>
+                        <span class="publication-date" data-i18n="alzara_date">20 Mai 2025</span>
+                        <p class="game-excerpt" data-i18n="alzara_excerpt">Une plongée dans les coulisses de ce JRPG inspiré des classiques avec une touche méditerranéenne.</p>
+                        <a href="alzara-interview.html" class="read-more" data-i18n="read_interview">Lire l'interview</a>
                     </div>
                 </div>
             </div>
@@ -70,13 +71,13 @@
 
     <section class="categories">
         <div class="container">
-            <h2 class="section-title">Catégories d'Interviews</h2>
+            <h2 class="section-title" data-i18n="interview_categories">Catégories d'Interviews</h2>
             <div style="max-width: 800px; margin: 0 auto; text-align: justify;">
-                <p style="margin-bottom: 1.5rem;">Mes interviews sont organisées en plusieurs catégories pour vous aider à trouver le contenu qui vous intéresse :</p>
+                <p style="margin-bottom: 1.5rem;" data-i18n="interview_categories_text">Mes interviews sont organisées en plusieurs catégories pour vous aider à trouver le contenu qui vous intéresse :</p>
                 
                 <ul style="list-style-type: disc; margin-left: 2rem; margin-bottom: 1.5rem;">
-                    <li><strong>Développeurs</strong> - Discussions avec les créateurs de jeux sur leur processus créatif et leurs inspirations</li>
-                    <li><strong>Éditeurs</strong> - Échanges avec les éditeurs sur les tendances de l'industrie et leurs stratégies</li>
+                    <li><strong data-i18n="developers_category">Développeurs</strong> - <span data-i18n="developers_description">Discussions avec les créateurs de jeux sur leur processus créatif et leurs inspirations</span></li>
+                    <li><strong data-i18n="publishers_category">Éditeurs</strong> - <span data-i18n="publishers_description">Échanges avec les éditeurs sur les tendances de l'industrie et leurs stratégies</span></li>
                 </ul>
             </div>
         </div>
@@ -84,9 +85,9 @@
 
     <section class="newsletter">
         <div class="container">
-            <h2 class="section-title">Contactez-moi</h2>
-            <p>Vous êtes développeur, artiste ou acteur de l'industrie du jeu vidéo et souhaitez partager votre expérience ? Contactez-moi pour organiser une interview.</p>
-            <p>Email: <a href="mailto:contentcreator.jrpglibrary@gmail.com?subject=Interview%20Proposition">contentcreator.jrpglibrary@gmail.com</a></p>
+            <h2 class="section-title" data-i18n="contact_me">Contactez-moi</h2>
+            <p data-i18n="contact_interview_text">Vous êtes développeur, artiste ou acteur de l'industrie du jeu vidéo et souhaitez partager votre expérience ? Contactez-moi pour organiser une interview.</p>
+            <p><span data-i18n="email_label">Email:</span> <a href="mailto:contentcreator.jrpglibrary@gmail.com?subject=Interview%20Proposition">contentcreator.jrpglibrary@gmail.com</a></p>
         </div>
     </section>
 
@@ -95,20 +96,20 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo">Game<span>Critique</span></div>
-                    <p>Votre référence pour les tests de jeux vidéo.</p>
+                    <p data-i18n="footer_reference">Votre référence pour les tests de jeux vidéo.</p>
                 </div>
                 <div class="footer-links">
-                    <h3>Liens rapides</h3>
+                    <h3 data-i18n="quick_links">Liens rapides</h3>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="tests.html">Tests</a></li>
-                        <li><a href="interviews.html">Interviews</a></li>
-                        <li><a href="partenariat.html">Partenariats</a></li>
-                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                        <li><a href="tests.html" data-i18n="nav_tests">Tests</a></li>
+                        <li><a href="interviews.html" data-i18n="nav_interviews">Interviews</a></li>
+                        <li><a href="partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
+                        <li><a href="apropos.html" data-i18n="nav_about">À propos</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h3>Suivez-moi</h3>
+                    <h3 data-i18n="follow_me">Suivez-moi</h3>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -119,7 +120,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 GameCritique. Tous droits réservés.</p>
+                <p data-i18n="copyright">&copy; 2025 GameCritique. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

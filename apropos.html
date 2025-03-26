@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos - GameCritique</title>
+    <title data-i18n="about_page_title">À propos - GameCritique</title>
     
     <!-- Balises Open Graph pour l'aperçu des liens -->
-    <meta property="og:title" content="À propos - GameCritique">
-    <meta property="og:description" content="Découvrez l'histoire, la mission et les valeurs de GameCritique, votre référence pour les tests de jeux vidéo spécialisés dans les RPG et jeux indépendants.">
+    <meta property="og:title" data-i18n="about_page_title" content="À propos - GameCritique">
+    <meta property="og:description" data-i18n="about_page_description" content="Découvrez l'histoire, la mission et les valeurs de GameCritique, votre référence pour les tests de jeux vidéo spécialisés dans les RPG et jeux indépendants.">
     <meta property="og:image" content="https://gamecritique.fr/assets/img/logo-menu.png">
     <meta property="og:url" content="https://gamecritique.fr/apropos.html">
     <meta property="og:type" content="website">
@@ -15,14 +15,15 @@
     
     <!-- Balises Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="À propos - GameCritique">
-    <meta name="twitter:description" content="Découvrez l'histoire, la mission et les valeurs de GameCritique, votre référence pour les tests de jeux vidéo spécialisés dans les RPG et jeux indépendants.">
+    <meta name="twitter:title" data-i18n="about_page_title" content="À propos - GameCritique">
+    <meta name="twitter:description" data-i18n="about_page_description" content="Découvrez l'histoire, la mission et les valeurs de GameCritique, votre référence pour les tests de jeux vidéo spécialisés dans les RPG et jeux indépendants.">
     <meta name="twitter:image" content="https://gamecritique.fr/assets/img/logo-menu.png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile-responsive.css">
     <script src="theme-switcher.js" defer></script>
+    <script src="language-switcher.js" defer></script>
     
 </head>
 <body>
@@ -31,11 +32,11 @@
             <nav class="navbar">
                 <div class="logo">Game<span>Critique</span></div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="tests.html">Tests</a></li>
-                    <li><a href="interviews.html">Interviews</a></li>
-                    <li><a href="partenariat.html">Partenariats</a></li>
-                    <li><a href="apropos.html" class="active">À propos</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="tests.html" data-i18n="nav_tests">Tests</a></li>
+                    <li><a href="interviews.html" data-i18n="nav_interviews">Interviews</a></li>
+                    <li><a href="partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
+                    <li><a href="apropos.html" class="active" data-i18n="nav_about">À propos</a></li>
                     
                 </ul>
             </nav>
@@ -44,49 +45,49 @@
 
     <section class="hero">
         <div class="container">
-            <h1>À propos de GameCritique</h1>
-            <p>Découvrez mon histoire, ma mission et mes valeurs.</p>
+            <h1 data-i18n="about_title">À propos de GameCritique</h1>
+            <p data-i18n="about_subtitle">Découvrez mon histoire, ma mission et mes valeurs.</p>
         </div>
     </section>
 
     <section class="featured">
         <div class="container">
-            <h2 class="section-title">GameCritique : L'extension de mon univers TikTok</h2>
+            <h2 class="section-title" data-i18n="about_section1_title">GameCritique : L'extension de mon univers TikTok</h2>
 
             <div style="max-width: 800px; margin: 0 auto; text-align: justify;">
-                <p style="margin-bottom: 1.5rem;">Je suis jRPGcontentCreator, créateur de contenu et passionné de jeux vidéo depuis les années 90. Mon aventure a commencé sur TikTok, où je partage au quotidien mini-découvertes, bandes-annonces, unboxings et avis à chaud sur les jeux que je teste.</p>
+                <p style="margin-bottom: 1.5rem;" data-i18n="about_paragraph1">Je suis jRPGcontentCreator, créateur de contenu et passionné de jeux vidéo depuis les années 90. Mon aventure a commencé sur TikTok, où je partage au quotidien mini-découvertes, bandes-annonces, unboxings et avis à chaud sur les jeux que je teste.</p>
                 
-                <p style="margin-bottom: 1.5rem;">GameCritique n'est pas un média comme les autres, c'est une extension de mon univers, un espace où je regroupe mes analyses, mes ressentis et mes critiques les plus détaillées. Un complément à mes vidéos, pensé pour les joueurs curieux, mais aussi pour les éditeurs, développeurs et distributeurs qui souhaitent avoir un retour sincère sur leurs titres.</p>
+                <p style="margin-bottom: 1.5rem;" data-i18n="about_paragraph2">GameCritique n'est pas un média comme les autres, c'est une extension de mon univers, un espace où je regroupe mes analyses, mes ressentis et mes critiques les plus détaillées. Un complément à mes vidéos, pensé pour les joueurs curieux, mais aussi pour les éditeurs, développeurs et distributeurs qui souhaitent avoir un retour sincère sur leurs titres.</p>
             </div>
         </div>
     </section>
 
     <section class="recent-reviews">
         <div class="container">
-            <h2 class="section-title">Ma mission avec GameCritique</h2>
+            <h2 class="section-title" data-i18n="about_section2_title">Ma mission avec GameCritique</h2>
             <div style="max-width: 800px; margin: 0 auto; text-align: justify;">
-                <p style="margin-bottom: 1.5rem;">Si vous me suivez sur TikTok, vous savez que je ne fais pas dans la complaisance. Chaque jeu est testé avec sérieux, mais toujours avec passion et honnêteté.</p>
+                <p style="margin-bottom: 1.5rem;" data-i18n="about_paragraph3">Si vous me suivez sur TikTok, vous savez que je ne fais pas dans la complaisance. Chaque jeu est testé avec sérieux, mais toujours avec passion et honnêteté.</p>
                 
                 <ul style="list-style-type: disc; margin-left: 2rem; margin-bottom: 1.5rem;">
-                    <li>🎮 Un avis approfondi : ici, pas de survol rapide, j'explore chaque jeu à fond</li>
-                    <li>🕹️ Un espace indépendant : pas d'influence extérieure, juste mon ressenti authentique</li>
-                    <li>📱 Un complément à mes vidéos TikTok : là où je peux aller plus en détail sur mes tests</li>
-                    <li>🎥 Un outil pour les éditeurs & développeurs : un lieu où leur travail est mis en valeur, avec un regard critique et constructif</li>
-                    <li>🌍 Un lien direct avec la communauté : un espace où je peux archiver mes retours et prolonger nos échanges</li>
+                    <li data-i18n="about_list_item1">🎮 Un avis approfondi : ici, pas de survol rapide, j'explore chaque jeu à fond</li>
+                    <li data-i18n="about_list_item2">🕹️ Un espace indépendant : pas d'influence extérieure, juste mon ressenti authentique</li>
+                    <li data-i18n="about_list_item3">📱 Un complément à mes vidéos TikTok : là où je peux aller plus en détail sur mes tests</li>
+                    <li data-i18n="about_list_item4">🎥 Un outil pour les éditeurs & développeurs : un lieu où leur travail est mis en valeur, avec un regard critique et constructif</li>
+                    <li data-i18n="about_list_item5">🌍 Un lien direct avec la communauté : un espace où je peux archiver mes retours et prolonger nos échanges</li>
                 </ul>
                 
-                <p style="margin-bottom: 1.5rem;">GameCritique, c'est mon carnet de bord vidéoludique, un lieu où je prends le temps de poser mes idées et d'offrir aux joueurs et aux professionnels du milieu un regard sincère sur l'industrie.</p>
+                <p style="margin-bottom: 1.5rem;" data-i18n="about_paragraph4">GameCritique, c'est mon carnet de bord vidéoludique, un lieu où je prends le temps de poser mes idées et d'offrir aux joueurs et aux professionnels du milieu un regard sincère sur l'industrie.</p>
                 
-                <p style="margin-bottom: 1.5rem;">Que ce soit en vidéo, en stream ou ici, une seule promesse : parler gaming avec passion, expertise et une pointe de fun !</p>
+                <p style="margin-bottom: 1.5rem;" data-i18n="about_paragraph5">Que ce soit en vidéo, en stream ou ici, une seule promesse : parler gaming avec passion, expertise et une pointe de fun !</p>
             </div>
         </div>
     </section>
 
     <section class="categories">
         <div class="container">
-            <h2 class="section-title">Mon système de notation</h2>
+            <h2 class="section-title" data-i18n="about_section3_title">Mon système de notation</h2>
             <div style="max-width: 800px; margin: 0 auto; text-align: justify;">
-                <p style="margin-bottom: 1.5rem;">J'utilise un système de notation sur 5 étoiles pour évaluer les jeux que je teste. Voici ce que signifie chaque note :</p>
+                <p style="margin-bottom: 1.5rem;" data-i18n="about_rating_intro">J'utilise un système de notation sur 5 étoiles pour évaluer les jeux que je teste. Voici ce que signifie chaque note :</p>
                 
                 <div style="margin-bottom: 1rem;">
                     <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
@@ -97,7 +98,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <strong>5/5</strong> - Chef-d'œuvre, une expérience exceptionnelle et incontournable
+                        <strong>5/5</strong> <span data-i18n="rating_5">- Chef-d'œuvre, une expérience exceptionnelle et incontournable</span>
                     </div>
                     
                     <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
@@ -108,7 +109,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <strong>4.5/5</strong> - Excellent, presque parfait avec quelques détails mineurs à améliorer
+                        <strong>4.5/5</strong> <span data-i18n="rating_4_5">- Excellent, presque parfait avec quelques détails mineurs à améliorer</span>
                     </div>
                     
                     <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
@@ -119,7 +120,7 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <strong>4/5</strong> - Très bon jeu, hautement recommandé malgré quelques défauts
+                        <strong>4/5</strong> <span data-i18n="rating_4">- Très bon jeu, hautement recommandé malgré quelques défauts</span>
                     </div>
                     
                     <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
@@ -130,7 +131,7 @@
                             <i class="fas fa-star-half-alt"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <strong>3.5/5</strong> - Bon jeu avec des qualités évidentes mais aussi des lacunes notables
+                        <strong>3.5/5</strong> <span data-i18n="rating_3_5">- Bon jeu avec des qualités évidentes mais aussi des lacunes notables</span>
                     </div>
                     
                     <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
@@ -141,7 +142,7 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <strong>3/5</strong> - Jeu moyen, peut plaire aux fans du genre mais présente des problèmes
+                        <strong>3/5</strong> <span data-i18n="rating_3">- Jeu moyen, peut plaire aux fans du genre mais présente des problèmes</span>
                     </div>
                     
                     <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
@@ -152,7 +153,7 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <strong>2/5</strong> - Décevant, difficile à recommander même avec quelques bonnes idées
+                        <strong>2/5</strong> <span data-i18n="rating_2">- Décevant, difficile à recommander même avec quelques bonnes idées</span>
                     </div>
                     
                     <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
@@ -163,7 +164,7 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <strong>1/5</strong> - À éviter, présente de sérieux problèmes fondamentaux
+                        <strong>1/5</strong> <span data-i18n="rating_1">- À éviter, présente de sérieux problèmes fondamentaux</span>
                     </div>
                 </div>
             </div>
@@ -172,8 +173,8 @@
 
     <section class="newsletter">
         <div class="container">
-            <h2 class="section-title">Contactez-moi</h2>
-            <p>Vous avez des questions, des suggestions ou souhaitez collaborer avec moi ? N'hésitez pas à me contacter pour échanger sur vos idées ou propositions.</p>
+            <h2 class="section-title" data-i18n="contact_me">Contactez-moi</h2>
+            <p data-i18n="about_contact_text">Vous avez des questions, des suggestions ou souhaitez collaborer avec moi ? N'hésitez pas à me contacter pour échanger sur vos idées ou propositions.</p>
             <p>Email: <a href="mailto:contentcreator.jrpglibrary@gmail.com?subject=Contact%20GameCritique">contentcreator.jrpglibrary@gmail.com</a></p>
         </div>
     </section>
@@ -183,20 +184,20 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo">Game<span>Critique</span></div>
-                    <p>Votre référence pour les tests de jeux vidéo.</p>
+                    <p data-i18n="footer_reference">Votre référence pour les tests de jeux vidéo.</p>
                 </div>
                 <div class="footer-links">
-                    <h3>Liens rapides</h3>
+                    <h3 data-i18n="quick_links">Liens rapides</h3>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="tests.html">Tests</a></li>
-                        <li><a href="interviews.html">Interviews</a></li>
-                        <li><a href="partenariat.html">Partenariats</a></li>
-                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                        <li><a href="tests.html" data-i18n="nav_tests">Tests</a></li>
+                        <li><a href="interviews.html" data-i18n="nav_interviews">Interviews</a></li>
+                        <li><a href="partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
+                        <li><a href="apropos.html" data-i18n="nav_about">À propos</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h3>Suivez-moi</h3>
+                    <h3 data-i18n="follow_me">Suivez-moi</h3>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -209,7 +210,7 @@
 
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 GameCritique. Tous droits réservés.</p>
+                <p data-i18n="copyright">&copy; 2025 GameCritique. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

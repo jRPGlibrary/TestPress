@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameCritique - Spécialiste RPG et Jeux Indépendants</title>
+    <title data-i18n="site_title">GameCritique - Spécialiste RPG et Jeux Indépendants</title>
     
     <!-- Balises Open Graph pour l'aperçu des liens -->
-    <meta property="og:title" content="GameCritique - Spécialiste RPG et Jeux Indépendants">
-    <meta property="og:description" content="Découvrez les meilleurs RPG et Jeux Indépendants avec des tests complets, des analyses détaillées et des avis d'experts sur GameCritique.">
+    <meta property="og:title" data-i18n="site_title" content="GameCritique - Spécialiste RPG et Jeux Indépendants">
+    <meta property="og:description" data-i18n="site_description" content="Découvrez les meilleurs RPG et Jeux Indépendants avec des tests complets, des analyses détaillées et des avis d'experts sur GameCritique.">
     <meta property="og:image" content="https://gamecritique.fr/assets/img/logo-menu.png">
     <meta property="og:url" content="https://gamecritique.fr/index.html">
     <meta property="og:type" content="website">
@@ -15,14 +15,15 @@
     
     <!-- Balises Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GameCritique - Spécialiste RPG et Jeux Indépendants">
-    <meta name="twitter:description" content="Découvrez les meilleurs RPG et Jeux Indépendants avec des tests complets, des analyses détaillées et des avis d'experts sur GameCritique.">
+    <meta name="twitter:title" data-i18n="site_title" content="GameCritique - Spécialiste RPG et Jeux Indépendants">
+    <meta name="twitter:description" data-i18n="site_description" content="Découvrez les meilleurs RPG et Jeux Indépendants avec des tests complets, des analyses détaillées et des avis d'experts sur GameCritique.">
     <meta name="twitter:image" content="https://gamecritique.fr/assets/img/logo-menu.png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile-responsive.css">
     <script src="theme-switcher.js" defer></script>
+    <script src="language-switcher.js" defer></script>
 
 </head>
 <body>
@@ -31,11 +32,11 @@
             <nav class="navbar">
                 <div class="logo">Game<span>Critique</span></div>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Accueil</a></li>
-                     <li><a href="tests.html">Tests</a></li>
-                    <li><a href="interviews.html">Interviews</a></li>
-                    <li><a href="partenariat.html">Partenariats</a></li>
-                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="index.html" class="active" data-i18n="nav_home">Accueil</a></li>
+                     <li><a href="tests.html" data-i18n="nav_tests">Tests</a></li>
+                    <li><a href="interviews.html" data-i18n="nav_interviews">Interviews</a></li>
+                    <li><a href="partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
+                    <li><a href="apropos.html" data-i18n="nav_about">À propos</a></li>
                     
                 </ul>
             </nav>
@@ -44,15 +45,15 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Découvrez les meilleurs RPG et Jeux Indépendants</h1>
-            <p>Des tests complets, des analyses détaillées et des avis d'experts sur les RPG en tout genre et les pépites indépendantes.</p>
-            <a href="tests.html" class="read-more">Voir les derniers tests</a>
+            <h1 data-i18n="hero_title">Découvrez les meilleurs RPG et Jeux Indépendants</h1>
+            <p data-i18n="hero_subtitle">Des tests complets, des analyses détaillées et des avis d'experts sur les RPG en tout genre et les pépites indépendantes.</p>
+            <a href="tests.html" class="read-more" data-i18n="see_latest_reviews">Voir les derniers tests</a>
         </div>
     </section>
 
     <section class="featured">
         <div class="container">
-            <h2 class="section-title">RPG Vedette</h2>
+            <h2 class="section-title" data-i18n="featured_rpg">RPG Vedette</h2>
             <div class="games-grid">
                 <div class="game-card">
                     <img src="assets/img/atelier-yumia.jpg" alt="Atelier Yumia" class="game-img">
@@ -74,8 +75,8 @@
                             </div>
                             <span class="rating-text">4/5</span>
                         </div>
-                        <p class="game-excerpt">Un JRPG d'alchimie qui perpétue l'héritage de la série Atelier avec une nouvelle héroïne.</p>
-                        <a href="atelier-yumia.html" class="read-more">Lire le test</a>
+                        <p class="game-excerpt" data-i18n="atelier_yumia_subtitle">Un JRPG d'alchimie qui perpétue l'héritage de la série Atelier avec une nouvelle héroïne.</p>
+                        <a href="atelier-yumia.html" class="read-more" data-i18n="read_review">Lire le test</a>
                     </div>
                 </div>
                 <!-- D'autres RPG vedettes seront ajoutés progressivement -->
@@ -85,7 +86,7 @@
 
     <section class="recent-reviews">
         <div class="container">
-            <h2 class="section-title">Jeux Indépendants à découvrir</h2>
+            <h2 class="section-title" data-i18n="indie_games_discover">Jeux Indépendants à découvrir</h2>
             <div class="games-grid">
                 <div class="game-card">
                     <img src="assets/img/SplitFiction.jpeg" alt="Split Fiction" class="game-img">
@@ -105,8 +106,8 @@
                             </div>
                             <span class="rating-text">5/5</span>
                         </div>
-                        <p class="game-excerpt">Une nouvelle aventure coopérative par Hazelight Studios, les créateurs du célèbre It Takes Two.</p>
-                        <a href="split-fiction.html" class="read-more">Lire le test</a>
+                        <p class="game-excerpt" data-i18n="split_fiction_subtitle">Une nouvelle aventure coopérative par Hazelight Studios, les créateurs du célèbre It Takes Two.</p>
+                        <a href="split-fiction.html" class="read-more" data-i18n="read_review">Lire le test</a>
                     </div>
                 </div>
                 <div class="game-card">
@@ -128,8 +129,8 @@
                             </div>
                             <span class="rating-text">3/5</span>
                         </div>
-                        <p class="game-excerpt">Un RPG de simulation de pêche avec des chats, entre charme et imperfections techniques.</p>
-                        <a href="whisker-waters.html" class="read-more">Lire le test</a>
+                        <p class="game-excerpt" data-i18n="whisker_waters_subtitle">Un RPG de simulation de pêche avec des chats, entre charme et imperfections techniques.</p>
+                        <a href="whisker-waters.html" class="read-more" data-i18n="read_review">Lire le test</a>
                     </div>
                 </div>
                 <!-- D'autres jeux indépendants seront ajoutés progressivement -->
@@ -139,8 +140,8 @@
 
     <section class="newsletter">
         <div class="container">
-            <h2 class="section-title">Restez Informé</h2>
-            <p>Abonnez-vous à ma newsletter pour recevoir les derniers tests et actualités du monde du jeu vidéo.</p>
+            <h2 class="section-title" data-i18n="stay_informed">Restez Informé</h2>
+            <p data-i18n="newsletter_text">Abonnez-vous à ma newsletter pour recevoir les derniers tests et actualités du monde du jeu vidéo.</p>
             <p>Email: <a href="mailto:contentcreator.jrpglibrary@gmail.com?subject=Newsletter%20GameCritique">contentcreator.jrpglibrary@gmail.com</a></p>
         </div>
     </section>
@@ -150,20 +151,20 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo">Game<span>Critique</span></div>
-                    <p>Votre référence pour les tests de jeux vidéo.</p>
+                    <p data-i18n="footer_reference">Votre référence pour les tests de jeux vidéo.</p>
                 </div>
                 <div class="footer-links">
-                    <h3>Liens rapides</h3>
+                    <h3 data-i18n="quick_links">Liens rapides</h3>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="tests.html">Tests</a></li>
-                        <li><a href="interviews.html">Interviews</a></li>
-                        <li><a href="partenariat.html">Partenariats</a></li>
-                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                        <li><a href="tests.html" data-i18n="nav_tests">Tests</a></li>
+                        <li><a href="interviews.html" data-i18n="nav_interviews">Interviews</a></li>
+                        <li><a href="partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
+                        <li><a href="apropos.html" data-i18n="nav_about">À propos</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h3>Suivez-moi</h3>
+                    <h3 data-i18n="follow_me">Suivez-moi</h3>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -176,7 +177,7 @@
 
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 GameCritique. Tous droits réservés.</p>
+                <p data-i18n="copyright">&copy; 2025 GameCritique. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
