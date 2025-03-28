@@ -99,15 +99,16 @@
     padding-bottom: 0.8rem;
 }
 
-.review-content a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.review-content a:hover {
+.review-content a, .review-footer a {
     color: var(--accent-color);
     text-decoration: underline;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.review-content a:hover, .review-footer a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 

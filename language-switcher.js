@@ -737,6 +737,164 @@ const translations = {
         'fr': 'Autres interviews',
         'en': 'Other interviews'
     },
+    
+    // BIOMORPH Interview
+    'biomorph_interview_title': {
+        'fr': 'Interview de Rayanne de Lucid Dreams Studio sur BIOMORPH - GameCritique',
+        'en': 'Interview with Rayanne from Lucid Dreams Studio about BIOMORPH - GameCritique'
+    },
+    'biomorph_interview_description': {
+        'fr': 'Découvrez notre entretien exclusif avec Rayanne, Brand Manager de Lucid Dreams Studio, sur BIOMORPH, un metroidvania innovant avec une mécanique unique de transformation.',
+        'en': 'Discover our exclusive interview with Rayanne, Brand Manager at Lucid Dreams Studio, about BIOMORPH, an innovative metroidvania with a unique transformation mechanic.'
+    },
+    'biomorph_interview_heading': {
+        'fr': 'BIOMORPH - Interview de Rayanne de Lucid Dreams Studio',
+        'en': 'BIOMORPH - Interview with Rayanne from Lucid Dreams Studio'
+    },
+    'biomorph_interview_subtitle': {
+        'fr': 'Une plongée dans les coulisses de ce metroidvania innovant avec une mécanique unique de transformation',
+        'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic'
+    },
+    'biomorph_interview_author': {
+        'fr': 'Interview réalisée par jRPG_Library, post-launch',
+        'en': 'Interview conducted by jRPG_Library, post-launch'
+    },
+    'biomorph_intro_text': {
+        'fr': 'J\'ai eu l\'opportunité d\'interviewer Rayanne, Brand Manager chez Lucid Dreams Studio, pour discuter de <strong>BIOMORPH</strong>, un metroidvania innovant qui vient de sortir. Ce jeu propose une expérience unique avec sa mécanique de transformation permettant au joueur de prendre le contrôle des monstres qu\'il affronte, offrant ainsi une variété de gameplay jamais vue dans le genre.',
+        'en': 'I had the opportunity to interview Rayanne, Brand Manager at Lucid Dreams Studio, to discuss <strong>BIOMORPH</strong>, an innovative metroidvania that has just been released. This game offers a unique experience with its transformation mechanic allowing the player to take control of the monsters they face, thus offering a variety of gameplay never seen before in the genre.'
+    },
+    'biomorph_q1': {
+        'fr': 'Question: Peux-tu te présenter ?',
+        'en': 'Question: Can you introduce yourself?'
+    },
+    'biomorph_a1_p1': {
+        'fr': 'Salut ! Moi, c\'est Rayanne de Lucid Dreams Studio. Je travaille sur BIOMORPH depuis 2 ans en tant que Brand Manager. Mon objectif est de faire en sorte que le jeu BIOMORPH arrive jusqu\'à vous, tout en ayant une image de marque pertinente et en cohérence avec nos valeurs.',
+        'en': 'Hi! I\'m Rayanne from Lucid Dreams Studio. I\'ve been working on BIOMORPH for 2 years as a Brand Manager. My goal is to ensure that BIOMORPH reaches you, while having a relevant brand image that is consistent with our values.'
+    },
+    'biomorph_a1_p2': {
+        'fr': 'Merci à jRPG_Library de m\'avoir proposé cette interview post-launch, je suis ravi d\'être avec vous pour discuter du projet !',
+        'en': 'Thanks to jRPG_Library for offering me this post-launch interview, I\'m delighted to be with you to discuss the project!'
+    },
+    'biomorph_q2': {
+        'fr': 'Question: Pourquoi / Comment BIOMORPH est né ?',
+        'en': 'Question: Why / How was BIOMORPH born?'
+    },
+    'biomorph_a2_p1': {
+        'fr': 'BIOMORPH est né de la passion de la passion de Maxime et Francis, les deux fondateurs de Lucid Dreams Studio, envers le genre metroidvania. Hollow Knight, Ender Lilies, Blasphemous… Il n\'y a pas un jour au studio où je n\'entendais pas un de ces noms !',
+        'en': 'BIOMORPH was born from the passion of Maxime and Francis, the two founders of Lucid Dreams Studio, for the metroidvania genre. Hollow Knight, Ender Lilies, Blasphemous... There wasn\'t a day at the studio where I didn\'t hear one of these names!'
+    },
+    'biomorph_a2_p2': {
+        'fr': 'C\'est en jouant à Mario Odyssey que Maxime a eu une vision pour le jeu. La mécanique de prendre le contrôle des monstres que l\'on affronte en incarnant Mario lui a vraiment plu. Là, les questions se posaient : "est-ce que cette mécanique existe dans un metroidvania ?", "prendre la créature des monstres donnerait un gameplay unique pour chaque monstre tué ?", "est-ce que c\'est une mécanique qui plaira aux joueurs ?".',
+        'en': 'It was while playing Mario Odyssey that Maxime had a vision for the game. The mechanic of taking control of the monsters you face while playing as Mario really appealed to him. Then, questions arose: "does this mechanic exist in a metroidvania?", "would taking the creature of monsters give unique gameplay for each monster killed?", "is this a mechanic that players will enjoy?"'
+    },
+    'biomorph_a2_p3': {
+        'fr': 'En tant que fan de metroidvania et vétéran dans ce genre, c\'est ainsi qu\'ils ont senti une opportunité. Le pouvoir du BIOMORPH était un moyen de créer une nouveauté jamais vue dans le genre du metroidvania !',
+        'en': 'As a metroidvania fan and veteran in this genre, that\'s how they sensed an opportunity. The power of BIOMORPH was a way to create something never seen before in the metroidvania genre!'
+    },
+    'biomorph_q3': {
+        'fr': 'Question: Inspirations, durée de vie, nombre de transformations',
+        'en': 'Question: Inspirations, game length, number of transformations'
+    },
+    'biomorph_a3_p1': {
+        'fr': 'Pour les inspirations, j\'y ai un peu répondu au-dessus. BIOMORPH s\'inspire d\'Hollow Knight et Ender Lilies pour la partie metroidvania, de Mario Odyssey et de Kirby pour la partie pouvoir.',
+        'en': 'For inspirations, I\'ve answered a bit above. BIOMORPH is inspired by Hollow Knight and Ender Lilies for the metroidvania part, and by Mario Odyssey and Kirby for the power part.'
+    },
+    'biomorph_a3_p2': {
+        'fr': 'La durée de vie dépendra vraiment de votre expérience sur le genre metroidvania. En moyenne, je dirais entre un 15h - 20h pour les bons joueurs de metroidvania et cela peut aller à beaucoup plus pour ceux qui aiment prendre le temps de tout explorer, et de contempler le monde qu\'ils explorent.',
+        'en': 'The game length will really depend on your experience with the metroidvania genre. On average, I would say between 15-20 hours for good metroidvania players, and it can go much longer for those who like to take the time to explore everything and contemplate the world they\'re exploring.'
+    },
+    'biomorph_a3_p3': {
+        'fr': 'Pour les transformations, nous avons un total de 21 monstres. En excluant la totalité des armes et des mementos que nous avons, cela vous fait un minimum de 21 gameplays différents ! Chaque monstre ayant en moyenne entre 1 et 2 attaques… Je vous laisse imaginer le temps que cela va vous prendre à tous les maîtriser.',
+        'en': 'For transformations, we have a total of 21 monsters. Excluding all the weapons and mementos we have, that gives you a minimum of 21 different gameplays! Each monster having on average between 1 and 2 attacks... I\'ll let you imagine how long it will take you to master them all.'
+    },
+    'biomorph_q4': {
+        'fr': 'Question: Combien sommes-nous sur le projet ?',
+        'en': 'Question: How many of us are on the project?'
+    },
+    'biomorph_a4_p1': {
+        'fr': 'Nous sommes une douzaine à travailler sur BIOMORPH. Cela pouvait changer selon les besoins que nous avions à des moments précis mais nous n\'avons jamais dépassé la vingtaine.',
+        'en': 'We are about a dozen people working on BIOMORPH. This could change depending on the needs we had at specific times, but we never exceeded twenty.'
+    },
+    'biomorph_a4_p2': {
+        'fr': 'Nous sommes 7 départements : Art, Animation, Design, Marketing, Musique, Programmation et Testeur.',
+        'en': 'We have 7 departments: Art, Animation, Design, Marketing, Music, Programming, and Testing.'
+    },
+    'biomorph_a4_p3': {
+        'fr': 'une partie de l\'équipe pendant le Megamigs 2023',
+        'en': 'part of the team during Megamigs 2023'
+    },
+    'biomorph_image_caption': {
+        'fr': 'L\'équipe de Lucid Dreams Studio au Megamigs 2023',
+        'en': 'The Lucid Dreams Studio team at Megamigs 2023'
+    },
+    'biomorph_q5': {
+        'fr': 'Question: Ce qui nous a donné le plus de difficulté et pourquoi ?',
+        'en': 'Question: What gave us the most difficulty and why?'
+    },
+    'biomorph_a5_p1': {
+        'fr': 'Globalement, nous avons toujours su atteindre les objectifs que nous nous étions fixés. Nous avons de la chance d\'avoir une partie de l\'équipe qui est vétérane de l\'industrie du jeu vidéo. Il nous est arrivé de couper certains éléments du jeu pour en faire venir d\'autres, plus pertinents, plus demandés par les joueurs.',
+        'en': 'Overall, we have always been able to achieve the goals we set for ourselves. We are lucky to have part of the team who are veterans of the video game industry. We sometimes had to cut certain elements of the game to bring in others that were more relevant and more requested by players.'
+    },
+    'biomorph_a5_p2': {
+        'fr': 'Le plus gros bloquant était évidemment d\'avoir un jeu qui mêle un design pertinent et fluide dans tout le jeu et d\'avoir, dans ce même jeu, une capacité qui te permet d\'utiliser à volonté tout le gameplay de chaque monstre rencontré tant en début qu\'en fin de jeu.',
+        'en': 'The biggest blocker was obviously having a game that combines relevant and fluid design throughout the game and having, in that same game, an ability that allows you to use at will all the gameplay of each monster encountered both at the beginning and at the end of the game.'
+    },
+    'biomorph_a5_p3': {
+        'fr': 'Par exemple, il fallait que notre équipe de designer prenne en compte le monstre Oddwing. Ce monstre a la capacité de voler et donc d\'explorer la zone comme personne. Cela veut dire que l\'ensemble du jeu doit prendre cela en compte.',
+        'en': 'For example, our design team had to take into account the Oddwing monster. This monster has the ability to fly and therefore explore the area like no one else. This means that the entire game has to take this into account.'
+    },
+    'biomorph_a5_p4': {
+        'fr': 'Pareil pour Scarbyttle. Elles peuvent flotter sur les spikes grâce à la fumée qu\'elles produisent… Nous avons du prendre ça en compte à chaque endroit du jeu ! Le monde de BIOMORPH est rempli de puzzle parce que ce monde aura été notre propre puzzle dans sa conception.',
+        'en': 'Same for Scarbyttle. They can float over spikes thanks to the smoke they produce... We had to take this into account at every location in the game! The world of BIOMORPH is filled with puzzles because this world was our own puzzle in its design.'
+    },
+    'biomorph_a5_p5': {
+        'fr': 'Cela nous a pris du temps, beaucoup de tests de zones mais nous avons finalement réussi !',
+        'en': 'It took us time, a lot of area testing, but we finally succeeded!'
+    },
+    'biomorph_q6': {
+        'fr': 'Question: Quels sont les plans du projet pour le futur ?',
+        'en': 'Question: What are the plans for the project in the future?'
+    },
+    'biomorph_a6_p1': {
+        'fr': 'Nous venons de sortir du launch donc c\'est difficile de voir ce qui peut se profiler pour nous ! Je dirais que tout dépend de la réception de BIOMORPH à la communauté metroidvania.',
+        'en': 'We just came out of the launch so it\'s difficult to see what might be in store for us! I would say it all depends on the reception of BIOMORPH by the metroidvania community.'
+    },
+    'biomorph_a6_p2': {
+        'fr': 'La certitude est que nous allons continuer à améliorer BIOMORPH. Nous avons de nombreux patches prévus pour modifier certaines choses afin de rendre le gameplay plus agréable.',
+        'en': 'The certainty is that we will continue to improve BIOMORPH. We have many patches planned to modify certain things to make the gameplay more enjoyable.'
+    },
+    'biomorph_a6_p3': {
+        'fr': 'Il y a d\'autres éléments qui arriveront au fur et à mesure mais je ne peux pas encore me prononcer là dessus…!',
+        'en': 'There are other elements that will come gradually but I can\'t comment on that yet...!'
+    },
+    'biomorph_a6_p4': {
+        'fr': 'Je vous invite à nous suivre sur notre Discord pour avoir les actualités en direct : https://discord.gg/FaDvF392wu',
+        'en': 'I invite you to follow us on our Discord to get the news live: https://discord.gg/FaDvF392wu'
+    },
+    'biomorph_footer_text': {
+        'fr': 'Merci d\'avoir lu cette interview avec Rayanne Berriche, Brand Manager chez Lucid Dreams Studio. Pour plus d\'informations sur BIOMORPH, n\'hésitez pas à visiter le site officiel du studio.',
+        'en': 'Thank you for reading this interview with Rayanne Berriche, Brand Manager at Lucid Dreams Studio. For more information about BIOMORPH, feel free to visit the official studio website.'
+    },
+    'biomorph_signature': {
+        'fr': 'Rayanne Berriche<br>Brand Manager | www.luciddreamsstudio.com',
+        'en': 'Rayanne Berriche<br>Brand Manager | www.luciddreamsstudio.com'
+    },
+    'biomorph_studio': {
+        'fr': 'Lucid Dreams Studio',
+        'en': 'Lucid Dreams Studio'
+    },
+    'biomorph_title': {
+        'fr': 'BIOMORPH',
+        'en': 'BIOMORPH'
+    },
+    'biomorph_date': {
+        'fr': 'Juin 2023',
+        'en': 'June 2023'
+    },
+    'biomorph_excerpt': {
+        'fr': 'Une plongée dans les coulisses de ce metroidvania innovant avec une mécanique unique de transformation.',
+        'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic.'
+    },
     'gameplay_mechanics': {
         'fr': 'Gameplay et Mécaniques de Jeu',
         'en': 'Gameplay and Game Mechanics'
@@ -788,6 +946,164 @@ const translations = {
     'other_interviews': {
         'fr': 'Autres interviews',
         'en': 'Other interviews'
+    },
+    
+    // BIOMORPH Interview
+    'biomorph_interview_title': {
+        'fr': 'Interview de Rayanne de Lucid Dreams Studio sur BIOMORPH - GameCritique',
+        'en': 'Interview with Rayanne from Lucid Dreams Studio about BIOMORPH - GameCritique'
+    },
+    'biomorph_interview_description': {
+        'fr': 'Découvrez notre entretien exclusif avec Rayanne, Brand Manager de Lucid Dreams Studio, sur BIOMORPH, un metroidvania innovant avec une mécanique unique de transformation.',
+        'en': 'Discover our exclusive interview with Rayanne, Brand Manager at Lucid Dreams Studio, about BIOMORPH, an innovative metroidvania with a unique transformation mechanic.'
+    },
+    'biomorph_interview_heading': {
+        'fr': 'BIOMORPH - Interview de Rayanne de Lucid Dreams Studio',
+        'en': 'BIOMORPH - Interview with Rayanne from Lucid Dreams Studio'
+    },
+    'biomorph_interview_subtitle': {
+        'fr': 'Une plongée dans les coulisses de ce metroidvania innovant avec une mécanique unique de transformation',
+        'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic'
+    },
+    'biomorph_interview_author': {
+        'fr': 'Interview réalisée par jRPG_Library, post-launch',
+        'en': 'Interview conducted by jRPG_Library, post-launch'
+    },
+    'biomorph_intro_text': {
+        'fr': 'J\'ai eu l\'opportunité d\'interviewer Rayanne, Brand Manager chez Lucid Dreams Studio, pour discuter de <strong>BIOMORPH</strong>, un metroidvania innovant qui vient de sortir. Ce jeu propose une expérience unique avec sa mécanique de transformation permettant au joueur de prendre le contrôle des monstres qu\'il affronte, offrant ainsi une variété de gameplay jamais vue dans le genre.',
+        'en': 'I had the opportunity to interview Rayanne, Brand Manager at Lucid Dreams Studio, to discuss <strong>BIOMORPH</strong>, an innovative metroidvania that has just been released. This game offers a unique experience with its transformation mechanic allowing the player to take control of the monsters they face, thus offering a variety of gameplay never seen before in the genre.'
+    },
+    'biomorph_q1': {
+        'fr': 'Question: Peux-tu te présenter ?',
+        'en': 'Question: Can you introduce yourself?'
+    },
+    'biomorph_a1_p1': {
+        'fr': 'Salut ! Moi, c\'est Rayanne de Lucid Dreams Studio. Je travaille sur BIOMORPH depuis 2 ans en tant que Brand Manager. Mon objectif est de faire en sorte que le jeu BIOMORPH arrive jusqu\'à vous, tout en ayant une image de marque pertinente et en cohérence avec nos valeurs.',
+        'en': 'Hi! I\'m Rayanne from Lucid Dreams Studio. I\'ve been working on BIOMORPH for 2 years as a Brand Manager. My goal is to ensure that BIOMORPH reaches you, while having a relevant brand image that is consistent with our values.'
+    },
+    'biomorph_a1_p2': {
+        'fr': 'Merci à jRPG_Library de m\'avoir proposé cette interview post-launch, je suis ravi d\'être avec vous pour discuter du projet !',
+        'en': 'Thanks to jRPG_Library for offering me this post-launch interview, I\'m delighted to be with you to discuss the project!'
+    },
+    'biomorph_q2': {
+        'fr': 'Question: Pourquoi / Comment BIOMORPH est né ?',
+        'en': 'Question: Why / How was BIOMORPH born?'
+    },
+    'biomorph_a2_p1': {
+        'fr': 'BIOMORPH est né de la passion de la passion de Maxime et Francis, les deux fondateurs de Lucid Dreams Studio, envers le genre metroidvania. Hollow Knight, Ender Lilies, Blasphemous… Il n\'y a pas un jour au studio où je n\'entendais pas un de ces noms !',
+        'en': 'BIOMORPH was born from the passion of Maxime and Francis, the two founders of Lucid Dreams Studio, for the metroidvania genre. Hollow Knight, Ender Lilies, Blasphemous... There wasn\'t a day at the studio where I didn\'t hear one of these names!'
+    },
+    'biomorph_a2_p2': {
+        'fr': 'C\'est en jouant à Mario Odyssey que Maxime a eu une vision pour le jeu. La mécanique de prendre le contrôle des monstres que l\'on affronte en incarnant Mario lui a vraiment plu. Là, les questions se posaient : "est-ce que cette mécanique existe dans un metroidvania ?", "prendre la créature des monstres donnerait un gameplay unique pour chaque monstre tué ?", "est-ce que c\'est une mécanique qui plaira aux joueurs ?".',
+        'en': 'It was while playing Mario Odyssey that Maxime had a vision for the game. The mechanic of taking control of the monsters you face while playing as Mario really appealed to him. Then, questions arose: "does this mechanic exist in a metroidvania?", "would taking the creature of monsters give unique gameplay for each monster killed?", "is this a mechanic that players will enjoy?"'
+    },
+    'biomorph_a2_p3': {
+        'fr': 'En tant que fan de metroidvania et vétéran dans ce genre, c\'est ainsi qu\'ils ont senti une opportunité. Le pouvoir du BIOMORPH était un moyen de créer une nouveauté jamais vue dans le genre du metroidvania !',
+        'en': 'As a metroidvania fan and veteran in this genre, that\'s how they sensed an opportunity. The power of BIOMORPH was a way to create something never seen before in the metroidvania genre!'
+    },
+    'biomorph_q3': {
+        'fr': 'Question: Inspirations, durée de vie, nombre de transformations',
+        'en': 'Question: Inspirations, game length, number of transformations'
+    },
+    'biomorph_a3_p1': {
+        'fr': 'Pour les inspirations, j\'y ai un peu répondu au-dessus. BIOMORPH s\'inspire d\'Hollow Knight et Ender Lilies pour la partie metroidvania, de Mario Odyssey et de Kirby pour la partie pouvoir.',
+        'en': 'For inspirations, I\'ve answered a bit above. BIOMORPH is inspired by Hollow Knight and Ender Lilies for the metroidvania part, and by Mario Odyssey and Kirby for the power part.'
+    },
+    'biomorph_a3_p2': {
+        'fr': 'La durée de vie dépendra vraiment de votre expérience sur le genre metroidvania. En moyenne, je dirais entre un 15h - 20h pour les bons joueurs de metroidvania et cela peut aller à beaucoup plus pour ceux qui aiment prendre le temps de tout explorer, et de contempler le monde qu\'ils explorent.',
+        'en': 'The game length will really depend on your experience with the metroidvania genre. On average, I would say between 15-20 hours for good metroidvania players, and it can go much longer for those who like to take the time to explore everything and contemplate the world they\'re exploring.'
+    },
+    'biomorph_a3_p3': {
+        'fr': 'Pour les transformations, nous avons un total de 21 monstres. En excluant la totalité des armes et des mementos que nous avons, cela vous fait un minimum de 21 gameplays différents ! Chaque monstre ayant en moyenne entre 1 et 2 attaques… Je vous laisse imaginer le temps que cela va vous prendre à tous les maîtriser.',
+        'en': 'For transformations, we have a total of 21 monsters. Excluding all the weapons and mementos we have, that gives you a minimum of 21 different gameplays! Each monster having on average between 1 and 2 attacks... I\'ll let you imagine how long it will take you to master them all.'
+    },
+    'biomorph_q4': {
+        'fr': 'Question: Combien sommes-nous sur le projet ?',
+        'en': 'Question: How many of us are on the project?'
+    },
+    'biomorph_a4_p1': {
+        'fr': 'Nous sommes une douzaine à travailler sur BIOMORPH. Cela pouvait changer selon les besoins que nous avions à des moments précis mais nous n\'avons jamais dépassé la vingtaine.',
+        'en': 'We are about a dozen people working on BIOMORPH. This could change depending on the needs we had at specific times, but we never exceeded twenty.'
+    },
+    'biomorph_a4_p2': {
+        'fr': 'Nous sommes 7 départements : Art, Animation, Design, Marketing, Musique, Programmation et Testeur.',
+        'en': 'We have 7 departments: Art, Animation, Design, Marketing, Music, Programming, and Testing.'
+    },
+    'biomorph_a4_p3': {
+        'fr': 'une partie de l\'équipe pendant le Megamigs 2023',
+        'en': 'part of the team during Megamigs 2023'
+    },
+    'biomorph_image_caption': {
+        'fr': 'L\'équipe de Lucid Dreams Studio au Megamigs 2023',
+        'en': 'The Lucid Dreams Studio team at Megamigs 2023'
+    },
+    'biomorph_q5': {
+        'fr': 'Question: Ce qui nous a donné le plus de difficulté et pourquoi ?',
+        'en': 'Question: What gave us the most difficulty and why?'
+    },
+    'biomorph_a5_p1': {
+        'fr': 'Globalement, nous avons toujours su atteindre les objectifs que nous nous étions fixés. Nous avons de la chance d\'avoir une partie de l\'équipe qui est vétérane de l\'industrie du jeu vidéo. Il nous est arrivé de couper certains éléments du jeu pour en faire venir d\'autres, plus pertinents, plus demandés par les joueurs.',
+        'en': 'Overall, we have always been able to achieve the goals we set for ourselves. We are lucky to have part of the team who are veterans of the video game industry. We sometimes had to cut certain elements of the game to bring in others that were more relevant and more requested by players.'
+    },
+    'biomorph_a5_p2': {
+        'fr': 'Le plus gros bloquant était évidemment d\'avoir un jeu qui mêle un design pertinent et fluide dans tout le jeu et d\'avoir, dans ce même jeu, une capacité qui te permet d\'utiliser à volonté tout le gameplay de chaque monstre rencontré tant en début qu\'en fin de jeu.',
+        'en': 'The biggest blocker was obviously having a game that combines relevant and fluid design throughout the game and having, in that same game, an ability that allows you to use at will all the gameplay of each monster encountered both at the beginning and at the end of the game.'
+    },
+    'biomorph_a5_p3': {
+        'fr': 'Par exemple, il fallait que notre équipe de designer prenne en compte le monstre Oddwing. Ce monstre a la capacité de voler et donc d\'explorer la zone comme personne. Cela veut dire que l\'ensemble du jeu doit prendre cela en compte.',
+        'en': 'For example, our design team had to take into account the Oddwing monster. This monster has the ability to fly and therefore explore the area like no one else. This means that the entire game has to take this into account.'
+    },
+    'biomorph_a5_p4': {
+        'fr': 'Pareil pour Scarbyttle. Elles peuvent flotter sur les spikes grâce à la fumée qu\'elles produisent… Nous avons du prendre ça en compte à chaque endroit du jeu ! Le monde de BIOMORPH est rempli de puzzle parce que ce monde aura été notre propre puzzle dans sa conception.',
+        'en': 'Same for Scarbyttle. They can float over spikes thanks to the smoke they produce... We had to take this into account at every location in the game! The world of BIOMORPH is filled with puzzles because this world was our own puzzle in its design.'
+    },
+    'biomorph_a5_p5': {
+        'fr': 'Cela nous a pris du temps, beaucoup de tests de zones mais nous avons finalement réussi !',
+        'en': 'It took us time, a lot of area testing, but we finally succeeded!'
+    },
+    'biomorph_q6': {
+        'fr': 'Question: Quels sont les plans du projet pour le futur ?',
+        'en': 'Question: What are the plans for the project in the future?'
+    },
+    'biomorph_a6_p1': {
+        'fr': 'Nous venons de sortir du launch donc c\'est difficile de voir ce qui peut se profiler pour nous ! Je dirais que tout dépend de la réception de BIOMORPH à la communauté metroidvania.',
+        'en': 'We just came out of the launch so it\'s difficult to see what might be in store for us! I would say it all depends on the reception of BIOMORPH by the metroidvania community.'
+    },
+    'biomorph_a6_p2': {
+        'fr': 'La certitude est que nous allons continuer à améliorer BIOMORPH. Nous avons de nombreux patches prévus pour modifier certaines choses afin de rendre le gameplay plus agréable.',
+        'en': 'The certainty is that we will continue to improve BIOMORPH. We have many patches planned to modify certain things to make the gameplay more enjoyable.'
+    },
+    'biomorph_a6_p3': {
+        'fr': 'Il y a d\'autres éléments qui arriveront au fur et à mesure mais je ne peux pas encore me prononcer là dessus…!',
+        'en': 'There are other elements that will come gradually but I can\'t comment on that yet...!'
+    },
+    'biomorph_a6_p4': {
+        'fr': 'Je vous invite à nous suivre sur notre Discord pour avoir les actualités en direct : https://discord.gg/FaDvF392wu',
+        'en': 'I invite you to follow us on our Discord to get the news live: https://discord.gg/FaDvF392wu'
+    },
+    'biomorph_footer_text': {
+        'fr': 'Merci d\'avoir lu cette interview avec Rayanne Berriche, Brand Manager chez Lucid Dreams Studio. Pour plus d\'informations sur BIOMORPH, n\'hésitez pas à visiter le site officiel du studio.',
+        'en': 'Thank you for reading this interview with Rayanne Berriche, Brand Manager at Lucid Dreams Studio. For more information about BIOMORPH, feel free to visit the official studio website.'
+    },
+    'biomorph_signature': {
+        'fr': 'Rayanne Berriche<br>Brand Manager | www.luciddreamsstudio.com',
+        'en': 'Rayanne Berriche<br>Brand Manager | www.luciddreamsstudio.com'
+    },
+    'biomorph_studio': {
+        'fr': 'Lucid Dreams Studio',
+        'en': 'Lucid Dreams Studio'
+    },
+    'biomorph_title': {
+        'fr': 'BIOMORPH',
+        'en': 'BIOMORPH'
+    },
+    'biomorph_date': {
+        'fr': 'Juin 2023',
+        'en': 'June 2023'
+    },
+    'biomorph_excerpt': {
+        'fr': 'Une plongée dans les coulisses de ce metroidvania innovant avec une mécanique unique de transformation.',
+        'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic.'
     },
     
     // Partners
@@ -1158,6 +1474,164 @@ const translations = {
     'other_interviews': {
         'fr': 'Autres interviews',
         'en': 'Other interviews'
+    },
+    
+    // BIOMORPH Interview
+    'biomorph_interview_title': {
+        'fr': 'Interview de Rayanne de Lucid Dreams Studio sur BIOMORPH - GameCritique',
+        'en': 'Interview with Rayanne from Lucid Dreams Studio about BIOMORPH - GameCritique'
+    },
+    'biomorph_interview_description': {
+        'fr': 'Découvrez notre entretien exclusif avec Rayanne, Brand Manager de Lucid Dreams Studio, sur BIOMORPH, un metroidvania innovant avec une mécanique unique de transformation.',
+        'en': 'Discover our exclusive interview with Rayanne, Brand Manager at Lucid Dreams Studio, about BIOMORPH, an innovative metroidvania with a unique transformation mechanic.'
+    },
+    'biomorph_interview_heading': {
+        'fr': 'BIOMORPH - Interview de Rayanne de Lucid Dreams Studio',
+        'en': 'BIOMORPH - Interview with Rayanne from Lucid Dreams Studio'
+    },
+    'biomorph_interview_subtitle': {
+        'fr': 'Une plongée dans les coulisses de ce metroidvania innovant avec une mécanique unique de transformation',
+        'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic'
+    },
+    'biomorph_interview_author': {
+        'fr': 'Interview réalisée par jRPG_Library, post-launch',
+        'en': 'Interview conducted by jRPG_Library, post-launch'
+    },
+    'biomorph_intro_text': {
+        'fr': 'J\'ai eu l\'opportunité d\'interviewer Rayanne, Brand Manager chez Lucid Dreams Studio, pour discuter de <strong>BIOMORPH</strong>, un metroidvania innovant qui vient de sortir. Ce jeu propose une expérience unique avec sa mécanique de transformation permettant au joueur de prendre le contrôle des monstres qu\'il affronte, offrant ainsi une variété de gameplay jamais vue dans le genre.',
+        'en': 'I had the opportunity to interview Rayanne, Brand Manager at Lucid Dreams Studio, to discuss <strong>BIOMORPH</strong>, an innovative metroidvania that has just been released. This game offers a unique experience with its transformation mechanic allowing the player to take control of the monsters they face, thus offering a variety of gameplay never seen before in the genre.'
+    },
+    'biomorph_q1': {
+        'fr': 'Question: Peux-tu te présenter ?',
+        'en': 'Question: Can you introduce yourself?'
+    },
+    'biomorph_a1_p1': {
+        'fr': 'Salut ! Moi, c\'est Rayanne de Lucid Dreams Studio. Je travaille sur BIOMORPH depuis 2 ans en tant que Brand Manager. Mon objectif est de faire en sorte que le jeu BIOMORPH arrive jusqu\'à vous, tout en ayant une image de marque pertinente et en cohérence avec nos valeurs.',
+        'en': 'Hi! I\'m Rayanne from Lucid Dreams Studio. I\'ve been working on BIOMORPH for 2 years as a Brand Manager. My goal is to ensure that BIOMORPH reaches you, while having a relevant brand image that is consistent with our values.'
+    },
+    'biomorph_a1_p2': {
+        'fr': 'Merci à jRPG_Library de m\'avoir proposé cette interview post-launch, je suis ravi d\'être avec vous pour discuter du projet !',
+        'en': 'Thanks to jRPG_Library for offering me this post-launch interview, I\'m delighted to be with you to discuss the project!'
+    },
+    'biomorph_q2': {
+        'fr': 'Question: Pourquoi / Comment BIOMORPH est né ?',
+        'en': 'Question: Why / How was BIOMORPH born?'
+    },
+    'biomorph_a2_p1': {
+        'fr': 'BIOMORPH est né de la passion de la passion de Maxime et Francis, les deux fondateurs de Lucid Dreams Studio, envers le genre metroidvania. Hollow Knight, Ender Lilies, Blasphemous… Il n\'y a pas un jour au studio où je n\'entendais pas un de ces noms !',
+        'en': 'BIOMORPH was born from the passion of Maxime and Francis, the two founders of Lucid Dreams Studio, for the metroidvania genre. Hollow Knight, Ender Lilies, Blasphemous... There wasn\'t a day at the studio where I didn\'t hear one of these names!'
+    },
+    'biomorph_a2_p2': {
+        'fr': 'C\'est en jouant à Mario Odyssey que Maxime a eu une vision pour le jeu. La mécanique de prendre le contrôle des monstres que l\'on affronte en incarnant Mario lui a vraiment plu. Là, les questions se posaient : "est-ce que cette mécanique existe dans un metroidvania ?", "prendre la créature des monstres donnerait un gameplay unique pour chaque monstre tué ?", "est-ce que c\'est une mécanique qui plaira aux joueurs ?".',
+        'en': 'It was while playing Mario Odyssey that Maxime had a vision for the game. The mechanic of taking control of the monsters you face while playing as Mario really appealed to him. Then, questions arose: "does this mechanic exist in a metroidvania?", "would taking the creature of monsters give unique gameplay for each monster killed?", "is this a mechanic that players will enjoy?"'
+    },
+    'biomorph_a2_p3': {
+        'fr': 'En tant que fan de metroidvania et vétéran dans ce genre, c\'est ainsi qu\'ils ont senti une opportunité. Le pouvoir du BIOMORPH était un moyen de créer une nouveauté jamais vue dans le genre du metroidvania !',
+        'en': 'As a metroidvania fan and veteran in this genre, that\'s how they sensed an opportunity. The power of BIOMORPH was a way to create something never seen before in the metroidvania genre!'
+    },
+    'biomorph_q3': {
+        'fr': 'Question: Inspirations, durée de vie, nombre de transformations',
+        'en': 'Question: Inspirations, game length, number of transformations'
+    },
+    'biomorph_a3_p1': {
+        'fr': 'Pour les inspirations, j\'y ai un peu répondu au-dessus. BIOMORPH s\'inspire d\'Hollow Knight et Ender Lilies pour la partie metroidvania, de Mario Odyssey et de Kirby pour la partie pouvoir.',
+        'en': 'For inspirations, I\'ve answered a bit above. BIOMORPH is inspired by Hollow Knight and Ender Lilies for the metroidvania part, and by Mario Odyssey and Kirby for the power part.'
+    },
+    'biomorph_a3_p2': {
+        'fr': 'La durée de vie dépendra vraiment de votre expérience sur le genre metroidvania. En moyenne, je dirais entre un 15h - 20h pour les bons joueurs de metroidvania et cela peut aller à beaucoup plus pour ceux qui aiment prendre le temps de tout explorer, et de contempler le monde qu\'ils explorent.',
+        'en': 'The game length will really depend on your experience with the metroidvania genre. On average, I would say between 15-20 hours for good metroidvania players, and it can go much longer for those who like to take the time to explore everything and contemplate the world they\'re exploring.'
+    },
+    'biomorph_a3_p3': {
+        'fr': 'Pour les transformations, nous avons un total de 21 monstres. En excluant la totalité des armes et des mementos que nous avons, cela vous fait un minimum de 21 gameplays différents ! Chaque monstre ayant en moyenne entre 1 et 2 attaques… Je vous laisse imaginer le temps que cela va vous prendre à tous les maîtriser.',
+        'en': 'For transformations, we have a total of 21 monsters. Excluding all the weapons and mementos we have, that gives you a minimum of 21 different gameplays! Each monster having on average between 1 and 2 attacks... I\'ll let you imagine how long it will take you to master them all.'
+    },
+    'biomorph_q4': {
+        'fr': 'Question: Combien sommes-nous sur le projet ?',
+        'en': 'Question: How many of us are on the project?'
+    },
+    'biomorph_a4_p1': {
+        'fr': 'Nous sommes une douzaine à travailler sur BIOMORPH. Cela pouvait changer selon les besoins que nous avions à des moments précis mais nous n\'avons jamais dépassé la vingtaine.',
+        'en': 'We are about a dozen people working on BIOMORPH. This could change depending on the needs we had at specific times, but we never exceeded twenty.'
+    },
+    'biomorph_a4_p2': {
+        'fr': 'Nous sommes 7 départements : Art, Animation, Design, Marketing, Musique, Programmation et Testeur.',
+        'en': 'We have 7 departments: Art, Animation, Design, Marketing, Music, Programming, and Testing.'
+    },
+    'biomorph_a4_p3': {
+        'fr': 'une partie de l\'équipe pendant le Megamigs 2023',
+        'en': 'part of the team during Megamigs 2023'
+    },
+    'biomorph_image_caption': {
+        'fr': 'L\'équipe de Lucid Dreams Studio au Megamigs 2023',
+        'en': 'The Lucid Dreams Studio team at Megamigs 2023'
+    },
+    'biomorph_q5': {
+        'fr': 'Question: Ce qui nous a donné le plus de difficulté et pourquoi ?',
+        'en': 'Question: What gave us the most difficulty and why?'
+    },
+    'biomorph_a5_p1': {
+        'fr': 'Globalement, nous avons toujours su atteindre les objectifs que nous nous étions fixés. Nous avons de la chance d\'avoir une partie de l\'équipe qui est vétérane de l\'industrie du jeu vidéo. Il nous est arrivé de couper certains éléments du jeu pour en faire venir d\'autres, plus pertinents, plus demandés par les joueurs.',
+        'en': 'Overall, we have always been able to achieve the goals we set for ourselves. We are lucky to have part of the team who are veterans of the video game industry. We sometimes had to cut certain elements of the game to bring in others that were more relevant and more requested by players.'
+    },
+    'biomorph_a5_p2': {
+        'fr': 'Le plus gros bloquant était évidemment d\'avoir un jeu qui mêle un design pertinent et fluide dans tout le jeu et d\'avoir, dans ce même jeu, une capacité qui te permet d\'utiliser à volonté tout le gameplay de chaque monstre rencontré tant en début qu\'en fin de jeu.',
+        'en': 'The biggest blocker was obviously having a game that combines relevant and fluid design throughout the game and having, in that same game, an ability that allows you to use at will all the gameplay of each monster encountered both at the beginning and at the end of the game.'
+    },
+    'biomorph_a5_p3': {
+        'fr': 'Par exemple, il fallait que notre équipe de designer prenne en compte le monstre Oddwing. Ce monstre a la capacité de voler et donc d\'explorer la zone comme personne. Cela veut dire que l\'ensemble du jeu doit prendre cela en compte.',
+        'en': 'For example, our design team had to take into account the Oddwing monster. This monster has the ability to fly and therefore explore the area like no one else. This means that the entire game has to take this into account.'
+    },
+    'biomorph_a5_p4': {
+        'fr': 'Pareil pour Scarbyttle. Elles peuvent flotter sur les spikes grâce à la fumée qu\'elles produisent… Nous avons du prendre ça en compte à chaque endroit du jeu ! Le monde de BIOMORPH est rempli de puzzle parce que ce monde aura été notre propre puzzle dans sa conception.',
+        'en': 'Same for Scarbyttle. They can float over spikes thanks to the smoke they produce... We had to take this into account at every location in the game! The world of BIOMORPH is filled with puzzles because this world was our own puzzle in its design.'
+    },
+    'biomorph_a5_p5': {
+        'fr': 'Cela nous a pris du temps, beaucoup de tests de zones mais nous avons finalement réussi !',
+        'en': 'It took us time, a lot of area testing, but we finally succeeded!'
+    },
+    'biomorph_q6': {
+        'fr': 'Question: Quels sont les plans du projet pour le futur ?',
+        'en': 'Question: What are the plans for the project in the future?'
+    },
+    'biomorph_a6_p1': {
+        'fr': 'Nous venons de sortir du launch donc c\'est difficile de voir ce qui peut se profiler pour nous ! Je dirais que tout dépend de la réception de BIOMORPH à la communauté metroidvania.',
+        'en': 'We just came out of the launch so it\'s difficult to see what might be in store for us! I would say it all depends on the reception of BIOMORPH by the metroidvania community.'
+    },
+    'biomorph_a6_p2': {
+        'fr': 'La certitude est que nous allons continuer à améliorer BIOMORPH. Nous avons de nombreux patches prévus pour modifier certaines choses afin de rendre le gameplay plus agréable.',
+        'en': 'The certainty is that we will continue to improve BIOMORPH. We have many patches planned to modify certain things to make the gameplay more enjoyable.'
+    },
+    'biomorph_a6_p3': {
+        'fr': 'Il y a d\'autres éléments qui arriveront au fur et à mesure mais je ne peux pas encore me prononcer là dessus…!',
+        'en': 'There are other elements that will come gradually but I can\'t comment on that yet...!'
+    },
+    'biomorph_a6_p4': {
+        'fr': 'Je vous invite à nous suivre sur notre Discord pour avoir les actualités en direct : https://discord.gg/FaDvF392wu',
+        'en': 'I invite you to follow us on our Discord to get the news live: https://discord.gg/FaDvF392wu'
+    },
+    'biomorph_footer_text': {
+        'fr': 'Merci d\'avoir lu cette interview avec Rayanne Berriche, Brand Manager chez Lucid Dreams Studio. Pour plus d\'informations sur BIOMORPH, n\'hésitez pas à visiter le site officiel du studio.',
+        'en': 'Thank you for reading this interview with Rayanne Berriche, Brand Manager at Lucid Dreams Studio. For more information about BIOMORPH, feel free to visit the official studio website.'
+    },
+    'biomorph_signature': {
+        'fr': 'Rayanne Berriche<br>Brand Manager | https://www.luciddreamsstudio.com',
+        'en': 'Rayanne Berriche<br>Brand Manager | https://www.luciddreamsstudio.com'
+    },
+    'biomorph_studio': {
+        'fr': 'Lucid Dreams Studio',
+        'en': 'Lucid Dreams Studio'
+    },
+    'biomorph_title': {
+        'fr': 'BIOMORPH',
+        'en': 'BIOMORPH'
+    },
+    'biomorph_date': {
+        'fr': 'Juin 2023',
+        'en': 'June 2023'
+    },
+    'biomorph_excerpt': {
+        'fr': 'Une plongée dans les coulisses de ce metroidvania innovant avec une mécanique unique de transformation.',
+        'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic.'
     }
 };
 
