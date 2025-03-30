@@ -876,8 +876,8 @@ const translations = {
         'en': 'Thank you for reading this interview with Rayanne Berriche, Brand Manager at Lucid Dreams Studio. For more information about BIOMORPH, feel free to visit the official studio website.'
     },
     'biomorph_signature': {
-        'fr': 'Rayanne Berriche<br>Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">https://www.luciddreamsstudio.com</a>',
-        'en': 'Rayanne Berriche<br>Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">https://www.luciddreamsstudio.com</a>'
+        'fr': 'Rayanne Berriche, Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">Site officiel de Lucid Dreams Studio</a>',
+        'en': 'Rayanne Berriche, Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">Official Lucid Dreams Studio website</a>'
     },
     'biomorph_studio': {
         'fr': 'Lucid Dreams Studio',
@@ -1086,8 +1086,8 @@ const translations = {
         'en': 'Thank you for reading this interview with Rayanne Berriche, Brand Manager at Lucid Dreams Studio. For more information about BIOMORPH, feel free to visit the official studio website.'
     },
     'biomorph_signature': {
-        'fr': 'Rayanne Berriche<br>Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">https://www.luciddreamsstudio.com</a>',
-        'en': 'Rayanne Berriche<br>Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">https://www.luciddreamsstudio.com</a>'
+        'fr': 'Rayanne Berriche, Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">Site officiel de Lucid Dreams Studio</a>',
+        'en': 'Rayanne Berriche, Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">Official Lucid Dreams Studio website</a>'
     },
     'biomorph_studio': {
         'fr': 'Lucid Dreams Studio',
@@ -1614,8 +1614,8 @@ const translations = {
         'en': 'Thank you for reading this interview with Rayanne Berriche, Brand Manager at Lucid Dreams Studio. For more information about BIOMORPH, feel free to visit the official studio website.'
     },
     'biomorph_signature': {
-        'fr': 'Rayanne Berriche<br>Brand Manager | https://www.luciddreamsstudio.com',
-        'en': 'Rayanne Berriche<br>Brand Manager | https://www.luciddreamsstudio.com'
+        'fr': 'Rayanne Berriche, Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">Site officiel de Lucid Dreams Studio</a>',
+        'en': 'Rayanne Berriche, Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">Official Lucid Dreams Studio website</a>'
     },
     'biomorph_studio': {
         'fr': 'Lucid Dreams Studio',
@@ -1646,8 +1646,51 @@ function getTranslation(key) {
     return key; // Return the key itself if translation not found
 }
 
+// Function to validate HTML content
+function isValidHtml(html) {
+    // Create a temporary div to parse the HTML
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+    
+    // Check if the parsed HTML matches the original
+    // If not, there might be unclosed or malformed tags
+    return tempDiv.innerHTML === html;
+}
+
+// Function to detect URLs in text and convert them to clickable links
+function convertUrlsToLinks(text) {
+    // Regex to match URLs (http, https, www)
+    const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+        const href = url.startsWith('www.') ? 'https://' + url : url;
+        return `<a href="${href}" class="external-link" target="_blank">${url}</a>`;
+    });
+}
+
+// Function to process translation text and handle HTML content properly
+function processTranslationText(text) {
+    // Check if text contains HTML tags
+    const containsHtml = /<[a-z][\s\S]*>/i.test(text);
+    
+    if (containsHtml) {
+        // If it contains HTML, validate it
+        if (!isValidHtml(text)) {
+            console.warn('Invalid HTML detected in translation:', text);
+            // Try to fix common issues like unclosed tags
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = text;
+            return tempDiv.innerHTML;
+        }
+        return text;
+    }
+    
+    // If no HTML, check for URLs and convert them to links
+    return convertUrlsToLinks(text);
+}
+
 // Function to update all translatable elements on the page
 function updatePageLanguage() {
+    console.log('Applying translations in language: ' + currentLanguage);
     // Update HTML lang attribute
     document.documentElement.setAttribute('lang', currentLanguage);
     
@@ -1655,7 +1698,27 @@ function updatePageLanguage() {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[key]) {
-            element.textContent = getTranslation(key);
+            try {
+                const translatedText = getTranslation(key);
+                const processedText = processTranslationText(translatedText);
+                
+                // Add a visual indicator for elements with HTML issues in development mode
+                if (processedText !== translatedText && location.hostname === 'localhost') {
+                    element.classList.add('translation-fixed');
+                    element.title = 'Translation HTML was fixed automatically';
+                }
+                
+                // If the processed text contains HTML, use innerHTML, otherwise use textContent
+                if (/<[a-z][\s\S]*>/i.test(processedText)) {
+                    element.innerHTML = processedText;
+                } else {
+                    element.textContent = processedText;
+                }
+            } catch (error) {
+                console.error(`Error applying translation for key: ${key}`, error);
+                // Fallback to key name to prevent empty content
+                element.textContent = key;
+            }
         }
     });
     
@@ -1720,8 +1783,16 @@ function switchLanguage(lang) {
     }
 }
 
+// Try to apply translations as early as possible
+try {
+    updatePageLanguage();
+} catch (e) {
+    console.log('Early translation application failed, will retry on DOMContentLoaded', e);
+}
+
 // Create and add language switcher button when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM Content Loaded - applying translations');
     // Create language switcher if it doesn't exist
     if (!document.querySelector('.language-toggle')) {
         const navbar = document.querySelector('.nav-links');
@@ -1764,9 +1835,24 @@ document.addEventListener('DOMContentLoaded', function() {
     updatePageLanguage();
 });
 
+// Add a window load event to ensure translations are applied after all resources are loaded
+window.addEventListener('load', function() {
+    console.log('Window fully loaded - applying translations again');
+    // Apply translations again after everything is loaded
+    updatePageLanguage();
+});
+
 // Export functions for use in other scripts if needed
 window.i18n = {
     getTranslation,
     switchLanguage,
     updatePageLanguage
 };
+
+// Force a refresh when the page is loaded from cache (back/forward navigation)
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        console.log('Page loaded from cache - refreshing translations');
+        updatePageLanguage();
+    }
+});
