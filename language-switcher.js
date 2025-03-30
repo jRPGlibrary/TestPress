@@ -560,8 +560,8 @@ const translations = {
         'en': 'ALZARA: Radiant Echoes'
     },
     'alzara_date': {
-        'fr': '20 Mai 2025',
-        'en': 'May 20, 2025'
+        'fr': '20 Mai 2024',
+        'en': 'May 20, 2024'
     },
     'alzara_excerpt': {
         'fr': 'Une plongée dans les coulisses de ce JRPG inspiré des classiques avec une touche méditerranéenne.',
@@ -586,8 +586,8 @@ const translations = {
         'en': 'A behind-the-scenes look at this JRPG inspired by classics with a Mediterranean touch'
     },
     'alzara_interview_author': {
-        'fr': 'Interview réalisée par jRPGcontentCreator, 20 Mai 2025',
-        'en': 'Interview conducted by jRPGcontentCreator, May 20, 2025'
+        'fr': 'Interview réalisée par jRPGcontentCreator, 20 Mai 2024',
+        'en': 'Interview conducted by jRPGcontentCreator, May 20, 2024'
     },
     'project_origins': {
         'fr': 'Origines du Projet',
@@ -756,8 +756,8 @@ const translations = {
         'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic'
     },
     'biomorph_interview_author': {
-        'fr': 'Interview réalisée par jRPGcontentCreator, post-launch',
-        'en': 'Interview conducted by jRPGcontentCreator, post-launch'
+        'fr': 'Interview réalisée par jRPGcontentCreator, 14 Avril 2024',
+        'en': 'Interview conducted by jRPGcontentCreator, April 14, 2024'
     },
     'biomorph_intro_text': {
         'fr': 'J\'ai eu l\'opportunité d\'interviewer Rayanne, Brand Manager chez Lucid Dreams Studio, pour discuter de <strong>BIOMORPH</strong>, un metroidvania innovant qui vient de sortir. Ce jeu propose une expérience unique avec sa mécanique de transformation permettant au joueur de prendre le contrôle des monstres qu\'il affronte, offrant ainsi une variété de gameplay jamais vue dans le genre.',
@@ -888,8 +888,8 @@ const translations = {
         'en': 'BIOMORPH'
     },
     'biomorph_date': {
-        'fr': 'Juin 2023',
-        'en': 'June 2023'
+        'fr': '14 Avril 2024',
+        'en': 'April 14, 2024'
     },
     'biomorph_excerpt': {
         'fr': 'Une plongée dans les coulisses de ce metroidvania innovant avec une mécanique unique de transformation.',
@@ -966,8 +966,8 @@ const translations = {
         'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic'
     },
     'biomorph_interview_author': {
-        'fr': 'Interview réalisée par jRPGcontentCreator, post-launch',
-        'en': 'Interview conducted by jRPGcontentCreator, post-launch'
+        'fr': 'Interview réalisée par jRPGcontentCreator, 14 Avril 2024',
+        'en': 'Interview conducted by jRPGcontentCreator, April 14, 2024'
     },
     'biomorph_intro_text': {
         'fr': 'J\'ai eu l\'opportunité d\'interviewer Rayanne, Brand Manager chez Lucid Dreams Studio, pour discuter de <strong>BIOMORPH</strong>, un metroidvania innovant qui vient de sortir. Ce jeu propose une expérience unique avec sa mécanique de transformation permettant au joueur de prendre le contrôle des monstres qu\'il affronte, offrant ainsi une variété de gameplay jamais vue dans le genre.',
@@ -1098,8 +1098,8 @@ const translations = {
         'en': 'BIOMORPH'
     },
     'biomorph_date': {
-        'fr': 'Juin 2023',
-        'en': 'June 2023'
+        'fr': '14 Avril 2024',
+        'en': 'April 14, 2024'
     },
     'biomorph_excerpt': {
         'fr': 'Une plongée dans les coulisses de ce metroidvania innovant avec une mécanique unique de transformation.',
@@ -1280,8 +1280,8 @@ const translations = {
         'en': 'A behind-the-scenes look at this JRPG inspired by classics with a Mediterranean touch'
     },
     'alzara_interview_author': {
-        'fr': 'Interview réalisée par jRPGcontentCreator, 20 Mai 2025',
-        'en': 'Interview conducted by jRPGcontentCreator, May 20, 2025'
+        'fr': 'Interview réalisée par jRPGcontentCreator, 20 Mai 2024',
+        'en': 'Interview conducted by jRPGcontentCreator, May 20, 2024'
     },
     'alzara_intro_text': {
         'fr': 'J\'ai eu l\'opportunité d\'interviewer l\'équipe de développement de <strong>ALZARA: Radiant Echoes</strong>, un JRPG prometteur développé par Studio Camelia. Ce jeu, qui a récemment lancé sa campagne Kickstarter, propose une expérience inspirée des classiques du genre tout en apportant une touche d\'originalité avec son univers méditerranéen et ses mécaniques de combat innovantes.',
@@ -1494,8 +1494,8 @@ const translations = {
         'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic'
     },
     'biomorph_interview_author': {
-        'fr': 'Interview réalisée par jRPGcontentCreator, post-launch',
-        'en': 'Interview conducted by jRPGcontentCreator, post-launch'
+        'fr': 'Interview réalisée par jRPGcontentCreator, 14 Avril 2024',
+        'en': 'Interview conducted by jRPGcontentCreator, April 14, 2024'
     },
     'biomorph_intro_text': {
         'fr': 'J\'ai eu l\'opportunité d\'interviewer Rayanne, Brand Manager chez Lucid Dreams Studio, pour discuter de <strong>BIOMORPH</strong>, un metroidvania innovant qui vient de sortir. Ce jeu propose une expérience unique avec sa mécanique de transformation permettant au joueur de prendre le contrôle des monstres qu\'il affronte, offrant ainsi une variété de gameplay jamais vue dans le genre.',
@@ -1626,8 +1626,8 @@ const translations = {
         'en': 'BIOMORPH'
     },
     'biomorph_date': {
-        'fr': 'Juin 2023',
-        'en': 'June 2023'
+        'fr': '14 Avril 2024',
+        'en': 'April 14, 2024'
     },
     'biomorph_excerpt': {
         'fr': 'Une plongée dans les coulisses de ce metroidvania innovant avec une mécanique unique de transformation.',
