@@ -756,8 +756,8 @@ const translations = {
         'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic'
     },
     'biomorph_interview_author': {
-        'fr': 'Interview réalisée par jRPG_Library, post-launch',
-        'en': 'Interview conducted by jRPG_Library, post-launch'
+        'fr': 'Interview réalisée par jRPGcontentCreator, post-launch',
+        'en': 'Interview conducted by jRPGcontentCreator, post-launch'
     },
     'biomorph_intro_text': {
         'fr': 'J\'ai eu l\'opportunité d\'interviewer Rayanne, Brand Manager chez Lucid Dreams Studio, pour discuter de <strong>BIOMORPH</strong>, un metroidvania innovant qui vient de sortir. Ce jeu propose une expérience unique avec sa mécanique de transformation permettant au joueur de prendre le contrôle des monstres qu\'il affronte, offrant ainsi une variété de gameplay jamais vue dans le genre.',
@@ -772,8 +772,8 @@ const translations = {
         'en': 'Hi! I\'m Rayanne from Lucid Dreams Studio. I\'ve been working on BIOMORPH for 2 years as a Brand Manager. My goal is to ensure that BIOMORPH reaches you, while having a relevant brand image that is consistent with our values.'
     },
     'biomorph_a1_p2': {
-        'fr': 'Merci à jRPG_Library de m\'avoir proposé cette interview post-launch, je suis ravi d\'être avec vous pour discuter du projet !',
-        'en': 'Thanks to jRPG_Library for offering me this post-launch interview, I\'m delighted to be with you to discuss the project!'
+        'fr': 'Merci à jRPGcontentCreator de m\'avoir proposé cette interview post-launch, je suis ravi d\'être avec vous pour discuter du projet !',
+        'en': 'Thanks to jRPGcontentCreator for offering me this post-launch interview, I\'m delighted to be with you to discuss the project!'
     },
     'biomorph_q2': {
         'fr': 'Question: Pourquoi / Comment BIOMORPH est né ?',
@@ -868,16 +868,16 @@ const translations = {
         'en': 'There are other elements that will come gradually but I can\'t comment on that yet...!'
     },
     'biomorph_a6_p4': {
-        'fr': 'Je vous invite à nous suivre sur notre Discord pour avoir les actualités en direct : https://discord.gg/FaDvF392wu',
-        'en': 'I invite you to follow us on our Discord to get the news live: https://discord.gg/FaDvF392wu'
+        'fr': 'Je vous invite à nous suivre sur notre Discord pour avoir les actualités en direct : <a href="https://discord.gg/FaDvF392wu" class="external-link" target="_blank">https://discord.gg/FaDvF392wu</a>',
+        'en': 'I invite you to follow us on our Discord to get the news live: <a href="https://discord.gg/FaDvF392wu" class="external-link" target="_blank">https://discord.gg/FaDvF392wu</a>'
     },
     'biomorph_footer_text': {
         'fr': 'Merci d\'avoir lu cette interview avec Rayanne Berriche, Brand Manager chez Lucid Dreams Studio. Pour plus d\'informations sur BIOMORPH, n\'hésitez pas à visiter le site officiel du studio.',
         'en': 'Thank you for reading this interview with Rayanne Berriche, Brand Manager at Lucid Dreams Studio. For more information about BIOMORPH, feel free to visit the official studio website.'
     },
     'biomorph_signature': {
-        'fr': 'Rayanne Berriche<br>Brand Manager | www.luciddreamsstudio.com',
-        'en': 'Rayanne Berriche<br>Brand Manager | www.luciddreamsstudio.com'
+        'fr': 'Rayanne Berriche<br>Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">https://www.luciddreamsstudio.com</a>',
+        'en': 'Rayanne Berriche<br>Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">https://www.luciddreamsstudio.com</a>'
     },
     'biomorph_studio': {
         'fr': 'Lucid Dreams Studio',
@@ -966,8 +966,8 @@ const translations = {
         'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic'
     },
     'biomorph_interview_author': {
-        'fr': 'Interview réalisée par jRPG_Library, post-launch',
-        'en': 'Interview conducted by jRPG_Library, post-launch'
+        'fr': 'Interview réalisée par jRPGcontentCreator, post-launch',
+        'en': 'Interview conducted by jRPGcontentCreator, post-launch'
     },
     'biomorph_intro_text': {
         'fr': 'J\'ai eu l\'opportunité d\'interviewer Rayanne, Brand Manager chez Lucid Dreams Studio, pour discuter de <strong>BIOMORPH</strong>, un metroidvania innovant qui vient de sortir. Ce jeu propose une expérience unique avec sa mécanique de transformation permettant au joueur de prendre le contrôle des monstres qu\'il affronte, offrant ainsi une variété de gameplay jamais vue dans le genre.',
@@ -982,8 +982,8 @@ const translations = {
         'en': 'Hi! I\'m Rayanne from Lucid Dreams Studio. I\'ve been working on BIOMORPH for 2 years as a Brand Manager. My goal is to ensure that BIOMORPH reaches you, while having a relevant brand image that is consistent with our values.'
     },
     'biomorph_a1_p2': {
-        'fr': 'Merci à jRPG_Library de m\'avoir proposé cette interview post-launch, je suis ravi d\'être avec vous pour discuter du projet !',
-        'en': 'Thanks to jRPG_Library for offering me this post-launch interview, I\'m delighted to be with you to discuss the project!'
+        'fr': 'Merci à jRPGcontentCreator de m\'avoir proposé cette interview post-launch, je suis ravi d\'être avec vous pour discuter du projet !',
+        'en': 'Thanks to jRPGcontentCreator for offering me this post-launch interview, I\'m delighted to be with you to discuss the project!'
     },
     'biomorph_q2': {
         'fr': 'Question: Pourquoi / Comment BIOMORPH est né ?',
@@ -1078,16 +1078,16 @@ const translations = {
         'en': 'There are other elements that will come gradually but I can\'t comment on that yet...!'
     },
     'biomorph_a6_p4': {
-        'fr': 'Je vous invite à nous suivre sur notre Discord pour avoir les actualités en direct : https://discord.gg/FaDvF392wu',
-        'en': 'I invite you to follow us on our Discord to get the news live: https://discord.gg/FaDvF392wu'
+        'fr': 'Je vous invite à nous suivre sur notre Discord pour avoir les actualités en direct : <a href="https://discord.gg/FaDvF392wu" class="external-link" target="_blank">https://discord.gg/FaDvF392wu</a>',
+        'en': 'I invite you to follow us on our Discord to get the news live: <a href="https://discord.gg/FaDvF392wu" class="external-link" target="_blank">https://discord.gg/FaDvF392wu</a>'
     },
     'biomorph_footer_text': {
         'fr': 'Merci d\'avoir lu cette interview avec Rayanne Berriche, Brand Manager chez Lucid Dreams Studio. Pour plus d\'informations sur BIOMORPH, n\'hésitez pas à visiter le site officiel du studio.',
         'en': 'Thank you for reading this interview with Rayanne Berriche, Brand Manager at Lucid Dreams Studio. For more information about BIOMORPH, feel free to visit the official studio website.'
     },
     'biomorph_signature': {
-        'fr': 'Rayanne Berriche<br>Brand Manager | www.luciddreamsstudio.com',
-        'en': 'Rayanne Berriche<br>Brand Manager | www.luciddreamsstudio.com'
+        'fr': 'Rayanne Berriche<br>Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">https://www.luciddreamsstudio.com</a>',
+        'en': 'Rayanne Berriche<br>Brand Manager | <a href="https://www.luciddreamsstudio.com" class="external-link" target="_blank">https://www.luciddreamsstudio.com</a>'
     },
     'biomorph_studio': {
         'fr': 'Lucid Dreams Studio',
@@ -1494,8 +1494,8 @@ const translations = {
         'en': 'A behind-the-scenes look at this innovative metroidvania with a unique transformation mechanic'
     },
     'biomorph_interview_author': {
-        'fr': 'Interview réalisée par jRPG_Library, post-launch',
-        'en': 'Interview conducted by jRPG_Library, post-launch'
+        'fr': 'Interview réalisée par jRPGcontentCreator, post-launch',
+        'en': 'Interview conducted by jRPGcontentCreator, post-launch'
     },
     'biomorph_intro_text': {
         'fr': 'J\'ai eu l\'opportunité d\'interviewer Rayanne, Brand Manager chez Lucid Dreams Studio, pour discuter de <strong>BIOMORPH</strong>, un metroidvania innovant qui vient de sortir. Ce jeu propose une expérience unique avec sa mécanique de transformation permettant au joueur de prendre le contrôle des monstres qu\'il affronte, offrant ainsi une variété de gameplay jamais vue dans le genre.',
@@ -1510,8 +1510,8 @@ const translations = {
         'en': 'Hi! I\'m Rayanne from Lucid Dreams Studio. I\'ve been working on BIOMORPH for 2 years as a Brand Manager. My goal is to ensure that BIOMORPH reaches you, while having a relevant brand image that is consistent with our values.'
     },
     'biomorph_a1_p2': {
-        'fr': 'Merci à jRPG_Library de m\'avoir proposé cette interview post-launch, je suis ravi d\'être avec vous pour discuter du projet !',
-        'en': 'Thanks to jRPG_Library for offering me this post-launch interview, I\'m delighted to be with you to discuss the project!'
+        'fr': 'Merci à jRPGcontentCreator de m\'avoir proposé cette interview post-launch, je suis ravi d\'être avec vous pour discuter du projet !',
+        'en': 'Thanks to jRPGcontentCreator for offering me this post-launch interview, I\'m delighted to be with you to discuss the project!'
     },
     'biomorph_q2': {
         'fr': 'Question: Pourquoi / Comment BIOMORPH est né ?',
@@ -1606,8 +1606,8 @@ const translations = {
         'en': 'There are other elements that will come gradually but I can\'t comment on that yet...!'
     },
     'biomorph_a6_p4': {
-        'fr': 'Je vous invite à nous suivre sur notre Discord pour avoir les actualités en direct : https://discord.gg/FaDvF392wu',
-        'en': 'I invite you to follow us on our Discord to get the news live: https://discord.gg/FaDvF392wu'
+        'fr': 'Je vous invite à nous suivre sur notre Discord pour avoir les actualités en direct : <a href="https://discord.gg/FaDvF392wu" class="external-link" target="_blank">https://discord.gg/FaDvF392wu</a>',
+        'en': 'I invite you to follow us on our Discord to get the news live: <a href="https://discord.gg/FaDvF392wu" class="external-link" target="_blank">https://discord.gg/FaDvF392wu</a>'
     },
     'biomorph_footer_text': {
         'fr': 'Merci d\'avoir lu cette interview avec Rayanne Berriche, Brand Manager chez Lucid Dreams Studio. Pour plus d\'informations sur BIOMORPH, n\'hésitez pas à visiter le site officiel du studio.',
