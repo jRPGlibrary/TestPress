@@ -80,8 +80,8 @@ const translations = {
         'en': '© 2025 GameCritique. All rights reserved.'
     },
     'visitor_count': {
-        'fr': 'Visiteurs aujourd\'hui: <span id="visitor-counter">0</span>',
-        'en': 'Visitors today: <span id="visitor-counter">0</span>'
+        'fr': 'Visiteurs: <span id="visitor-counter">0</span>',
+        'en': 'Visitors: <span id="visitor-counter">0</span>'
     },
     
     // Partners page

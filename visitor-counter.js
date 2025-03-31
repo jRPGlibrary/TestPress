@@ -1,17 +1,14 @@
 /**
  * Compteur de visiteurs quotidien pour GameCritique
- * Utilise Google Tag Manager pour suivre et afficher le nombre de visiteurs par jour
+ * Utilise Google Tag Manager pour suivre et afficher le nombre de visiteurs uniques par jour
  */
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialiser le compteur avec Google Tag Manager
     initializeGTMCounter();
     
-    // Afficher le compteur sur la page
-    displayVisitorCounter();
-    
     // Vérifier si nous devons réinitialiser le compteur (nouveau jour)
-    checkDayChange();
+    scheduleResetAtMidnight();
 });
 
 /**
@@ -31,12 +28,10 @@ function initializeGTMCounter() {
                 'event': 'visitor_count_increment',
                 'pageTitle': document.title,
                 'pageUrl': window.location.href,
-                'visitDate': getCurrentDate() // Ajouter la date actuelle
+                'visitDate': getCurrentDate(), // Ajouter la date actuelle
+                'uniqueVisitor': true // Indiquer qu'il s'agit d'un visiteur unique
             });
         }
-        
-        // Incrémenter également le compteur local quotidien
-        incrementDailyCounter();
     }
     
     // Récupérer les données de Google Analytics via GTM
@@ -47,15 +42,6 @@ function initializeGTMCounter() {
  * Récupère le nombre de visiteurs quotidien depuis Google Analytics via GTM
  */
 function fetchVisitorCount() {
-    // Utiliser un compteur de secours en cas d'échec de récupération des données
-    const currentDate = getCurrentDate();
-    let fallbackCount = localStorage.getItem(`gameCritique_dailyVisits_${currentDate}`);
-    
-    if (!fallbackCount) {
-        fallbackCount = '0';
-        localStorage.setItem(`gameCritique_dailyVisits_${currentDate}`, fallbackCount);
-    }
-    
     // Essayer de récupérer les données de Google Analytics via GTM
     if (typeof dataLayer !== 'undefined') {
         // Créer un événement pour demander les données de visiteurs
@@ -70,30 +56,6 @@ function fetchVisitorCount() {
                 updateVisitorCountDisplay(event.data.visitorCount);
             }
         });
-        
-        // Après 3 secondes, si aucune réponse n'est reçue, utiliser le compteur de secours
-        setTimeout(function() {
-            const counterElement = document.getElementById('visitor-counter');
-            if (counterElement && counterElement.textContent === '0') {
-                updateVisitorCountDisplay(fallbackCount);
-            }
-        }, 3000);
-    } else {
-        // Si GTM n'est pas disponible, utiliser le compteur de secours
-        updateVisitorCountDisplay(fallbackCount);
-    }
-}
-
-/**
- * Affiche le compteur de visiteurs sur la page
- */
-function displayVisitorCounter() {
-    // Initialiser le compteur à 0
-    const counterElement = document.getElementById('visitor-counter');
-    
-    if (counterElement) {
-        // Mettre à jour le texte du compteur (sera mis à jour par fetchVisitorCount)
-        counterElement.textContent = '0';
     }
 }
 
@@ -106,30 +68,7 @@ function updateVisitorCountDisplay(count) {
     if (counterElement) {
         // Mettre à jour le texte du compteur
         counterElement.textContent = count;
-        
-        // Mettre à jour le texte du label si nécessaire
-        updateVisitorCountLabel();
     }
-}
-
-/**
- * Réinitialise le compteur quotidien (fonction administrative)
- */
-function resetVisitorCounter() {
-    const currentDate = getCurrentDate();
-    localStorage.removeItem(`gameCritique_dailyVisits_${currentDate}`);
-    sessionStorage.removeItem('gameCritique_hasVisited');
-    localStorage.setItem('gameCritique_lastResetDate', currentDate);
-    
-    // Envoyer un événement à Google Tag Manager pour réinitialiser le compteur
-    if (typeof dataLayer !== 'undefined') {
-        dataLayer.push({
-            'event': 'reset_visitor_count',
-            'resetDate': currentDate
-        });
-    }
-    
-    displayVisitorCounter();
 }
 
 /**
@@ -141,27 +80,9 @@ function getCurrentDate() {
 }
 
 /**
- * Vérifie si le jour a changé et réinitialise le compteur si nécessaire
+ * Programme la réinitialisation du compteur à minuit
  */
-function checkDayChange() {
-    const currentDate = getCurrentDate();
-    const lastResetDate = localStorage.getItem('gameCritique_lastResetDate');
-    
-    // Si c'est un nouveau jour ou si la date de dernière réinitialisation n'existe pas
-    if (!lastResetDate || lastResetDate !== currentDate) {
-        // Réinitialiser le compteur pour le nouveau jour
-        localStorage.setItem(`gameCritique_dailyVisits_${currentDate}`, '0');
-        localStorage.setItem('gameCritique_lastResetDate', currentDate);
-    }
-    
-    // Programmer la prochaine vérification à minuit
-    scheduleNextDayCheck();
-}
-
-/**
- * Programme la prochaine vérification de changement de jour à minuit
- */
-function scheduleNextDayCheck() {
+function scheduleResetAtMidnight() {
     const now = new Date();
     const tomorrow = new Date(now);
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -171,36 +92,26 @@ function scheduleNextDayCheck() {
     
     // Programmer la réinitialisation à minuit
     setTimeout(function() {
-        checkDayChange();
+        resetCounterAtMidnight();
+        scheduleResetAtMidnight(); // Reprogrammer pour le jour suivant
     }, timeUntilMidnight);
 }
 
 /**
- * Incrémente le compteur quotidien local
+ * Réinitialise le compteur à minuit
  */
-function incrementDailyCounter() {
-    const currentDate = getCurrentDate();
-    const currentCount = parseInt(localStorage.getItem(`gameCritique_dailyVisits_${currentDate}`) || '0');
-    localStorage.setItem(`gameCritique_dailyVisits_${currentDate}`, (currentCount + 1).toString());
-}
-
-/**
- * Met à jour le texte du label du compteur pour indiquer qu'il s'agit de visites quotidiennes
- */
-function updateVisitorCountLabel() {
-    const labels = document.querySelectorAll('[data-i18n="visitor_count"]');
+function resetCounterAtMidnight() {
+    // Envoyer un événement à Google Tag Manager pour réinitialiser le compteur
+    if (typeof dataLayer !== 'undefined') {
+        dataLayer.push({
+            'event': 'reset_visitor_count',
+            'resetDate': getCurrentDate()
+        });
+    }
     
-    labels.forEach(function(label) {
-        // Vérifier si le texte contient déjà "aujourd'hui"
-        if (label.textContent.indexOf('aujourd\'hui') === -1 && 
-            label.textContent.indexOf('today') === -1) {
-            
-            // Adapter le texte en fonction de la langue
-            if (label.textContent.indexOf('Nombre de visiteurs') !== -1) {
-                label.textContent = label.textContent.replace('Nombre de visiteurs:', 'Visiteurs aujourd\'hui:');
-            } else if (label.textContent.indexOf('Visitor count') !== -1) {
-                label.textContent = label.textContent.replace('Visitor count:', 'Visitors today:');
-            }
-        }
-    });
+    // Réinitialiser la session pour permettre un nouveau comptage
+    sessionStorage.removeItem('gameCritique_hasVisited');
+    
+    // Mettre à jour l'affichage du compteur à 0
+    updateVisitorCountDisplay('0');
 }

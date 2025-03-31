@@ -1,6 +1,6 @@
 /**
  * Configuration Google Tag Manager pour le compteur de visiteurs quotidien
- * Ce fichier permet d'intégrer le compteur de visiteurs quotidien avec Google Tag Manager
+ * Ce fichier permet d'intégrer le compteur de visiteurs uniques quotidien avec Google Tag Manager
  */
 
 // Configuration pour le compteur de visiteurs via GTM
@@ -39,21 +39,6 @@ function setupGTMEventListener() {
             updateVisitorCounterWithGTMData(event.data.visitorCount);
         }
     });
-    
-    // Configurer un délai pour utiliser les données de secours si GTM ne répond pas
-    setTimeout(function() {
-        const counterElement = document.getElementById('visitor-counter');
-        if (counterElement && counterElement.textContent === '0') {
-            // Utiliser les données de secours (localStorage) pour le jour actuel
-            const currentDate = getCurrentDate();
-            const fallbackCount = localStorage.getItem(`gameCritique_dailyVisits_${currentDate}`) || '1';
-            updateVisitorCounterWithGTMData(fallbackCount);
-            
-            // Incrémenter le compteur de secours pour la prochaine visite
-            const newCount = parseInt(fallbackCount) + 1;
-            localStorage.setItem(`gameCritique_dailyVisits_${currentDate}`, newCount.toString());
-        }
-    }, 2000);
 }
 
 /**
@@ -64,13 +49,6 @@ function updateVisitorCounterWithGTMData(visitorCount) {
     if (counterElement) {
         // Mettre à jour l'affichage du compteur
         counterElement.textContent = visitorCount;
-        
-        // Sauvegarder la valeur comme secours pour le jour actuel
-        const currentDate = getCurrentDate();
-        localStorage.setItem(`gameCritique_dailyVisits_${currentDate}`, visitorCount);
-        
-        // Mettre à jour le texte du label pour indiquer qu'il s'agit de visites quotidiennes
-        updateVisitorCountLabel();
     }
 }
 
@@ -92,12 +70,10 @@ function recordVisitWithGTM() {
                 'event': 'new_visitor',
                 'pageTitle': document.title,
                 'pageUrl': window.location.href,
-                'visitDate': currentDate
+                'visitDate': currentDate,
+                'uniqueVisitor': true // Indiquer qu'il s'agit d'un visiteur unique
             });
         }
-        
-        // Incrémenter également le compteur local quotidien
-        incrementDailyCounter();
     }
 }
 
@@ -107,36 +83,6 @@ function recordVisitWithGTM() {
 function getCurrentDate() {
     const now = new Date();
     return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
-}
-
-/**
- * Incrémente le compteur quotidien local
- */
-function incrementDailyCounter() {
-    const currentDate = getCurrentDate();
-    const currentCount = parseInt(localStorage.getItem(`gameCritique_dailyVisits_${currentDate}`) || '0');
-    localStorage.setItem(`gameCritique_dailyVisits_${currentDate}`, (currentCount + 1).toString());
-}
-
-/**
- * Met à jour le texte du label du compteur pour indiquer qu'il s'agit de visites quotidiennes
- */
-function updateVisitorCountLabel() {
-    const labels = document.querySelectorAll('[data-i18n="visitor_count"]');
-    
-    labels.forEach(function(label) {
-        // Vérifier si le texte contient déjà "aujourd'hui"
-        if (label.textContent.indexOf('aujourd\'hui') === -1 && 
-            label.textContent.indexOf('today') === -1) {
-            
-            // Adapter le texte en fonction de la langue
-            if (label.textContent.indexOf('Nombre de visiteurs') !== -1) {
-                label.textContent = label.textContent.replace('Nombre de visiteurs:', 'Visiteurs aujourd\'hui:');
-            } else if (label.textContent.indexOf('Visitor count') !== -1) {
-                label.textContent = label.textContent.replace('Visitor count:', 'Visitors today:');
-            }
-        }
-    });
 }
 
 // Exécuter l'enregistrement de visite
