@@ -1,0 +1,27 @@
+/* Styles pour le compteur de visiteurs */
+
+.visitor-counter-container {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.visitor-counter-container:hover {
+    opacity: 1;
+}
+
+#visitor-counter {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-left: 0.3rem;
+}
+
+/* Styles responsifs pour le compteur de visiteurs */
+@media (max-width: 768px) {
+    .visitor-counter-container {
+        font-size: 0.8rem;
+    }
+}
