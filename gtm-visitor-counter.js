@@ -7,6 +7,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialiser la communication avec GTM
     initGTMVisitorCounter();
+    
+    // Définir un délai de secours pour mettre à jour le compteur si aucune réponse n'est reçue
+    setTimeout(function() {
+        const counterElement = document.getElementById('visitor-counter');
+        if (counterElement && counterElement.textContent === '0') {
+            console.log('Aucune réponse reçue de GTM, utilisation de la valeur de secours');
+            // Récupérer la valeur stockée ou utiliser 1 comme valeur par défaut
+            const fallbackCount = localStorage.getItem('gameCritique_visitorCount') || '1';
+            updateVisitorCounterWithGTMData(fallbackCount);
+        }
+    }, 3000); // Attendre 3 secondes avant d'utiliser la valeur de secours
 });
 
 /**
@@ -16,13 +27,21 @@ function initGTMVisitorCounter() {
     // S'assurer que dataLayer existe
     window.dataLayer = window.dataLayer || [];
     
-    // Envoyer un événement pour demander le nombre de visiteurs quotidien
+    // Envoyer un événement pour demander le nombre de visiteurs quotidien (format GTM)
     const currentDate = getCurrentDate();
     dataLayer.push({
         'event': 'get_visitor_stats',
         'gtmId': 'GTM-NTG73P3V',
         'visitDate': currentDate
     });
+    
+    // Envoyer également l'événement attendu par google-analytics.js
+    dataLayer.push({
+        'event': 'get_visitor_count',
+        'gtm.uniqueEventId': new Date().getTime()
+    });
+    
+    console.log('Événements de demande de compteur envoyés');
     
     // Configurer un écouteur d'événements pour recevoir les données de GTM
     setupGTMEventListener();
@@ -34,9 +53,14 @@ function initGTMVisitorCounter() {
 function setupGTMEventListener() {
     window.addEventListener('message', function(event) {
         // Vérifier si l'événement contient des données de visiteurs quotidien
-        if (event.data && event.data.event === 'visitor_count_data') {
+        // Log pour déboguer les événements reçus
+        console.log('GTM Event reçu:', event.data);
+        
+        // Écouter à la fois 'visitor_count_data' (format GTM) et 'visitor_count_response' (format GA)
+        if (event.data && (event.data.event === 'visitor_count_data' || event.data.event === 'visitor_count_response')) {
             // Mettre à jour le compteur avec les données reçues
             updateVisitorCounterWithGTMData(event.data.visitorCount);
+            console.log('Compteur mis à jour avec la valeur:', event.data.visitorCount);
         }
     });
 }
@@ -47,8 +71,18 @@ function setupGTMEventListener() {
 function updateVisitorCounterWithGTMData(visitorCount) {
     const counterElement = document.getElementById('visitor-counter');
     if (counterElement) {
+        // Utiliser une valeur par défaut si visitorCount est undefined ou null
+        const count = visitorCount || localStorage.getItem('gameCritique_visitorCount') || '1';
+        
         // Mettre à jour l'affichage du compteur
-        counterElement.textContent = visitorCount;
+        counterElement.textContent = count;
+        
+        // Sauvegarder la valeur dans le localStorage pour la persistance
+        localStorage.setItem('gameCritique_visitorCount', count);
+        
+        console.log('Compteur mis à jour avec la valeur:', count);
+    } else {
+        console.error('Élément compteur non trouvé dans le DOM');
     }
 }
 
