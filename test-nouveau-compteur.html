@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test du Nouveau Compteur de Visiteurs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .counter-container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .debug-panel {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .debug-panel h3 {
+            margin-top: 0;
+        }
+        .debug-log {
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .error {
+            color: red;
+        }
+        .warning {
+            color: orange;
+        }
+        .info {
+            color: blue;
+        }
+        .success {
+            color: green;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+        .tab {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+            background-color: #f5f5f5;
+        }
+        .tab.active {
+            background-color: white;
+            border-bottom: 1px solid white;
+            margin-bottom: -1px;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .visitor-counter-container {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .visitor-counter-container:hover {
+            opacity: 1;
+        }
+        #visitor-counter {
+            font-weight: bold;
+            color: #007bff;
+            margin-left: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test du Nouveau Compteur de Visiteurs</h1>
+    
+    <div class="counter-container">
+        <div class="visitor-counter-container">
+            <p>Nombre de visiteurs: <span id="visitor-counter">0</span></p>
+        </div>
+    </div>
+    
+    <div class="tabs">
+        <div class="tab active" data-tab="test">Tests</div>
+        <div class="tab" data-tab="debug">Débogage</div>
+        <div class="tab" data-tab="info">Informations</div>
+    </div>
+    
+    <div class="tab-content active" id="test-tab">
+        <div class="button-container">
+            <button id="test-init">Initialiser le compteur</button>
+            <button id="test-fetch">Demander le nombre de visiteurs</button>
+            <button id="test-simulate">Simuler une réponse</button>
+            <button id="test-reset">Réinitialiser le compteur</button>
+        </div>
+        
+        <div class="debug-panel">
+            <h3>Résultats des tests</h3>
+            <div id="test-logs"></div>
+        </div>
+    </div>
+    
+    <div class="tab-content" id="debug-tab">
+        <div class="button-container">
+            <button id="check-gtm">Vérifier GTM</button>
+            <button id="check-storage">Vérifier le stockage</button>
+            <button id="check-listeners">Vérifier les écouteurs</button>
+            <button id="clear-logs">Effacer les logs</button>
+        </div>
+        
+        <div class="debug-panel">
+            <h3>Console de débogage</h3>
+            <div id="debug-logs"></div>
+        </div>
+    </div>
+    
+    <div class="tab-content" id="info-tab">
+        <div class="debug-panel">
+            <h3>Améliorations apportées</h3>
+            <ol>
+                <li><strong>Unification du code</strong> - Un seul fichier JavaScript gère maintenant toutes les fonctionnalités du compteur de visiteurs.</li>
+                <li><strong>Gestion des écouteurs d'événements</strong> - Suppression des écouteurs existants avant d'en ajouter de nouveaux pour éviter les doublons.</li>
+                <li><strong>Stockage local amélioré</strong> - Utilisation cohérente du localStorage pour stocker le nombre de visiteurs.</li>
+                <li><strong>Délai de secours augmenté</strong> - Passage de 3 à 5 secondes pour le délai de secours.</li>
+                <li><strong>Vérification de GTM</strong> - Ajout d'une vérification pour s'assurer que GTM est bien chargé.</li>
+                <li><strong>Logs détaillés</strong> - Ajout de logs plus détaillés pour faciliter le débogage.</li>
+                <li><strong>Réinitialisation à minuit</strong> - Programmation de la réinitialisation du compteur à minuit.</li>
+                <li><strong>Fonction de simulation</strong> - Ajout d'une fonction pour simuler une réponse GTM pour les tests.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour ajouter des logs à la console de débogage
+        function debugLog(message, type = 'info', target = 'debug-logs') {
+            const logElement = document.createElement('div');
+            logElement.className = `debug-log ${type}`;
+            logElement.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            document.getElementById(target).appendChild(logElement);
+            document.getElementById(target).scrollTop = document.getElementById(target).scrollHeight;
+            console.log(message);
+        }
+
+        // Gestion des onglets
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Désactiver tous les onglets
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Activer l'onglet cliqué
+                this.classList.add('active');
+                document.getElementById(`${this.dataset.tab}-tab`).classList.add('active');
+            });
+        });
+
+        // Initialiser dataLayer
+        window.dataLayer = window.dataLayer || [];
+
+        // Rediriger les logs de console vers notre panneau de débogage
+        const originalConsoleLog = console.log;
+        const originalConsoleError = console.error;
+        const originalConsoleWarn = console.warn;
+
+        console.log = function(message) {
+            const formattedMessage = typeof message === 'object' ? JSON.stringify(message) : message;
+            if (formattedMessage.startsWith('[Compteur]')) {
+                debugLog(formattedMessage, 'info', 'test-logs');
+            } else {
+                debugLog(formattedMessage, 'info');
+            }
+            originalConsoleLog.apply(console, arguments);
+        };
+
+        console.error = function(message) {
+            const formattedMessage = typeof message === 'object' ? JSON.stringify(message) : message;
+            if (formattedMessage.startsWith('[Compteur]')) {
+                debugLog(formattedMessage, 'error', 'test-logs');
+            } else {
+                debugLog(formattedMessage, 'error');
+            }
+            originalConsoleError.apply(console, arguments);
+        };
+
+        console.warn = function(message) {
+            const formattedMessage = typeof message === 'object' ? JSON.stringify(message) : message;
+            if (formattedMessage.startsWith('[Compteur]')) {
+                debugLog(formattedMessage, 'warning', 'test-logs');
+            } else {
+                debugLog(formattedMessage, 'warning');
+            }
+            originalConsoleWarn.apply(console, arguments);
+        };
+
+        // Stocker les écouteurs d'événements pour vérification
+        window._messageListeners = [];
+
+        // Remplacer la méthode addEventListener pour suivre les écouteurs d'événements 'message'
+        const originalAddEventListener = window.addEventListener;
+        window.addEventListener = function(type, listener, options) {
+            if (type === 'message') {
+                window._messageListeners.push(listener);
+                debugLog('Nouvel écouteur d\'événement "message" ajouté');
+            }
+            return originalAddEventListener.call(this, type, listener, options);
+        };
+
+        // Remplacer dataLayer.push pour déboguer les événements
+        const originalDataLayerPush = Array.prototype.push;
+        window.dataLayer.push = function() {
+            debugLog('dataLayer.push appelé avec: ' + JSON.stringify(arguments[0]));
+            return originalDataLayerPush.apply(this, arguments);
+        };
+
+        // Intercepter les messages postMessage
+        const originalPostMessage = window.postMessage;
+        window.postMessage = function(message, targetOrigin, transfer) {
+            debugLog('postMessage appelé avec: ' + JSON.stringify(message));
+            return originalPostMessage.call(this, message, targetOrigin, transfer);
+        };
+
+        // Bouton pour initialiser le compteur
+        document.getElementById('test-init').addEventListener('click', function() {
+            debugLog('Initialisation du compteur...', 'info', 'test-logs');
+            try {
+                if (typeof initVisitorCounter === 'function') {
+                    initVisitorCounter();
+                    debugLog('Compteur initialisé avec succès', 'success', 'test-logs');
+                } else {
+                    debugLog('Fonction initVisitorCounter non trouvée!', 'error', 'test-logs');
+                }
+            } catch (error) {
+                debugLog('Erreur lors de l\'initialisation: ' + error.message, 'error', 'test-logs');
+            }
+        });
+
+        // Bouton pour demander le nombre de visiteurs
+        document.getElementById('test-fetch').addEventListener('click', function() {
+            debugLog('Demande du nombre de visiteurs...', 'info', 'test-logs');
+            try {
+                if (typeof fetchVisitorCount === 'function') {
+                    fetchVisitorCount();
+                    debugLog('Demande envoyée avec succès', 'success', 'test-logs');
+                } else {
+                    debugLog('Fonction fetchVisitorCount non trouvée!', 'error', 'test-logs');
+                }
+            } catch (error) {
+                debugLog('Erreur lors de la demande: ' + error.message, 'error', 'test-logs');
+            }
+        });
+
+        // Bouton pour simuler une réponse
+        document.getElementById('test-simulate').addEventListener('click', function() {
+            debugLog('Simulation d\'une réponse...', 'info', 'test-logs');
+            try {
+                if (typeof simulateGTMResponse === 'function') {
+                    simulateGTMResponse();
+                    debugLog('Réponse simulée avec succès', 'success', 'test-logs');
+                } else {
+                    // Simulation manuelle si la fonction n'existe pas
+                    const visitorCount = Math.floor(Math.random() * 100) + 1;
+                    window.postMessage({
+                        'event': 'visitor_count_response',
+                        'visitorCount': visitorCount.toString()
+                    }, '*');
+                    debugLog(`Réponse simulée manuellement avec visitorCount=${visitorCount}`, 'success', 'test-logs');
+                }
+            } catch (error) {
+                debugLog('Erreur lors de la simulation: ' + error.message, 'error', 'test-logs');
+            }
+        });
+
+        // Bouton pour réinitialiser le compteur
+        document.getElementById('test-reset').addEventListener('click', function() {
+            debugLog('Réinitialisation du compteur...', 'info', 'test-logs');
+            try {
+                if (typeof resetCounterAtMidnight === 'function') {
+                    resetCounterAtMidnight();
+                    debugLog('Compteur réinitialisé avec succès', 'success', 'test-logs');
+                } else {
+                    debugLog('Fonction resetCounterAtMidnight non trouvée!', 'error', 'test-logs');
+                }
+            } catch (error) {
+                debugLog('Erreur lors de la réinitialisation: ' + error.message, 'error', 'test-logs');
+            }
+        });
+
+        // Bouton pour vérifier GTM
+        document.getElementById('check-gtm').addEventListener('click', function() {
+            debugLog('Vérification du chargement de GTM...');
+            
+            // Vérifier si le script GTM est chargé
+            const gtmScript = document.querySelector('script[src*="googletagmanager.com/gtm.js"]');
+            if (!gtmScript) {
+                debugLog('ERREUR: Script GTM non trouvé dans le DOM', 'error');
+            } else {
+                debugLog('Script GTM trouvé dans le DOM', 'success');
+            }
+            
+            // Vérifier si dataLayer existe
+            if (typeof dataLayer === 'undefined') {
+                debugLog('ERREUR: dataLayer n\'est pas défini', 'error');
+            } else {
+                debugLog(`dataLayer est défini avec ${dataLayer.length} éléments`, 'success');
+            }
+        });
+
+        // Bouton pour vérifier le stockage
+        document.getElementById('check-storage').addEventListener('click', function() {
+            debugLog('Vérification du stockage...');
+            
+            const storageKeys = [
+                'gameCritique_visitorCount',
+                'gameCritique_hasVisited',
+                'gameCritique_globalVisits'
+            ];
+            
+            storageKeys.forEach(function(key) {
+                const localValue = localStorage.getItem(key);
+                const sessionValue = sessionStorage.getItem(key);
+                
+                debugLog(`localStorage[${key}] = ${localValue || 'non défini'}`);
+                debugLog(`sessionStorage[${key}] = ${sessionValue || 'non défini'}`);
+            });
+        });
+
+        // Bouton pour vérifier les écouteurs
+        document.getElementById('check-listeners').addEventListener('click', function() {
+            debugLog('Vérification des écouteurs d\'événements...');
+            
+            debugLog(`Nombre d'écouteurs d'événements 'message': ${window._messageListeners.length}`);
+            if (window._messageListeners.length > 1) {
+                debugLog('ATTENTION: Plusieurs écouteurs pour l\'événement "message" détectés', 'warning');
+            } else if (window._messageListeners.length === 1) {
+                debugLog('Un seul écouteur pour l\'événement "message" détecté', 'success');
+            } else {
+                debugLog('Aucun écouteur pour l\'événement "message" détecté', 'warning');
+            }
+        });
+
+        // Bouton pour effacer les logs
+        document.getElementById('clear-logs').addEventListener('click', function() {
+            document.getElementById('debug-logs').innerHTML = '';
+            document.getElementById('test-logs').innerHTML = '';
+            debugLog('Logs effacés', 'info');
+        });
+
+        // Charger le script du compteur
+        function loadScript(url) {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = url;
+                script.onload = resolve;
+                script.onerror = reject;
+                document.head.appendChild(script);
+            });
+        }
+
+        // Charger le nouveau script du compteur
+        loadScript('visitor-counter-new.js')
+            .then(() => {
+                debugLog('Script visitor-counter-new.js chargé avec succès', 'success', 'test-logs');
+            })
+            .catch(error => {
+                debugLog('Erreur lors du chargement du script: ' + error, 'error', 'test-logs');
+            });
+
+        // Initialiser
+        debugLog('Page de test initialisée', 'info', 'test-logs');
+    </script>
+</body>
+</html>
