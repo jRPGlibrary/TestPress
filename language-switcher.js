@@ -382,6 +382,84 @@ const translations = {
         'fr': 'Encore un grand merci à Merge Games et Underbite Games pour cette opportunité !',
         'en': 'Thanks again to Merge Games and Underbite Games for this opportunity!'
     },
+    
+    // Pilo and the Holobook
+    'pilo_holobook_title': {
+        'fr': 'Pilo and the Holobook : Un petit bijou indé qui fait scanner notre cœur de gamer - GameCritique',
+        'en': 'Pilo and the Holobook: An indie gem that scans its way into our gamer hearts - GameCritique'
+    },
+    'pilo_holobook_description': {
+        'fr': 'Un jeu d\'aventure et d\'exploration avec un univers coloré et des puzzles intelligents. Découvrez notre test complet de ce jeu indépendant charmant.',
+        'en': 'An adventure and exploration game with a colorful universe and clever puzzles. Discover our complete review of this charming indie game.'
+    },
+    'pilo_holobook_subtitle': {
+        'fr': 'Un monde coloré à explorer avec des puzzles intelligents et une direction artistique charmante',
+        'en': 'A colorful world to explore with clever puzzles and charming art direction'
+    },
+    'pilo_holobook_short_title': {
+        'fr': 'Pilo and the Holobook',
+        'en': 'Pilo and the Holobook'
+    },
+    'pilo_holobook_introduction_text': {
+        'fr': 'Bienvenue dans cette review de <strong>Pilo and the Holobook</strong>, un jeu d\'aventure et d\'exploration développé par Mudita Games et publié par RedDeer.Games. Ce petit jeu indépendant a réussi à captiver notre attention avec son univers coloré et sa direction artistique charmante.',
+        'en': 'Welcome to this review of <strong>Pilo and the Holobook</strong>, an adventure and exploration game developed by Mudita Games and published by RedDeer.Games. This small indie game has managed to captivate our attention with its colorful universe and charming art direction.'
+    },
+    'pilo_holobook_world_title': {
+        'fr': 'Un monde coloré à explorer... scanner en main !',
+        'en': 'A colorful world to explore... scanner in hand!'
+    },
+    'pilo_holobook_world_text': {
+        'fr': 'Pilo and the Holobook, c\'est le genre de jeu qu\'on lance sans attente... et qu\'on n\'a plus envie de lâcher. Sous ses airs enfantins, il cache un univers riche et une direction artistique ultra charmante. Vous incarnez Pilo, un petit explorateur équipé d\'un Holobook magique. Votre mission ? Scanner tout ce qui bouge – ou presque – pour compléter ce précieux grimoire numérique. Dit comme ça, ça a l\'air chill, mais le jeu demande réflexion ! Entre puzzles intelligents et exploration zen, chaque biome (aka planète) offre un vrai moment de détente et de curiosité.',
+        'en': 'Pilo and the Holobook is the kind of game you start without expectations... and then can\'t put down. Beneath its childlike appearance, it hides a rich universe and an ultra-charming artistic direction. You play as Pilo, a small explorer equipped with a magical Holobook. Your mission? Scan almost everything that moves to complete this precious digital grimoire. Said like that, it sounds chill, but the game requires thinking! Between clever puzzles and zen exploration, each biome (aka planet) offers a real moment of relaxation and curiosity.'
+    },
+    'pilo_holobook_indie_title': {
+        'fr': 'Un indé qui mérite votre attention',
+        'en': 'An indie that deserves your attention'
+    },
+    'pilo_holobook_indie_text': {
+        'fr': 'Chaque monde visité respire la créativité : des décors variés, une ambiance sonore parfaitement dosée, et quelques PNJ bien placés pour rythmer l\'aventure. Le rythme est doux, mais jamais ennuyeux. Et le plus beau ? Le plaisir de la découverte reste intact, sans forcer.',
+        'en': 'Each world visited breathes creativity: varied scenery, perfectly balanced sound ambiance, and a few well-placed NPCs to pace the adventure. The rhythm is gentle, but never boring. And the best part? The pleasure of discovery remains intact, without forcing it.'
+    },
+    'pilo_holobook_conclusion_text': {
+        'fr': 'Pilo and the Holobook, c\'est la preuve qu\'un jeu n\'a pas besoin de millions pour être marquant. Accessible aux petits comme aux grands, ce petit jeu indé a tout pour séduire les amateurs d\'exploration et de puzzles mignons mais malins. Une vraie bonne surprise !',
+        'en': 'Pilo and the Holobook is proof that a game doesn\'t need millions to be memorable. Accessible to both young and old, this small indie game has everything to appeal to fans of exploration and cute but clever puzzles. A real pleasant surprise!'
+    },
+    'pilo_holobook_pro_1': {
+        'fr': 'Direction artistique colorée et apaisante',
+        'en': 'Colorful and soothing art direction'
+    },
+    'pilo_holobook_pro_2': {
+        'fr': 'Puzzles simples mais malins',
+        'en': 'Simple but clever puzzles'
+    },
+    'pilo_holobook_pro_3': {
+        'fr': 'Exploration gratifiante',
+        'en': 'Rewarding exploration'
+    },
+    'pilo_holobook_pro_4': {
+        'fr': 'Univers mignon mais pas niais',
+        'en': 'Cute universe but not childish'
+    },
+    'pilo_holobook_con_1': {
+        'fr': 'Peut paraître trop calme pour certains',
+        'en': 'May seem too calm for some'
+    },
+    'pilo_holobook_con_2': {
+        'fr': 'Répétitivité possible sur la durée',
+        'en': 'Possible repetitiveness over time'
+    },
+    'pilo_holobook_score': {
+        'fr': '4.0',
+        'en': '4.0'
+    },
+    'genre': {
+        'fr': 'Genre',
+        'en': 'Genre'
+    },
+    'press_mentions': {
+        'fr': 'Mentions presse',
+        'en': 'Press mentions'
+    },
     'adventure_begins': {
         'fr': 'L\'Aventure Commence',
         'en': 'The Adventure Begins'
