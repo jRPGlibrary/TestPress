@@ -48,18 +48,24 @@ function setupVisitorCounterEvents() {
     window.addEventListener('message', function(event) {
         // Vérifier si l'événement contient des données de Google Analytics
         if (event.data && event.data.event === 'get_visitor_count') {
-            // Simuler une réponse avec un nombre de visiteurs (à remplacer par la vraie logique GTM)
-            const storedCount = localStorage.getItem('gameCritique_globalVisits') || '0';
-            const visitorCount = parseInt(storedCount) + Math.floor(Math.random() * 10); // Ajouter un nombre aléatoire pour simuler
+            // Récupérer le compteur global actuel
+            const storedCount = localStorage.getItem('gameCritique_globalVisits') || '10';
+            const visitorCount = parseInt(storedCount);
             
             // Envoyer la réponse
             window.postMessage({
                 'event': 'visitor_count_response',
                 'visitorCount': visitorCount.toString()
             }, '*');
-            
-            // Mettre à jour le compteur de secours
-            localStorage.setItem('gameCritique_globalVisits', visitorCount.toString());
+        }
+        
+        // Vérifier si l'événement est une nouvelle visite
+        if (event.data && event.data.event === 'new_visitor') {
+            // Incrémenter le compteur global
+            const currentCount = parseInt(localStorage.getItem('gameCritique_globalVisits') || '10');
+            const newCount = currentCount + 1;
+            localStorage.setItem('gameCritique_globalVisits', newCount.toString());
+            console.log('[Analytics] Compteur global incrémenté:', newCount);
         }
     });
     
@@ -75,7 +81,8 @@ function setupVisitorCounterEvents() {
  * Réinitialise le compteur (fonction administrative)
  */
 function resetVisitorCounter() {
-    localStorage.removeItem('gameCritique_globalVisits');
+    // Réinitialiser le compteur global à 0
+    localStorage.setItem('gameCritique_globalVisits', '0');
     sessionStorage.removeItem('gameCritique_hasVisited');
     
     // Envoyer un événement à GTM pour réinitialiser le compteur
@@ -90,4 +97,6 @@ function resetVisitorCounter() {
     if (counterElement) {
         counterElement.textContent = '0';
     }
+    
+    console.log('[Analytics] Compteur global réinitialisé');
 }

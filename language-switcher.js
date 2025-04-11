@@ -1796,10 +1796,55 @@ function updatePageLanguage() {
                 } else {
                     element.textContent = processedText;
                 }
+                
+                // Special handling for img elements with src attribute
+                if (element.tagName === 'IMG' && element.hasAttribute('src')) {
+                    // Check if the image exists in the language-specific folder
+                    checkAndUpdateImageSrc(element);
+                }
             } catch (error) {
                 console.error(`Error applying translation for key: ${key}`, error);
                 // Fallback to key name to prevent empty content
                 element.textContent = key;
+            }
+        }
+    });
+    
+    // Update all elements with data-i18n-src attribute for image paths
+    document.querySelectorAll('[data-i18n-src]').forEach(element => {
+        const key = element.getAttribute('data-i18n-src');
+        if (translations[key]) {
+            try {
+                const translatedSrc = getTranslation(key);
+                element.setAttribute('src', translatedSrc);
+            } catch (error) {
+                console.error(`Error applying translation for image src: ${key}`, error);
+            }
+        }
+    });}
+    
+    // Update all elements with data-i18n-src attribute for images
+    document.querySelectorAll('[data-i18n-src]').forEach(element => {
+        const key = element.getAttribute('data-i18n-src');
+        if (translations[key]) {
+            try {
+                const translatedSrc = getTranslation(key);
+                element.setAttribute('src', translatedSrc);
+            } catch (error) {
+                console.error(`Error applying translation for image src: ${key}`, error);
+            }
+        }
+    });
+    
+    // Update all elements with data-i18n-alt attribute for image alt text
+    document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+        const key = element.getAttribute('data-i18n-alt');
+        if (translations[key]) {
+            try {
+                const translatedAlt = getTranslation(key);
+                element.setAttribute('alt', translatedAlt);
+            } catch (error) {
+                console.error(`Error applying translation for image alt: ${key}`, error);
             }
         }
     });
