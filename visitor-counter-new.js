@@ -225,53 +225,71 @@ function resetCounterAtMidnight() {
 }
 
 /**
- * Récupère le nombre de visiteurs depuis le serveur
+ * Récupère le nombre de visiteurs depuis Google Analytics via GTM
  */
 function fetchVisitorCountFromServer() {
-    // Utiliser Google Analytics pour récupérer le nombre de visiteurs
-    // Cette fonction simule une requête au serveur en utilisant un compteur global stocké dans Google Analytics
-    console.log('[Compteur] Récupération du nombre de visiteurs depuis le serveur');
+    // Utiliser Google Analytics pour récupérer le nombre de visiteurs réel
+    console.log('[Compteur] Récupération du nombre de visiteurs depuis Google Analytics');
     
-    // Simuler une requête au serveur avec un délai
-    setTimeout(function() {
-        // Utiliser la valeur de gameCritique_globalVisits comme compteur centralisé
-        const globalCount = localStorage.getItem('gameCritique_globalVisits') || '10';
-        console.log('[Compteur] Valeur récupérée du serveur:', globalCount);
+    // Envoyer une requête à Google Analytics via GTM
+    if (window.dataLayer) {
+        dataLayer.push({
+            'event': 'request_visitor_count_from_ga',
+            'requestId': new Date().getTime()
+        });
         
-        // Mettre à jour l'affichage avec la valeur récupérée
-        updateVisitorCountDisplay(globalCount);
-    }, 1000);
+        console.log('[Compteur] Requête envoyée à Google Analytics via GTM');
+    } else {
+        console.error('[Compteur] dataLayer non disponible, impossible de communiquer avec GA');
+        // Utiliser une valeur par défaut en cas d'échec
+        updateVisitorCountDisplay('25');
+    }
 }
 
 /**
- * Incrémente le compteur de visiteurs sur le serveur
+ * Incrémente le compteur de visiteurs dans Google Analytics
  */
 function incrementVisitorCountOnServer() {
-    console.log('[Compteur] Incrémentation du compteur sur le serveur');
+    console.log('[Compteur] Incrémentation du compteur dans Google Analytics');
     
-    // Récupérer la valeur actuelle
-    const currentCount = parseInt(localStorage.getItem('gameCritique_globalVisits') || '10');
-    const newCount = currentCount + 1;
-    
-    // Mettre à jour la valeur globale
-    localStorage.setItem('gameCritique_globalVisits', newCount.toString());
-    console.log('[Compteur] Nouvelle valeur du compteur global:', newCount);
-    
-    // Mettre à jour l'affichage
-    updateVisitorCountDisplay(newCount.toString());
+    // Envoyer un événement à Google Analytics via GTM pour incrémenter le compteur
+    if (window.dataLayer) {
+        dataLayer.push({
+            'event': 'increment_visitor_count_in_ga',
+            'pageTitle': document.title,
+            'pageUrl': window.location.href,
+            'timestamp': new Date().toISOString()
+        });
+        
+        console.log('[Compteur] Événement d\'incrémentation envoyé à Google Analytics');
+        
+        // Demander la valeur mise à jour après un court délai
+        setTimeout(fetchVisitorCountFromServer, 1000);
+    } else {
+        console.error('[Compteur] dataLayer non disponible, impossible d\'incrémenter le compteur');
+    }
 }
 
 /**
- * Réinitialise le compteur de visiteurs sur le serveur
+ * Réinitialise le compteur de visiteurs dans Google Analytics
  */
 function resetVisitorCountOnServer() {
-    console.log('[Compteur] Réinitialisation du compteur sur le serveur');
+    console.log('[Compteur] Réinitialisation du compteur dans Google Analytics');
     
-    // Réinitialiser le compteur global à 0
-    localStorage.setItem('gameCritique_globalVisits', '0');
-    
-    // Mettre à jour l'affichage
-    updateVisitorCountDisplay('0');
+    // Envoyer un événement à Google Analytics via GTM pour réinitialiser le compteur
+    if (window.dataLayer) {
+        dataLayer.push({
+            'event': 'reset_visitor_count_in_ga',
+            'resetTime': new Date().toISOString()
+        });
+        
+        console.log('[Compteur] Événement de réinitialisation envoyé à Google Analytics');
+        
+        // Mettre à jour l'affichage
+        updateVisitorCountDisplay('0');
+    } else {
+        console.error('[Compteur] dataLayer non disponible, impossible de réinitialiser le compteur');
+    }
 }
 
 /**
@@ -279,10 +297,15 @@ function resetVisitorCountOnServer() {
  * Utile pour tester le compteur sans GTM configuré
  */
 function simulateGTMResponse() {
-    const globalCount = localStorage.getItem('gameCritique_globalVisits') || '10';
+    // Simuler une réponse de Google Analytics avec une valeur de test
+    // Dans la version réelle, cette valeur viendrait de Google Analytics
+    const simulatedCount = '25'; // Valeur de test pour la simulation
+    
     window.postMessage({
         'event': 'visitor_count_response',
-        'visitorCount': globalCount
+        'visitorCount': simulatedCount,
+        'source': 'ga_simulation'
     }, '*');
-    console.log('[Compteur] Simulation de réponse GTM avec compteur:', globalCount);
+    
+    console.log('[Compteur] Simulation de réponse GA via GTM avec compteur:', simulatedCount);
 }

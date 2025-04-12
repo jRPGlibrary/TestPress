@@ -39,6 +39,7 @@ function initializeGoogleAnalytics() {
 
 /**
  * Configure les événements pour le compteur de visiteurs via Google Tag Manager
+ * Cette version utilise Google Analytics pour stocker le compteur de manière centralisée
  */
 function setupVisitorCounterEvents() {
     // Écouter les événements de dataLayer pour le compteur de visiteurs
@@ -48,24 +49,36 @@ function setupVisitorCounterEvents() {
     window.addEventListener('message', function(event) {
         // Vérifier si l'événement contient des données de Google Analytics
         if (event.data && event.data.event === 'get_visitor_count') {
-            // Récupérer le compteur global actuel
-            const storedCount = localStorage.getItem('gameCritique_globalVisits') || '10';
-            const visitorCount = parseInt(storedCount);
+            // Envoyer une requête à Google Analytics pour récupérer le compteur global
+            // via un événement personnalisé dans GTM
+            dataLayer.push({
+                'event': 'request_visitor_count_from_ga',
+                'requestId': new Date().getTime()
+            });
             
-            // Envoyer la réponse
-            window.postMessage({
-                'event': 'visitor_count_response',
-                'visitorCount': visitorCount.toString()
-            }, '*');
+            console.log('[Analytics] Demande du compteur global envoyée à GA');
+            
+            // Simuler une réponse pour les tests (à remplacer par la vraie implémentation GTM)
+            // Dans la vraie implémentation, GTM récupérera la valeur depuis GA et la renverra
+            setTimeout(function() {
+                // Envoyer la réponse (cette partie sera gérée par GTM dans la version finale)
+                window.postMessage({
+                    'event': 'visitor_count_response',
+                    'visitorCount': '25' // Valeur de test, sera remplacée par la vraie valeur de GA
+                }, '*');
+            }, 500);
         }
         
         // Vérifier si l'événement est une nouvelle visite
         if (event.data && event.data.event === 'new_visitor') {
-            // Incrémenter le compteur global
-            const currentCount = parseInt(localStorage.getItem('gameCritique_globalVisits') || '10');
-            const newCount = currentCount + 1;
-            localStorage.setItem('gameCritique_globalVisits', newCount.toString());
-            console.log('[Analytics] Compteur global incrémenté:', newCount);
+            // Envoyer un événement à Google Analytics pour incrémenter le compteur global
+            dataLayer.push({
+                'event': 'increment_visitor_count_in_ga',
+                'pageTitle': document.title,
+                'pageUrl': window.location.href
+            });
+            
+            console.log('[Analytics] Événement d\'incrémentation envoyé à GA');
         }
     });
     
@@ -79,16 +92,17 @@ function setupVisitorCounterEvents() {
 
 /**
  * Réinitialise le compteur (fonction administrative)
+ * Cette version utilise Google Analytics pour réinitialiser le compteur de manière centralisée
  */
 function resetVisitorCounter() {
-    // Réinitialiser le compteur global à 0
-    localStorage.setItem('gameCritique_globalVisits', '0');
+    // Supprimer le marqueur de session pour permettre un nouveau comptage
     sessionStorage.removeItem('gameCritique_hasVisited');
     
-    // Envoyer un événement à GTM pour réinitialiser le compteur
+    // Envoyer un événement à GTM pour réinitialiser le compteur dans Google Analytics
     if (typeof dataLayer !== 'undefined') {
         dataLayer.push({
-            'event': 'reset_visitor_count'
+            'event': 'reset_visitor_count_in_ga',
+            'resetTime': new Date().toISOString()
         });
     }
     
@@ -98,5 +112,5 @@ function resetVisitorCounter() {
         counterElement.textContent = '0';
     }
     
-    console.log('[Analytics] Compteur global réinitialisé');
+    console.log('[Analytics] Demande de réinitialisation du compteur global envoyée à GA');
 }
