@@ -1867,7 +1867,7 @@ function updatePageLanguage() {
     
     // Update meta tags
     updateMetaTags();
-}
+
 
 // Function to update meta tags based on current language
 function updateMetaTags() {
