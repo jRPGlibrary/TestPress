@@ -1,52 +1,74 @@
-/* Styles pour la disposition horizontale des images dans les revues */
+/* Styles pour les images de revue */
 .review-images-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 3rem 0;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
 .review-image-item {
-    flex: 1;
-    overflow: visible; /* Permet à l'image de dépasser son conteneur */
-    position: relative; /* Pour le positionnement de l'image */
-    cursor: zoom-in; /* Curseur indiquant que l'image est zoomable */
+    flex: 1 1 300px;
+    max-width: 500px;
 }
 
-.review-image-item img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide pour l'effet de zoom */
-}
-
-/* Effet de zoom au survol */
-.review-image-item:hover img {
-    transform: scale(1.15); /* Agrandissement de 15% */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
-    z-index: 10; /* Valeur plus élevée pour s'assurer que l'image agrandie est au-dessus des autres éléments */
-    position: relative; /* Assure que l'image peut sortir de son conteneur */
-}
-
-/* Style pour l'image unique */
 .review-image {
-    overflow: visible; /* Permet à l'image de dépasser son conteneur */
-    position: relative; /* Pour le positionnement de l'image */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .review-image img {
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: zoom-in;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .review-image:hover img {
-    transform: scale(1.1); /* Agrandissement de 10% */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    z-index: 10; /* Valeur plus élevée pour s'assurer que l'image agrandie est au-dessus des autres éléments */
-    position: relative; /* Assure que l'image peut sortir de son conteneur */
+    transform: scale(1.1);
+}
+
+.review-image-caption {
+    margin-top: 0.8rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-color-muted);
+    text-align: center;
+}
+
+/* Galerie d'images adaptative pour les revues */
+.review-gallery {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.review-gallery-item {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.review-gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.review-gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.review-gallery-caption {
+    margin-top: 0.8rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-color-muted);
+    text-align: center;
 }
 
 /* Responsive design pour les petits écrans */
