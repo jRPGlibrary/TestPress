@@ -1,4 +1,25 @@
+/**
+ * Scripts unifiés pour GameCritique
+ * Ce fichier regroupe les fonctionnalités principales du site en un seul fichier
+ * Fusion de: theme-switcher.js, google-analytics.js, google-tag-manager.js
+ */
+
+// Initialisation au chargement du DOM
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialiser le changeur de thème
+    initThemeSwitcher();
+    
+    // Initialiser Google Tag Manager
+    initGoogleTagManager();
+    
+    // Initialiser Google Analytics
+    initGoogleAnalytics();
+});
+
+/**
+ * Initialise le changeur de thème
+ */
+function initThemeSwitcher() {
     // Ajouter une transition CSS pour éviter le clignotement lors du changement de thème
     document.documentElement.style.transition = 'background-color 0.3s ease, color 0.3s ease';
     document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
@@ -59,43 +80,83 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-    
-    // Appliquer le thème enregistré au chargement de la page
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        applyLightTheme();
-        // Mettre à jour l'icône si le bouton existe déjà
-        const themeToggle = document.querySelector('.theme-toggle');
-        if (themeToggle) {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
-    } else {
-        applyDarkTheme();
-    }
-});
-
-// Fonction pour appliquer le thème clair
-function applyLightTheme() {
-    // Appliquer les changements de manière groupée pour éviter les clignotements
-    requestAnimationFrame(() => {
-        document.documentElement.style.setProperty('--primary-color', '#6b46c1');
-        document.documentElement.style.setProperty('--secondary-color', '#4a5568');
-        document.documentElement.style.setProperty('--accent-color', '#f6ad55');
-        document.documentElement.style.setProperty('--bg-color', '#f7fafc');
-        document.documentElement.style.setProperty('--text-color', '#2d3748');
-        document.documentElement.style.setProperty('--card-bg', '#ffffff');
-    });
 }
 
-// Fonction pour appliquer le thème sombre
+/**
+ * Applique le thème sombre
+ */
 function applyDarkTheme() {
-    // Appliquer les changements de manière groupée pour éviter les clignotements
-    requestAnimationFrame(() => {
-        document.documentElement.style.setProperty('--primary-color', '#6b46c1');
-        document.documentElement.style.setProperty('--secondary-color', '#4a5568');
-        document.documentElement.style.setProperty('--accent-color', '#f6ad55');
-        document.documentElement.style.setProperty('--bg-color', '#1a202c');
-        document.documentElement.style.setProperty('--text-color', '#e2e8f0');
-        document.documentElement.style.setProperty('--card-bg', '#2d3748');
-    });
+    document.documentElement.style.setProperty('--bg-color', '#1a202c');
+    document.documentElement.style.setProperty('--text-color', '#e2e8f0');
+    document.documentElement.style.setProperty('--card-bg', '#2d3748');
+}
+
+/**
+ * Applique le thème clair
+ */
+function applyLightTheme() {
+    document.documentElement.style.setProperty('--bg-color', '#f7fafc');
+    document.documentElement.style.setProperty('--text-color', '#1a202c');
+    document.documentElement.style.setProperty('--card-bg', '#fff');
+}
+
+/**
+ * Initialise Google Tag Manager
+ */
+function initGoogleTagManager() {
+    // Vérifier si Google Tag Manager est déjà chargé
+    if (!window.dataLayer) {
+        window.dataLayer = [];
+        
+        // Charger Google Tag Manager si ce n'est pas déjà fait
+        if (!document.querySelector('script[src*="googletagmanager.com/gtm.js"]')) {
+            const gtmScript = document.createElement('script');
+            gtmScript.async = true;
+            gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NTG73P3V';
+            document.head.appendChild(gtmScript);
+            
+            // Initialiser GTM
+            dataLayer.push({
+                'gtm.start': new Date().getTime(),
+                'event': 'gtm.js'
+            });
+        }
+    }
+}
+
+/**
+ * Initialise Google Analytics via Google Tag Manager
+ */
+function initGoogleAnalytics() {
+    // Configurer les événements pour le compteur de visiteurs
+    setupVisitorCounterEvents();
+}
+
+/**
+ * Configure les événements pour le compteur de visiteurs
+ */
+function setupVisitorCounterEvents() {
+    // Vérifier si dataLayer existe
+    if (window.dataLayer) {
+        // Envoyer un événement de vue de page
+        dataLayer.push({
+            'event': 'pageview',
+            'pageTitle': document.title,
+            'pageUrl': window.location.href
+        });
+        
+        // Enregistrer les clics sur les liens
+        document.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                const linkUrl = this.href;
+                const linkText = this.textContent.trim();
+                
+                dataLayer.push({
+                    'event': 'link_click',
+                    'linkUrl': linkUrl,
+                    'linkText': linkText
+                });
+            });
+        });
+    }
 }

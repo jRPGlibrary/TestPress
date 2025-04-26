@@ -1897,16 +1897,27 @@ function updateMetaTags() {
 // Function to switch language
 function switchLanguage(lang) {
     if (lang === 'fr' || lang === 'en') {
-        currentLanguage = lang;
-        localStorage.setItem('language', lang);
-        updatePageLanguage();
+        // Ajouter une classe temporaire pour indiquer la transition
+        document.documentElement.classList.add('language-transition');
         
-        // Update language switcher button text
-        const langSwitcher = document.querySelector('.language-toggle');
-        if (langSwitcher) {
-            langSwitcher.textContent = lang === 'fr' ? 'EN' : 'FR';
-            langSwitcher.setAttribute('title', lang === 'fr' ? getTranslation('english') : getTranslation('french'));
-        }
+        // Légère pause avant de changer la langue pour permettre à la transition de commencer
+        setTimeout(() => {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            updatePageLanguage();
+            
+            // Update language switcher button text
+            const langSwitcher = document.querySelector('.language-toggle');
+            if (langSwitcher) {
+                langSwitcher.textContent = lang === 'fr' ? 'EN' : 'FR';
+                langSwitcher.setAttribute('title', lang === 'fr' ? getTranslation('english') : getTranslation('french'));
+            }
+            
+            // Retirer la classe de transition après que les changements sont appliqués
+            setTimeout(() => {
+                document.documentElement.classList.remove('language-transition');
+            }, 300); // Correspond à la durée de la transition CSS
+        }, 50);
     }
 }
 
@@ -1920,6 +1931,43 @@ try {
 // Create and add language switcher button when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM Content Loaded - applying translations');
+    
+    // Ajouter des transitions CSS pour tous les éléments qui peuvent changer
+    // Cela aide à éviter le clignotement lors des changements de langue
+    document.head.insertAdjacentHTML('beforeend', `
+        <style>
+            /* Transitions douces pour les changements de langue */
+            [data-i18n], 
+            [data-i18n-src], 
+            [data-i18n-alt], 
+            [data-i18n-placeholder], 
+            [data-i18n-title],
+            .nav-links a,
+            .nav-links li,
+            button,
+            h1, h2, h3, h4, h5, h6,
+            p, span, div, a {
+                transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+            }
+            
+            /* Éviter le clignotement des images */
+            img {
+                transition: opacity 0.3s ease;
+            }
+            
+            /* Style pour la transition de langue */
+            .language-transition * {
+                opacity: 0.8;
+                transition: opacity 0.3s ease;
+            }
+            
+            /* Assurer que les éléments de navigation restent visibles pendant la transition */
+            .language-transition .nav-links {
+                opacity: 1;
+            }
+        </style>
+    `);
+    
     // Create language switcher if it doesn't exist
     if (!document.querySelector('.language-toggle')) {
         const navbar = document.querySelector('.nav-links');
@@ -1945,6 +1993,7 @@ document.addEventListener('DOMContentLoaded', function() {
             langToggle.style.display = 'flex';
             langToggle.style.alignItems = 'center';
             langToggle.style.justifyContent = 'center';
+            langToggle.style.transition = 'color 0.3s ease, background-color 0.3s ease';
             
             // Add the button to li, then li to navbar
             langToggleLi.appendChild(langToggle);

@@ -1,38 +1,52 @@
-/* Styles pour les images de revue */
+/* Styles améliorés pour les images de revue */
 .review-images-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     margin: 2rem 0;
+    justify-content: center;
 }
 
 .review-image-item {
     flex: 1 1 300px;
     max-width: 500px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .review-image {
-    overflow: hidden;
+    margin: 3rem 0;
+    text-align: center;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.review-image img {
+.review-image img,
+.review-image-item img {
     width: 100%;
     height: auto;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.review-image:hover img {
-    transform: scale(1.1);
+.review-image:hover img,
+.review-image-item:hover img {
+    transform: scale(1.05);
 }
 
-.review-image-caption {
+.image-caption,
+.review-image-item .image-caption,
+.review-image-caption,
+.review-gallery-caption {
     margin-top: 0.8rem;
     font-style: italic;
     font-size: 0.9rem;
     color: var(--text-color-muted);
     text-align: center;
+    padding: 0 1rem 1rem;
 }
 
 /* Galerie d'images adaptative pour les revues */
@@ -41,6 +55,8 @@
     gap: 1.5rem;
     margin: 2rem 0;
     width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .review-gallery-item {
@@ -51,11 +67,13 @@
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .review-gallery-item img {
     width: 100%;
     height: auto;
+    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -63,27 +81,24 @@
     transform: scale(1.05);
 }
 
-.review-gallery-caption {
-    margin-top: 0.8rem;
-    font-style: italic;
-    font-size: 0.9rem;
-    color: var(--text-color-muted);
-    text-align: center;
-}
-
 /* Responsive design pour les petits écrans */
 @media (max-width: 768px) {
-    .review-images-container {
+    .review-images-container,
+    .review-gallery {
         flex-direction: column;
+        align-items: center;
     }
     
-    .review-image-item {
+    .review-image-item,
+    .review-gallery-item {
         margin-bottom: 2rem;
+        max-width: 100%;
     }
     
     /* Réduire l'effet de zoom sur mobile pour éviter les débordements */
     .review-image-item:hover img,
-    .review-image:hover img {
-        transform: scale(1.05);
+    .review-image:hover img,
+    .review-gallery-item:hover img {
+        transform: scale(1.02);
     }
 }
