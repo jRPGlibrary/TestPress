@@ -1,6 +1,6 @@
 /**
  * Google Analytics pour GameCritique
- * Ce script initialise Google Analytics via Google Tag Manager et suit les visites sur le site
+ * Ce script initialise Google Analytics via Google Tag Manager
  */
 
 // Initialisation de Google Analytics via GTM
@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialiser Google Analytics via GTM
     initializeGoogleAnalytics();
     
-    // Configurer les événements pour le compteur de visiteurs
-    setupVisitorCounterEvents();
+    // Envoyer un événement de page vue
+    sendPageViewEvent();
 });
 
 /**
@@ -35,6 +35,21 @@ function initializeGoogleAnalytics() {
             });
         }
     }
+}
+
+/**
+ * Envoie un événement de page vue à GTM
+ */
+function sendPageViewEvent() {
+    // S'assurer que dataLayer existe
+    window.dataLayer = window.dataLayer || [];
+    
+    // Envoyer un événement de page vue à GTM
+    dataLayer.push({
+        'event': 'page_view',
+        'pageTitle': document.title,
+        'pageUrl': window.location.href
+    });
 }
 
 /**
