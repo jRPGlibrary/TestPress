@@ -49,10 +49,6 @@ const translations = {
         'fr': 'Lire le test',
         'en': 'Read review'
     },
-    'read_full_review': {
-        'fr': 'Lire le test complet',
-        'en': 'Read full review'
-    },
     'stay_informed': {
         'fr': 'Restez Informé',
         'en': 'Stay Informed'
@@ -79,10 +75,7 @@ const translations = {
         'fr': '© 2025 GameCritique. Tous droits réservés.',
         'en': '© 2025 GameCritique. All rights reserved.'
     },
-    'visitor_count': {
-        'fr': 'Visiteurs: <span id="visitor-counter">0</span>',
-        'en': 'Visitors: <span id="visitor-counter">0</span>'
-    },
+
     
     // Partners page
     'partners_title': {

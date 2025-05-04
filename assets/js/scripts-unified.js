@@ -128,12 +128,12 @@ function initGoogleTagManager() {
  * Initialise Google Analytics via Google Tag Manager
  */
 function initGoogleAnalytics() {
-    // Configurer les événements pour le compteur de visiteurs
+    
     setupVisitorCounterEvents();
 }
 
 /**
- * Configure les événements pour le compteur de visiteurs
+ 
  */
 function setupVisitorCounterEvents() {
     // Vérifier si dataLayer existe

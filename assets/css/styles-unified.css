@@ -1,7 +1,7 @@
 /* 
  * Styles unifiés pour GameCritique
  * Ce fichier regroupe tous les styles du site en un seul fichier
- * Fusion de: styles.css, mobile-responsive.css, game-review.css, review-images-fix.css, visitor-counter.css
+ * Fusion de: styles.css, mobile-responsive.css, game-review.css, review-images-fix.css
  */
 
 /* Variables et styles de base */
@@ -184,25 +184,7 @@ header {
     transform: scale(1.02);
 }
 
-/* Styles pour le compteur de visiteurs */
-.visitor-counter-container {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--text-color);
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
 
-.visitor-counter-container:hover {
-    opacity: 1;
-}
-
-#visitor-counter {
-    font-weight: bold;
-    color: var(--accent-color);
-    margin-left: 0.3rem;
-}
 
 /* Styles responsifs */
 @media (max-width: 768px) {
@@ -250,10 +232,7 @@ header {
         grid-template-columns: 1fr;
     }
     
-    /* Compteur de visiteurs responsive */
-    .visitor-counter-container {
-        font-size: 0.8rem;
-    }
+
     
     /* Images de revue responsive */
     .review-image-item {
