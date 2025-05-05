@@ -1990,7 +1990,11 @@ function updateMetaTags() {
     const titleElement = document.querySelector('title');
     if (titleElement && titleElement.getAttribute('data-i18n')) {
         const key = titleElement.getAttribute('data-i18n');
-        titleElement.textContent = getTranslation(key);
+        const translatedTitle = getTranslation(key);
+        titleElement.textContent = translatedTitle;
+        // Mise à jour directe de document.title pour s'assurer que le titre de l'onglet est mis à jour
+        document.title = translatedTitle;
+        console.log('Titre mis à jour:', translatedTitle);
     }
     
     // Update meta description
@@ -2039,6 +2043,17 @@ function switchLanguage(lang) {
 // Try to apply translations as early as possible
 try {
     updatePageLanguage();
+    
+    // Forcer une mise à jour supplémentaire du titre après un court délai
+    setTimeout(() => {
+        const titleElement = document.querySelector('title');
+        if (titleElement && titleElement.getAttribute('data-i18n')) {
+            const key = titleElement.getAttribute('data-i18n');
+            const translatedTitle = getTranslation(key);
+            document.title = translatedTitle;
+            console.log('Titre mis à jour après délai:', translatedTitle);
+        }
+    }, 100);
 } catch (e) {
     console.log('Early translation application failed, will retry on DOMContentLoaded', e);
 }
@@ -2131,6 +2146,17 @@ window.addEventListener('load', function() {
     console.log('Window fully loaded - applying translations again');
     // Apply translations again after everything is loaded
     updatePageLanguage();
+    
+    // Mise à jour forcée du titre après le chargement complet
+    setTimeout(() => {
+        const titleElement = document.querySelector('title');
+        if (titleElement && titleElement.getAttribute('data-i18n')) {
+            const key = titleElement.getAttribute('data-i18n');
+            const translatedTitle = getTranslation(key);
+            document.title = translatedTitle;
+            console.log('Titre mis à jour après chargement complet:', translatedTitle);
+        }
+    }, 200);
 });
 
 // Export functions for use in other scripts if needed
