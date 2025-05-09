@@ -72,6 +72,14 @@ const translations = {
         'fr': '28 avril 2025',
         'en': 'April 28, 2025'
     },
+    'my_little_universe_release_date': {
+        'fr': '5 octobre 2023 (Switch, PC, consoles)',
+        'en': 'October 5, 2023 (Switch, PC, consoles)'
+    },
+    'my_little_universe_subtitle': {
+        'fr': 'Un jeu où Mario Galaxy rencontre Minecraft, le tout arrosé d\'une bonne grosse dose de farme intensive.',
+        'en': 'A game where Mario Galaxy meets Minecraft, all sprinkled with a good dose of intensive farming.'
+    },
     'publication_date_pilo': {
         'fr': '10 avril 2024',
         'en': 'April 10, 2024'
@@ -446,13 +454,145 @@ const translations = {
         'fr': 'Introduction',
         'en': 'Introduction'
     },
+    'my_little_universe_intro_text': {
+        'fr': 'Bienvenue dans cette review de <strong>My Little Universe</strong>, le jeu où Mario Galaxy rencontre Minecraft, le tout arrosé d\'une bonne grosse dose de farme intensive. Testé en duo avec ma femme (team love power), le jeu nous a offert 6h de pur kiff malgré mon petit scepticisme de départ — et oui, c\'est pas mon genre de base, mais l\'amour triomphe toujours !',
+        'en': 'Welcome to this review of <strong>My Little Universe</strong>, the game where Mario Galaxy meets Minecraft, all sprinkled with a hefty dose of intensive farming. Tested as a duo with my wife (team love power), the game gave us 6 hours of pure enjoyment despite my initial skepticism — and yes, it\'s not my usual genre, but love always triumphs!'
+    },
+    'my_little_universe_gameplay': {
+        'fr': 'Un petit pas pour l\'homme, un farm infini pour le joueur',
+        'en': 'One small step for man, an infinite farm for the player'
+    },
+    'my_little_universe_gameplay_text': {
+        'fr': 'Dans My Little Universe, l\'aventure commence simplement : un skin (basique au départ), un personnage chacun, et un univers à reconstruire. Jouable en solo jusqu\'à 4 joueurs, nous avons choisi de farmer en couple, et franchement, ça change tout.',
+        'en': 'In My Little Universe, the adventure begins simply: a skin (basic at first), one character each, and a universe to rebuild. Playable solo or with up to 4 players, we chose to farm as a couple, and honestly, it changes everything.'
+    },
+    'my_little_universe_gameplay_text2': {
+        'fr': 'La vue isométrique rappelle fortement Super Mario Galaxy (coucou les fans de Nintendo), avec une direction artistique ultra colorée et des mondes sphériques à explorer.',
+        'en': 'The isometric view strongly reminds of Super Mario Galaxy (hello Nintendo fans), with an ultra-colorful artistic direction and spherical worlds to explore.'
+    },
+    'my_little_universe_gameplay_text3': {
+        'fr': 'Mais ici, pas de Peach à sauver : on est là pour choper du matos ! Bois, pierres, fer, améthystes... tout y passe pour crafter et améliorer vos armes, outils, équipements, bref votre survie dépend de vos talents de bucheron/bidouilleur.',
+        'en': 'But here, no Peach to save: we\'re here to grab materials! Wood, stones, iron, amethysts... everything goes into crafting and improving your weapons, tools, equipment — in short, your survival depends on your lumberjack/tinkering skills.'
+    },
+    'my_little_universe_farming': {
+        'fr': 'Le farm est roi, mais jamais chiant en duo',
+        'en': 'Farming is king, but never boring as a duo'
+    },
+    'my_little_universe_farming_text': {
+        'fr': 'Le concept est simple : farmer pour avancer. Chaque nouvelle parcelle de la planète est verrouillée et demande des ressources à sacrifier. Plus vous explorez, plus vous débloquez :',
+        'en': 'The concept is simple: farm to progress. Each new plot of the planet is locked and requires resources to sacrifice. The more you explore, the more you unlock:'
+    },
+    'my_little_universe_farming_item1': {
+        'fr': 'Nouveaux outils (haches, pioches, épées, et plus)',
+        'en': 'New tools (axes, pickaxes, swords, and more)'
+    },
+    'my_little_universe_farming_item2': {
+        'fr': 'Nouvelles planètes',
+        'en': 'New planets'
+    },
+    'my_little_universe_farming_item3': {
+        'fr': 'Donjons à explorer',
+        'en': 'Dungeons to explore'
+    },
+    'my_little_universe_farming_item4': {
+        'fr': 'Monstres et boss à latter',
+        'en': 'Monsters and bosses to defeat'
+    },
+    'my_little_universe_farming_item5': {
+        'fr': 'Vendeurs pour améliorer votre stuff',
+        'en': 'Vendors to improve your gear'
+    },
+    'my_little_universe_farming_text2': {
+        'fr': 'Seul, l\'expérience pourrait vite devenir redondante. Mais à deux ? C\'est que du bonheur : on partage les tâches, on s\'organise, et surtout on se marre comme des gamins.',
+        'en': 'Alone, the experience could quickly become redundant. But as a duo? It\'s pure joy: we share tasks, organize ourselves, and most importantly, we have fun like kids.'
+    },
+    'my_little_universe_farming_text3': {
+        'fr': 'Mention spéciale pour l\'ambiance sonore : rythmée, agréable, jamais envahissante — et ça, c\'est rare dans un jeu qui te fait farmer pendant des heures.',
+        'en': 'Special mention for the sound atmosphere: rhythmic, pleasant, never invasive — and that\'s rare in a game that makes you farm for hours.'
+    },
+    'my_little_universe_rpg': {
+        'fr': 'RPG touch : skills et malus au menu',
+        'en': 'RPG touch: skills and penalties on the menu'
+    },
+    'my_little_universe_rpg_text': {
+        'fr': 'À chaque montée de niveau, trois compétences sont proposées au hasard. Vitesse d\'attaque, bonus de récolte, résistances... Chaque choix compte ! Et attention : mourir = perte d\'un niveau ET d\'une compétence. Autant dire que la pression est réelle en donjon !',
+        'en': 'With each level up, three skills are randomly offered. Attack speed, harvest bonus, resistances... Every choice matters! And beware: dying = loss of a level AND a skill. Needless to say, the pressure is real in dungeons!'
+    },
+    'my_little_universe_rpg_text2': {
+        'fr': 'Votre perso pourra aussi être empoisonné, brûlé ou subir d\'autres altérations, ajoutant une touche RPG bien sentie au gameplay.',
+        'en': 'Your character can also be poisoned, burned or suffer other status effects, adding a well-implemented RPG touch to the gameplay.'
+    },
+    'introduction': {
+        'fr': 'Introduction',
+        'en': 'Introduction'
+    },
     'conclusion': {
         'fr': 'Conclusion',
         'en': 'Conclusion'
     },
+    'my_little_universe_conclusion_text': {
+        'fr': 'My Little Universe est une masterclass en multijoueur casual/farming. Bien optimisé, ultra agréable à jouer, parfait pour des sessions chill en couple ou entre potes.',
+        'en': 'My Little Universe is a masterclass in casual/farming multiplayer. Well optimized, ultra enjoyable to play, perfect for chill sessions as a couple or with friends.'
+    },
+    'my_little_universe_conclusion_text2': {
+        'fr': 'Alors certes, si vous détestez farmer, passez votre chemin. Mais si vous aimez récolter, crafter et progresser en bonne compagnie, foncez les yeux fermés !',
+        'en': 'So sure, if you hate farming, move along. But if you enjoy harvesting, crafting and progressing in good company, go for it with your eyes closed!'
+    },
     'pros': {
         'fr': 'Points forts',
         'en': 'Strengths'
+    },
+    'cons': {
+        'fr': 'Points faibles',
+        'en': 'Weaknesses'
+    },
+    'my_little_universe_pro_multiplayer': {
+        'fr': 'Parfait en duo/multijoueur',
+        'en': 'Perfect in duo/multiplayer'
+    },
+    'my_little_universe_pro_sound': {
+        'fr': 'Ambiance sonore agréable',
+        'en': 'Pleasant sound atmosphere'
+    },
+    'my_little_universe_pro_visuals': {
+        'fr': 'Direction artistique colorée et chill',
+        'en': 'Colorful and chill artistic direction'
+    },
+    'my_little_universe_pro_progression': {
+        'fr': 'Progression gratifiante et addictive',
+        'en': 'Rewarding and addictive progression'
+    },
+    'my_little_universe_pro_performance': {
+        'fr': 'Aucun bug ni ralentissement en 6h de jeu',
+        'en': 'No bugs or slowdowns in 6 hours of gameplay'
+    },
+    'my_little_universe_con_solo': {
+        'fr': 'Gameplay répétitif en solo',
+        'en': 'Repetitive gameplay in solo'
+    },
+    'my_little_universe_con_customization': {
+        'fr': 'Peu d\'options de personnalisation au début',
+        'en': 'Few customization options at the beginning'
+    },
+    'my_little_universe_score': {
+        'fr': '4.5',
+        'en': '4.5'
+    },
+    'my_little_universe_thanks': {
+        'fr': 'Merci d\'avoir lu cette review !',
+        'en': 'Thanks for reading this review!'
+    },
+    'similar_games': {
+        'fr': 'Jeux similaires',
+        'en': 'Similar games'
+    },
+    'follow_us': {
+        'fr': 'Suivez-nous',
+        'en': 'Follow us'
+    },
+    'all_rights_reserved': {
+        'fr': 'Tous droits réservés.',
+        'en': 'All rights reserved.'
     },
     'cons': {
         'fr': 'Points faibles',
@@ -608,7 +748,7 @@ const translations = {
     
     'my_little_universe_description': {
         'fr': 'Un jeu où Mario Galaxy rencontre Minecraft, le tout arrosé d\'une bonne grosse dose de farme intensive. Découvrez notre test complet de ce jeu de farming et d\'exploration en multijoueur.',
-        'en': 'A game where Mario Galaxy meets Minecraft, all sprinkled with a hefty dose of intensive farming. Discover our complete review of this multiplayer farming and exploration game.'
+        'en': 'A game where Mario Galaxy meets Minecraft, all sprinkled with a good dose of intensive farming. Discover our complete review of this multiplayer farming and exploration game.'
     },
     
     'pilo_holobook_description': {
@@ -806,6 +946,9 @@ function switchLanguage(lang) {
         // Ajoute une classe temporaire pour indiquer la transition
         document.documentElement.classList.add('language-transition');
         
+        // Met à jour l'attribut lang de la balise HTML
+        document.documentElement.setAttribute('lang', lang);
+        
         // Légère pause avant de changer la langue pour permettre à la transition de commencer
         setTimeout(() => {
             currentLanguage = lang;
@@ -928,6 +1071,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Ajoute un événement de chargement de fenêtre pour s'assurer que les traductions sont appliquées après le chargement de toutes les ressources
 window.addEventListener('load', function() {
     console.log('Fenêtre entièrement chargée - application des traductions à nouveau');
+    // Met à jour l'attribut lang de la balise HTML avec la langue actuelle
+    document.documentElement.setAttribute('lang', currentLanguage);
     // Applique les traductions à nouveau après que tout est chargé
     updatePageLanguage();
 });
@@ -943,6 +1088,8 @@ window.i18n = {
 window.addEventListener('pageshow', function(event) {
     if (event.persisted) {
         console.log('Page chargée depuis le cache - rafraîchissement des traductions');
+        // Met à jour l'attribut lang de la balise HTML avec la langue actuelle
+        document.documentElement.setAttribute('lang', currentLanguage);
         updatePageLanguage();
     }
 });
