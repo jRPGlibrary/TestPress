@@ -1,10 +1,3 @@
-/* 
- * Styles unifiés pour GameCritique
- * Ce fichier regroupe tous les styles du site en un seul fichier
- * Fusion de: styles.css, mobile-responsive.css, game-review.css, review-images-fix.css
- */
-
-/* Variables et styles de base */
 :root {
     --primary-color: #6b46c1;
     --secondary-color: #4a5568;
@@ -34,7 +27,6 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-/* Structure principale */
 header {
     background-color: var(--card-bg);
     padding: 1.5rem 0;
@@ -50,7 +42,6 @@ header {
     margin: 0 auto;
 }
 
-/* Navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -87,7 +78,6 @@ header {
     color: var(--accent-color);
 }
 
-/* Section héro */
 .hero {
     text-align: center;
     padding: 6rem 0;
@@ -104,18 +94,479 @@ header {
     width: 90%;
 }
 
-/* Styles pour les revues de jeux */
+
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border: 2px solid rgba(246, 173, 85, 0.3);
+    border-radius: 8px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+}
+
+
+
+.featured {
+    padding: 3rem 0;
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--accent-color);
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.game-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.game-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.publication-date {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+.game-platform {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Couleurs spÃ©cifiques pour chaque console */
+.platform-ps {
+    background-color: #006FCD; /* Bleu PlayStation */
+}
+
+.platform-xbox {
+    background-color: #107C10; /* Vert Xbox */
+}
+
+.platform-switch {
+    background-color: #E60012; /* Rouge Nintendo */
+}
+
+.platform-pc {
+    background-color: #5A5A5A; /* Gris pour PC */
+}
+
+.platform-studio {
+    background-color: var(--primary-color); /* Couleur par dÃ©faut pour les studios */
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.game-rating {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars {
+    display: flex;
+    gap: 0.3rem;
+    color: var(--accent-color);
+}
+
+.rating-text {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.game-excerpt {
+    color: #cbd5e0;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    padding: 0.5rem 0;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    flex-grow: 1;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.read-more:hover {
+    background-color: #553c9a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.read-more:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.categories {
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    background-color: var(--card-bg);
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.category-item {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.category-item:hover {
+    background-color: #553c9a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.category-item.active {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.category-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.recent-reviews {
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+}
+
+.newsletter {
+    padding: 3rem 0;
+    background-color: var(--card-bg);
+    text-align: center;
+}
+
+.newsletter p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.newsletter-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-form input, .newsletter-form textarea {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    background-color: rgba(26, 32, 44, 0.6);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.02em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter-form input:focus, .newsletter-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(107, 70, 193, 0.3);
+    background-color: rgba(26, 32, 44, 0.8);
+}
+
+footer {
+    background-color: var(--card-bg);
+    padding: 3rem 0 1rem;
+    margin-top: 6rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo p {
+    margin-top: 1rem;
+    color: #cbd5e0;
+}
+
+.footer-links h3, .footer-social h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #cbd5e0;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+
+
+
+
+
+
+
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #4a5568;
+    color: #cbd5e0;
+}
+
+/* Responsive Design */
+/* Form Styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    margin-left: 0.2rem;
+}
+
+.newsletter-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.newsletter-form button {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .nav-links li {
+        margin-left: 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .newsletter-form {
+        width: 90%;
+        padding: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .game-card {
+        min-width: 100%;
+    }
+}
+/* Styles spÃ©cifiques pour les pages de test de jeu */
+
+/* Styles gÃ©nÃ©raux pour la section de revue */
 .game-review {
     padding: 4rem 0;
     line-height: 1.8;
 }
 
+/* En-tÃªte de la revue */
 .review-header {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+
+
+/* Cadre d'information du jeu */
 .game-info-box {
     margin-bottom: 2rem;
     padding: 1.5rem;
@@ -123,6 +574,8 @@ header {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+
 
 .game-metadata {
     display: grid;
@@ -145,7 +598,213 @@ header {
     font-size: 1rem;
 }
 
-/* Styles pour les images de revue */
+.metadata-value a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.metadata-value a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.game-info-header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.game-cover {
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.game-details {
+    flex: 1;
+}
+
+.review-author {
+    margin-top: 1.5rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.review-author p {
+    margin-bottom: 0.8rem;
+}
+
+/* Contenu de la revue */
+.review-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.review-content h3 {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.8rem;
+}
+
+.review-content a, .review-footer a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.review-content a:hover, .review-footer a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+
+
+.review-content p {
+    margin-bottom: 1.8rem;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+/* Images dans la revue */
+.review-image {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.review-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.image-caption {
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Section conclusion */
+.review-conclusion {
+    margin: 4rem 0;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pros, .cons {
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+
+
+.pros h4, .cons h4 {
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.pros h4 {
+    color: #4ade80; /* Vert pour les points forts */
+}
+
+.cons h4 {
+    color: #f87171; /* Rouge pour les points faibles */
+}
+
+.pros ul, .cons ul {
+    padding-left: 1.5rem;
+}
+
+.pros li, .cons li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.final-score {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.score-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(107, 70, 193, 0.5);
+}
+
+
+
+.score-circle span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.score-circle small {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Pied de page de la revue */
+.review-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-style: italic;
+    text-align: center;
+}
+
+.review-footer p {
+    margin-bottom: 1rem;
+}
+
+/* Section jeux similaires */
+.related-games {
+    padding: 4rem 0;
+    background-color: var(--card-bg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .game-info-header {
+        flex-direction: column;
+    }
+    
+    .game-cover {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
+}
+/* Styles amÃ©liorÃ©s pour les images de revue */
 .review-images-container {
     display: flex;
     flex-wrap: wrap;
@@ -179,16 +838,83 @@ header {
     transition: transform 0.3s ease;
 }
 
-.review-image img:hover,
-.review-image-item img:hover {
-    transform: scale(1.02);
+.review-image:hover img,
+.review-image-item:hover img {
+    transform: scale(1.05);
 }
 
+.image-caption,
+.review-image-item .image-caption,
+.review-image-caption,
+.review-gallery-caption {
+    margin-top: 0.8rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-color-muted);
+    text-align: center;
+    padding: 0 1rem 1rem;
+}
 
+/* Galerie d'images adaptative pour les revues */
+.review-gallery {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-/* Styles responsifs */
+.review-gallery-item {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.review-gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.review-gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive design pour les petits Ã©crans */
 @media (max-width: 768px) {
-    /* Navigation responsive */
+    .review-images-container,
+    .review-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .review-image-item,
+    .review-gallery-item {
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+    
+    /* RÃ©duire l'effet de zoom sur mobile pour Ã©viter les dÃ©bordements */
+    .review-image-item:hover img,
+    .review-image:hover img,
+    .review-gallery-item:hover img {
+        transform: scale(1.02);
+    }
+}
+/* Styles responsives pour les appareils mobiles */
+
+/* Styles responsives pour les appareils mobiles */
+
+/* Styles gÃ©nÃ©raux pour mobile */
+@media (max-width: 768px) {
+    /* Ajustement de la navigation */
     .navbar {
         position: relative;
         justify-content: space-between;
@@ -206,7 +932,7 @@ header {
         text-align: center;
     }
     
-    /* Section héro responsive */
+    /* Ajustement des sections */
     .hero {
         padding: 3rem 0;
         height: auto;
@@ -227,15 +953,309 @@ header {
         margin: 0 auto 1.5rem;
     }
     
-    /* Grille de jeux responsive */
+    /* Ajustement des cartes de jeux */
     .games-grid {
         grid-template-columns: 1fr;
     }
     
-
+    .game-card {
+        max-width: 100%;
+    }
     
-    /* Images de revue responsive */
+    /* Ajustement des formulaires */
+    .newsletter-form input, 
+    .newsletter-form textarea {
+        width: 100%;
+    }
+    
+    /* Ajustement du footer */
+    .footer-content {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Styles spÃ©cifiques pour les trÃ¨s petits Ã©crans */
+@media (max-width: 480px) {
+    /* RÃ©duction de la taille des textes */
+    body {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: var(--accent-color);
+        border-radius: 3px;
+    }
+    
+    .game-title {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Ajustement des plateformes de jeux */
+    .game-platform {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+        margin-right: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    /* Ajustement des boutons */
+    .read-more {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Styles spÃ©cifiques pour les pages de test de jeu */
+@media (max-width: 768px) {
+    /* Ajustement de l'en-tÃªte de la revue */
+    .game-info-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .game-cover {
+        max-width: 200px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+    }
+    
+    .game-cover:active {
+        transform: scale(1.05);
+    }
+    
+    /* AmÃ©lioration de la lisibilitÃ© du texte de revue */
+    .game-review {
+        padding: 2rem 1rem;
+        line-height: 1.7;
+        font-size: 1rem;
+    }
+    
+    .game-review p {
+        margin-bottom: 1.2rem;
+        letter-spacing: 0.01rem;
+    }
+    
+    .game-review h2, .game-review h3 {
+        margin: 1.5rem 0 1rem;
+        line-height: 1.3;
+    }
+    
+    /* Ajustement des mÃ©tadonnÃ©es */
+    .game-metadata {
+        grid-template-columns: 1fr;
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+    }
+    
+    .metadata-item {
+        padding: 0.8rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .metadata-item:last-child {
+        border-bottom: none;
+    }
+    
+    /* Ajustement des pros et cons */
+    .pros-cons {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .pros, .cons {
+        padding: 1.2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Ajustement des images de revue */
+    .review-image img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+}
+
+/* Styles spÃ©cifiques pour les images dans les revues */
+@media (max-width: 768px) {
+    .review-images-container {
+        flex-direction: column;
+    }
+    
     .review-image-item {
-        flex: 1 1 100%;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Galerie d'images adaptative */
+    .review-gallery {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        padding-bottom: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .review-gallery::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    
+    .review-gallery-item {
+        flex: 0 0 85%;
+        margin-right: 1rem;
+        scroll-snap-align: center;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .review-gallery-item img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+    
+    /* Indicateur de dÃ©filement */
+    .gallery-scroll-indicator {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+    
+    .indicator-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: rgba(var(--accent-color-rgb), 0.3);
+    }
+    
+    .indicator-dot.active {
+        background-color: var(--accent-color);
+    }
+    
+    /* RÃ©duire l'effet de zoom sur mobile pour Ã©viter les dÃ©bordements */
+    .review-image-item:active img,
+    .review-image:active img {
+        transform: scale(1.05);
+    }
+    
+    /* AmÃ©lioration de la lisibilitÃ© des paragraphes */
+    p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 1.2rem;
+        letter-spacing: 0.01rem;
+    }
+    
+    /* AmÃ©lioration des listes dans les articles */
+    ul, ol {
+        padding-left: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    li {
+        margin-bottom: 0.8rem;
+        line-height: 1.6;
+    }
+    
+    /* AmÃ©lioration des citations */
+    blockquote {
+        border-left: 4px solid var(--accent-color);
+        padding: 1rem 1.2rem;
+        margin: 1.5rem 0;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 0 8px 8px 0;
+        font-style: italic;
+    }
+    
+    /* AmÃ©lioration des tableaux */
+    table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+        margin: 1.5rem 0;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        padding: 0.8rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    th {
+        background-color: rgba(0, 0, 0, 0.05);
+        font-weight: bold;
+    }
+    
+    /* AmÃ©lioration des liens */
+    a {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        transition: color 0.2s ease;
+    }
+    
+    a:active {
+        color: var(--accent-color);
+    }
+
+}
+
+/* Ajout d'un bouton "Retour en haut" pour mobile */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        display: block;
     }
 }
