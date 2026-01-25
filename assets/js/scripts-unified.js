@@ -473,6 +473,28 @@ const translations = {
         'fr': 'Abonnez-vous à ma newsletter pour recevoir les derniers tests et actualités du monde du jeu vidéo.',
         'en': 'Subscribe to my newsletter to receive the latest reviews and news from the video game world.'
     },
+
+    // Editorial & ticker
+    'editorial_picks': {
+        'fr': 'Sélection de la rédaction',
+        'en': 'Editorial Picks'
+    },
+    'ticker_label': {
+        'fr': 'À la Une',
+        'en': 'Top Stories'
+    },
+    'ticker_biomorph': {
+        'fr': 'BIOMORPH — Interview exclusive',
+        'en': 'BIOMORPH — Exclusive interview'
+    },
+    'ticker_atelier': {
+        'fr': 'Test Atelier Yumia publié',
+        'en': 'Atelier Yumia review published'
+    },
+    'ticker_gal_guardians': {
+        'fr': 'Review Gal Guardians en ligne',
+        'en': 'Gal Guardians review live'
+    },
     
     // Footer
     'footer_reference': {
