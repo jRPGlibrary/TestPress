@@ -42,19 +42,30 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTG73P3V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
+    <header class="gc-header">
         <div class="container">
-            <nav class="navbar">
-                <div class="logo">Game<span>Critique</span></div>
+            <div class="gc-brand">
+                <div class="gc-brand-text">Game<span>Critique</span></div>
+            </div>
+            <nav class="gc-nav">
                 <ul class="nav-links">
                     <li><a href="../index.html" data-i18n="nav_home">Accueil</a></li>
                     <li><a href="../tests.html" data-i18n="nav_tests">Tests</a></li>
                     <li><a href="../interviews.html" class="active" data-i18n="nav_interviews">Interviews</a></li>
                     <li><a href="../partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
                     <li><a href="../apropos.html" data-i18n="nav_about">À propos</a></li>
-                    
                 </ul>
             </nav>
+        </div>
+        <div class="gc-ticker" aria-label="A la une">
+            <div class="container">
+                <span class="gc-ticker-label" data-i18n="ticker_label">À la Une</span>
+                <div class="gc-ticker-track">
+                    <a href="../interviews/biomorph-interview.html" class="gc-ticker-item" data-i18n="ticker_biomorph">BIOMORPH — Interview exclusive</a>
+                    <a href="../tests/atelier-yumia.html" class="gc-ticker-item" data-i18n="ticker_atelier">Test Atelier Yumia publié</a>
+                    <a href="../tests/gal-guardians.html" class="gc-ticker-item" data-i18n="ticker_gal_guardians">Review Gal Guardians en ligne</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -157,7 +168,9 @@
                 <div class="game-card">
                     <img src="../assets/img/Alzara_Keyart_Steam.png" alt="ALZARA: Radiant Echoes" class="game-img">
                     <div class="game-info">
-                        <span class="game-platform platform-studio" data-i18n="alzara_studio">Studio Camelia</span>
+                        <div class="platforms">
+                            <span class="game-platform platform-studio" data-i18n="alzara_studio">Studio Camelia</span>
+                        </div>
                         <h3 class="game-title" data-i18n="alzara_title">ALZARA: Radiant Echoes</h3>
                         <span class="publication-date" data-i18n="alzara_date">20 Mai 2025</span>
                         <p class="game-excerpt" data-i18n="alzara_excerpt">Une plongée dans les coulisses de ce JRPG inspiré des classiques avec une touche méditerranéenne.</p>
@@ -202,5 +215,6 @@
             </div>
         </div>
     </footer>
-</body>
-</html>
+    <script src="../assets/js/clickable-cards.js"></script>
+    </body>
+    </html>

@@ -42,19 +42,30 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTG73P3V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
+    <header class="gc-header">
         <div class="container">
-            <nav class="navbar">
-                <div class="logo">Game<span>Critique</span></div>
+            <div class="gc-brand">
+                <div class="gc-brand-text">Game<span>Critique</span></div>
+            </div>
+            <nav class="gc-nav">
                 <ul class="nav-links">
                     <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
                     <li><a href="tests.html" class="active" data-i18n="nav_tests">Tests</a></li>
                     <li><a href="interviews.html" data-i18n="nav_interviews">Interviews</a></li>
                     <li><a href="partenariat.html" data-i18n="nav_partnerships">Partenariats</a></li>
                     <li><a href="apropos.html" data-i18n="nav_about">À propos</a></li>
-                    
                 </ul>
             </nav>
+        </div>
+        <div class="gc-ticker" aria-label="A la une">
+            <div class="container">
+                <span class="gc-ticker-label" data-i18n="ticker_label">À la Une</span>
+                <div class="gc-ticker-track">
+                    <a href="interviews/biomorph-interview.html" class="gc-ticker-item" data-i18n="ticker_biomorph">BIOMORPH — Interview exclusive</a>
+                    <a href="tests/atelier-yumia.html" class="gc-ticker-item" data-i18n="ticker_atelier">Test Atelier Yumia publié</a>
+                    <a href="tests/gal-guardians.html" class="gc-ticker-item" data-i18n="ticker_gal_guardians">Review Gal Guardians en ligne</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -77,7 +88,6 @@
                             <span class="game-platform platform-ps">PS5</span>
                             <span class="game-platform platform-ps">PS4</span>
                             <span class="game-platform platform-xbox">Xbox Series X|S</span>
-                            <span class="game-platform platform-xbox">Xbox One</span>
                             <span class="game-platform platform-switch">Switch</span>
                         </div>
                         <h3 class="game-title" data-i18n="game_title_gal_guardians">Gal Guardians: Servant of the Dark</h3>
@@ -273,6 +283,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/clickable-cards.js"></script>
     <style>
         /* Style personnalisé pour l'adresse email */
         .newsletter a[href^="mailto:"] {
